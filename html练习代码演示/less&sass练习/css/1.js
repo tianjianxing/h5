@@ -1,0 +1,1 @@
+function fun(){console.log(2131)}console.log("js"),fun(),console.log(1646);

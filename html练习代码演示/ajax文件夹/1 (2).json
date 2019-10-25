@@ -1,0 +1,22 @@
+{
+	"province":[
+		{
+			"name":"河南",
+			"position":"华中",
+			"cities":[
+				{
+					"city":"郑州",
+					"people":999999
+				},
+				{
+					"city":"洛阳",
+					"scenery":"优美"
+				}
+			]
+		},
+		{
+			"name":"辽宁",
+			"position":"东北"
+		}
+	]
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <div id="i" class="ccc" style="color: green">qwer</div> -->
+	<!-- <script>
+		var w = document.all.i;
+		console.log(w.attributes);
+		console.log(w.getAttribute("class"));
+		console.log(w.attributes[2].value);
+		console.log(w.attributes["id"].value);
+
+		w.setAttribute("class","lll");
+		console.log(w.hasAttribute("id"));
+		console.log(w.hasAttribute("name"));
+		// w.removeAttribute("style");
+		w.setAttribute("type","buttion");
+
+        w.id = "qqq";
+        console.log(w.id);
+       
+        w.title = "这是title";
+
+        console.log(w.style.color);
+        w.className = "www";
+        console.log(w.className);
+	</script> -->
+
+
+
+	<!-- <script>
+		var ww = document.all.i;
+		console.log(ww.attributes);
+		console.log(ww.getAttribute("id"));
+
+		console.log(ww.attributes[1].value);
+		console.log(ww.attributes["style"].value);
+
+		ww.setAttribute("id","ss");
+		console.log(ww.hasAttribute("style"));
+		ww.removeAttribute("class");
+
+		ww.id = "aa";
+		console.log(ww.id);
+		ww.title = "这是一个网页";
+		console.log(ww.style.color);
+		ww.className = "xxx";
+		console.log(ww.className);
+	</script> -->
+
+
+
+	<!-- <div id="box1">
+	    zxcvb
+    </div>
+	<div id="box2">
+		<p>asd</p>
+		<s>eqr</s>
+	</div>
+	<script>
+		var w1 = document.all.box1;
+		console.log(w1.innerHTML);
+		w1.innerHTML = "anhdouiba";
+		var w2 = document.all.box2;
+		console.log(w2.innerHTML);
+		w2.innerHTML = "<b>bbbb</b><u>uuu</u>";
+
+		console.log(w1.textContent);
+		console.log(w2.textContent);
+		w1.textContent = "hauidghiua";
+		w2.textContent =  "<u>uuuuuu</u>";
+	</script>
+	<div id="box3" style="color:green;background-color:yellow;">aaaa</div>
+	<script>
+		var w3 = document.all.box3;
+		console.log(box3.style);
+		w3.style.backgroundColor = "blue";
+		w3.style.fontSize = "35px";
+		// w3.style = "color:pink";
+		console.log(window.getComputedStyle(w3).border);
+	</script> -->
+
+
+
+	<!-- <div id="box4">
+		<u>uuuuu</u>
+	</div>
+	<script>
+		var b1 = document.createElement("b");
+        console.log(b1);
+        var b2 = document.createTextNode("这是新文本");
+        console.log(b2);
+
+        var w4 = document.all.box4;
+        w4.appendChild(b1);
+        b1.appendChild(b2);
+
+        var b3 = document.createElement("i");
+        var b4 = document.querySelector("#box4 u");
+        w4.insertBefore(b3,b4);
+
+       
+	</script>
+	<div id="box5"><a href="">aaa</a></div>
+	<script>
+		var w5 = document.all.box5;
+		var b5 = document.createElement("b");
+		b5.innerHTML = "<u>uuu</u><i>iii</i>";
+		w5.appendChild(b5);
+
+	</script>
+	<div id="box6">
+		<s>sdadas</s>
+		<a href="">aaa</a>
+		<span>asdaf</span>
+	</div>
+	<script>
+		var w6 = document.all.box6;
+		var ss = document.querySelectorAll("#box6 s")[0];
+
+		w6.removeChild(ss);
+
+		var w7 = document.createElement("s");
+		w7.textContent = "ssssss";
+		w6.replaceChild(w7,w6.lastElementChild);
+	</script>
+	<div id="box7"></div>
+	<script>
+		var w8 = document.all.box7;
+        var aa = document.createElement("a")
+        var bb = document.createElement("b")
+        bb.textContent = "sadkop";
+        var ss = document.createElement("s")
+        var ff = document.createDocumentFragment();
+        ff.appendChild(aa);
+        ff.appendChild(bb);
+        ff.appendChild(ss);
+        w8.appendChild(ff);
+	</script> -->
+
+
+
+	<img id="box8" src="w.jpg" alt="">
+	<script>
+		var w9 = document.all.box8;
+		console.log(w9);
+		w9.src = "wv.jpg";
+		w9.width = "300";
+
+		var w10 = new Image();
+		w10.src = "w.jpg";
+		w10.width = "300";
+		console.log(w10);
+		document.body.appendChild(w10);
+
+		var w11 = document.createElement("img");
+		w11.src = "wv.jpg";
+		w11.width = "300";
+		console.log(w11);
+		document.body.appendChild(w11);
+	</script>
+	<table id="box9" border="1">
+		<tr>
+			<td>1651</td>
+			<td>451</td>
+			<td>642</td>
+			<td>8711</td>
+		</tr>
+		<tr>
+			<td>46841</td>
+			<td>1651</td>
+			<td>4984</td>
+			<td>13165</td>
+		</tr>
+		<tr>
+			<td>4841</td>
+			<td>1454</td>
+			<td>1652</td>
+			<td>5461</td>
+		</tr>
+		<tr>
+			<td>489</td>
+			<td id="box10">481</td>
+			<td>113</td>
+			<td>411</td>
+		</tr>
+	</table>
+	<script>
+		var w12 = document.all.box9;
+		console.log(w12);
+		console.log(w12.rows);
+
+		var a1 = w12.insertRow(3);
+		w12.deleteRow(2);
+
+		console.log(a1.rowIndex);
+		console.log(w12.rows[1].cells);
+
+		var a2 = a1.insertCell(0);
+		a2.textContent = "46512";
+		var a3 = a1.insertCell(1);
+		a3.textContent = "14651";
+
+		w12.rows[1].deleteCell(0);
+
+        var w13 = document.all.box10;
+        console.log(w13.cellIndex);
+        w13.colSpan = 2;
+        w12.rows[3].deleteCell(2);
+
+        w12.rows[1].cells[0].rowSpan = 2;
+        w12.rows[2].deleteCell(0);
+
+
+
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

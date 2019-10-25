@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="" id="s1" onchange="fun(this)">
+		<option value="">001</option>
+		<option value="" selected>002</option>
+		<option value="">003</option>
+		<option value="">004</option>
+		<option value="">005</option>
+	</select>
+	<script>
+		var w1 = document.all.s1;
+		console.log(w1.options);
+		console.log(w1.selectedIndex);
+		// w1.size = 2;
+		// w1.multiple = 3;
+
+		var op = new Option("006","1");
+
+		w1.add(op);
+		w1.remove(4);
+
+		function fun(ele){
+			console.log(ele.selectedIndex);
+		}
+
+		var w2 = s1.lastElementChild;
+		console.log(w2.index);
+		console.log(w2.text);
+		console.log(w2.value);
+		
+        // w2.selected = true;
+        console.log(w2.selected);
+	</script>
+
+	<form action="">
+		<span>adafaf</span>
+		<input type="text">
+		<input type="password">
+		<input type="button" value="按钮">
+	</form>
+	<form action="">
+		<input type="radio">
+		<input type="checkbox">
+	</form>
+	<script>
+		var w3 = document.forms;
+		console.log(w3);
+		w3[1].action = "";
+		console.log(w3[1].length);
+		//length表单中的控件数.
+	</script>
+	<form action="" id="box1">
+		<input type="text">
+		<br>
+		<input type="password">
+		<br>
+		<input type="submit">
+		<br>
+		<input type="reset">
+		<input type="button" value="按钮" onclick = "subbtn()">
+		<input type="button" value="按钮" onclick = "rebtn()">
+	</form>
+	<script>
+		var w4 = document.all.box1;
+		var num = 0;
+		function subbtn(){
+			if(num>3){
+				w4.submit();
+			}
+			num++;
+		}
+		function rebtn(){
+			console.log("ajodn")
+			w4.reset()
+		}
+	</script>
+
+
+
+	<input type="text" id="box2" value="af">
+	<input type="button" value="按钮" onclick="fun1()">
+	<script>
+		var w5 = document.all.box2;
+		w5.value = "重新定义";
+		function fun1(){
+			console.log(w5.value);
+		}
+	</script>
+	<br>
+	<input type="text" id="box3" onblur="fun2(this)" onfocus="fun3()" value="fad">
+	<input type="button" value="按钮1" onclick="fun4()">
+	<input type="button" value="按钮2" onclick="fun5()">
+	<script>
+		function fun2(ele){
+			console.log("失去焦点");
+			console.log(ele.value);
+		}
+        function fun3(){
+        	console.log("获得焦点");
+        }
+        function fun4(){
+        	document.all.box3.focus();
+        }
+        function fun5(){
+        	document.all.box3.blur();
+        }
+	</script>
+	<br>
+	<input type="text" id="box4" onselect="fun6()">
+	<input type="button" value="按钮3" onclick="fun7()">
+	<script>
+		function fun6(){
+			console.log("选中时显示");
+		}
+		function fun7(){
+			document.all.box4.select();
+		}
+	</script>
+	<br>
+	<input type="text" oninput="fun8(this)">
+	<script>
+		function fun8(ele){
+			console.log(ele.value.length);
+			if(ele.value.length > 20){
+				ele.blur();
+			}
+		}
+	</script>
+	<br>
+	<input type="checkbox" id="box5" class="c1" onclick="fun11(this)">
+	<input type="button" value="按钮4" onclick="fun10()">
+	<script>
+		var w6 = document.all.box5;
+		w6.checked = true;
+		function fun10(){
+			w6.checked = !w6.checked;
+		}
+		function fun11(ele){
+			console.log(ele.checked);
+		}
+	</script>
+	<input type="button" value="1" onclick="fun12(this)">
+	<script>
+		function fun12(ele){
+			// ele.value++;
+			ele.value = parseInt(ele.value) + 1;
+		}
+	</script>
+	<ul id="box6"></ul>
+	<input type="button" value="按钮5" onclick="fun13()">
+	<script>
+		var arr = [1,2,3,4,5,6];
+		var w7 = document.all.box6;
+		function fun13(){
+			for(var i = 0;i < arr.length;i++){
+				var li = document.createElement('li');
+				li.textContent = arr[i];
+				w7.appendChild(li);
+
+				// var li = "<li>"+arr[i]+"</li>";
+				// w7.innerHTML += li;	
+						}
+		}
+	</script>
+</body>
+</html>

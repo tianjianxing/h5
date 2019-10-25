@@ -1,0 +1,492 @@
+body{
+    background-color: #f5f5f5;
+}
+.red-line{
+    border-bottom: 5px solid red;
+}
+/*轮播图*/
+section{
+    position: relative;
+    height: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    width: 1130px;
+    margin: auto;
+}
+body section .swiper-container .swiper-button-next{
+    right: 0;
+    opacity: 0.2;
+}
+body section .swiper-container .swiper-button-next:hover{
+    opacity: 1;
+}
+body section .swiper-container .swiper-button-prev{
+    left:0;
+    opacity: 0.2;
+}
+body section .swiper-container .swiper-button-prev:hover{
+    opacity: 1;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    padding:0 50px;
+    box-sizing: border-box;
+    margin: auto;
+}
+.swiper-slide:not(.swiper-slide-active){
+    visibility: hidden;
+}
+.swiper-slide.swiper-slide-active{
+    overflow: hidden;
+}
+.swiper-slide {
+    overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.red-line{
+    border-bottom: 5px solid red;
+}
+section .swiper-slide{
+    margin-top: 40px;
+}
+/*用户头像*/
+section .user-photo li img{
+    width: 64px;
+    height: 64px;
+    margin: 20px 14px 0;
+    border-radius: 32px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+section .user-photo li b{
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    margin: 12px 0 0;
+    padding: 0 8px;
+    color: white;
+    background-color: #33ddaf;
+}
+section .user-photo ul li{
+    float: left;
+}
+section .user-photo ul li a{
+    display: block;
+    width: 92px;
+    height: 140px;
+    box-sizing: border-box;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    
+}
+section .user-photo ul li span{
+    display: inline-block;
+    width: 92px;
+    height: 140px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform-origin: center;
+    transition: all .5s;
+    z-index: 1;
+}
+section .user-photo ul li:hover span{
+    background-color: #33ddaf;
+    transform: scale(1,1.2);
+}
+section .user-photo ul li:hover b{
+    color: #33ddaf;
+    background-color: #fff;
+}
+section .user-photo ul{
+    width: 1030px;
+    height: 64px;
+    margin: 50px auto;
+    text-align: center;
+}
+/*标题的设置*/
+section .nice-man h3,section .good-content h3,section .man-mission h3{
+    font-size: 24px;
+    color: #333;
+    height: 84px;
+    line-height: 84px;
+    text-align: center;
+    padding: 0px;
+}
+section .section-contain h3:nth-child(3){
+    width: 1050px;
+    height: 120px;
+    line-height: 100px;
+    padding: 36px 0 0;
+    text-align: center;
+    margin-left: 40px;
+}
+/*精选照片*/
+section .nice-content{
+    width: 1050px;
+    height: 616px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+section .nice-content div{
+    width: 330px;
+    height: 280px;
+}
+section .nice-content div:hover{
+    box-shadow: 0 5px 5px 5px #ccc;
+}
+section .nice-content div span{
+    display: block;
+    width: 330px;
+    height: 102px;
+    padding: 12px 20px 16px;
+}
+section .nice-content div span a:first-child,section .nice-food span a:first-child{
+    display: block;
+    width: 290px;
+    height: 30px;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: auto;
+    color: #333;
+}
+section .nice-content div span i,section .nice-food span i{
+    display: block;
+    width: 290px;
+    height: 22px;
+    color: #999;
+    text-decoration: none;
+    font-size: 12px;
+}
+section .nice-content div span a:last-child,section .nice-food span a:last-child{
+    font-size: 12px;
+    color: red;
+}
+/*大咖专栏*/
+section .boss-place{
+    width: 1050px;
+    height: 514px;
+    margin-left: 70px;
+}
+section .boss-place h3{
+    width: 520px;
+    height: 120px;
+    padding: 40px 25px 0 0;
+    margin: 0px;
+    display: inline-block;
+    text-align: center;
+}
+section .boss-place .boss-image{
+    display: inline-block;
+    width: 505px;
+    height: 394px;
+    background-color: #fff;
+    padding: 16px;
+}
+section .boss-place .boss-image a:first-child{
+    display: inline-block;
+    height: 262px;
+    width: 465px;
+    overflow: hidden;
+    position: relative;
+}
+section .boss-place .boss-image span{
+    background: url(../image/f6a832fad10d918220ccc4b3b15e26bf.jpeg) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 262px;
+    width: 465px;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+section .boss-place .boss-image span:hover{
+    transform: scale(1.02,1.02);
+}
+section .boss-image a{
+    display: inline-block;
+    width: 150px;
+    height: 84px;
+    position: relative;
+    overflow: hidden;
+}
+section .boss-image a img{
+    margin:2px 0 0 5px ;
+    display: inline-block;
+    width: 150px;
+    height: 84px;
+    position: absolute;
+    transition: all 0.3s;
+    top: 0px;
+    left: 0px;
+}
+section .boss-image a img:hover{
+    transform: scale(1.02,1.02);
+}
+section .nice-mans,.request-man{
+    width: 340px;
+    height: 481px;
+    display: inline-block;
+}
+/*新晋达人*/
+section .nice-man{
+    width: 1050px;
+    height: 601px;
+    margin-left: 70px;
+}
+section .nice-man h4{
+    width: 345px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #333;
+    padding-left: 20px;
+}
+section .nice-man .new-nice-man{
+    width: 345px;
+    height: 66px;
+    padding-left: 20px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+section .nice-man .new-nice-man img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    top: 0px; 
+    left: 20px;
+}
+section .nice-man .new-nice-man .user-info{
+    width: 150px;
+    height: 66px;
+    margin-left: 60px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+section .nice-man .new-nice-man a{
+    color: #333;
+    font-size: 16px;
+}
+section .nice-man .new-nice-man span{
+    color: #999;
+}
+section .nice-man .new-nice-man>a{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    height: 24px;
+    border-radius: 2px;
+    padding: 0px 8px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    background: #ff4c35;
+}
+/*申请达人*/
+section .request-man{
+    position: relative;
+    background: url(../image/20160824100248_224.png) center 40px no-repeat;
+}
+section .request-man p{
+    display: inline-block;
+    width: 340px;
+    height: 269px;
+    padding: 154px 40px 0px;
+    font-size: 14px;
+    line-height: 23px;
+    color: #666;
+    position: absolute;
+    left: 10px;
+    bottom: 170px;
+}
+section .request-man a{
+    height: 44px;
+    width: 160px;
+    line-height: 44px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    background: #ff4c35;
+    display: block;
+    margin: 100px auto 0px;
+    border-radius: 2px;
+    transition: all ease 0.3s;
+    position: absolute;
+    left: 90px;
+    bottom: 70px;
+}
+section .request-man a:hover{
+    background-color: #f00;
+    text-decoration: none;
+}
+/*达人任务*/
+section .man-mission{
+    width: 1050px;
+    margin-left: 70px;
+}
+section .man-missions{
+    width: 1030px;
+    height: 119px;
+    position: relative;
+    border-bottom: 1px dashed #eee;
+    padding: 24px 40px 24px 168px;
+    background: #fff;
+    height: 70px;
+    margin: 0px 10px;
+}
+section .missions{
+    position: relative;
+    margin:20px;
+}
+section .man-mission img {
+    display: inline-block;
+    height: 70px;
+    width: 124px;
+    border-radius: 2px;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+}
+section .man-mission .mission-title{
+    height: 36px;
+    padding-top: 4px;
+    margin: 10px 10px 10px 140px;
+    line-height: 36px;
+    width: 70%;
+    display: inline-block;
+}
+section .man-mission .mission-title span{
+    height: 24px;
+    line-height: 24px;
+    padding: 0px 8px;
+    margin-top: 6px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    border-radius: 2px;
+    margin-right: 6px;
+    background-color: #ff7c7c;
+}
+section .man-mission .mission-title a:nth-child(2){
+    font-size: 18px;
+    color: #333;
+    line-height: 36px;
+}
+section .man-mission .mission-title a:nth-child(2):hover{
+    color: red; 
+}
+section .man-mission .mission-title div span{
+    color: #999;
+    background-color: #fff;
+    font-size: 14px;
+}
+section .man-mission .mission-title a:nth-child(5){
+    display: block;
+    transition: all ease 0.3s;
+    border-radius: 2px;
+    height: 36px;
+    width: 86px;
+    color: #fff;
+    background-color: #ff4c35;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+section .mission-title span:nth-child(4){
+    height: 24px;
+    line-height: 24px;
+    padding-left: 24px;
+    color: #ffce0f;
+    font-weight: bold;
+    font-size: 15px;
+    background: url(../image/20160811144358_913.png) no-repeat;
+    position: absolute;
+    top: 30px;
+    right: 130px;
+}
+section .man-mission .mission-title a:nth-child(5):hover{
+    background-color: #f00;
+    text-decoration: none;
+    color: white;
+}
+section .man-mission a:last-child{
+    display: block;
+    margin: 0px 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #333;
+    background: #fff;
+    font-size: 15px;
+}
+section .man-mission a:last-child:hover{
+    color: red;
+    text-decoration: none;
+}
+/*优质内容*/
+section .good-content{
+    width: 1050px;
+    margin-left: 70px;
+}
+section .good-content h3{
+    text-align: center;
+}
+section .good-content .nice-food{
+    background: #fff;
+    width: 330px;
+    display: inline-block;
+    margin: 10px 8px 20px;
+    transition: all ease 0.3s;
+}
+section .good-content .nice-food:hover{
+    box-shadow: 0 5px 5px 5px #ccc;
+}
+section .good-content .nice-food img{
+    height: 186px;
+    width: 330px;
+    display: block;
+}
+section .nice-food span i{
+    margin-left: 20px;
+}
+section .nice-food span a:last-child{
+    margin-left: 20px;
+}

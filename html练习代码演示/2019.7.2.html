@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			background-color: black;
+
+		}
+		.box1{
+			width: 500px;
+			height: 900px;
+			margin: auto;
+			background-color: #323232;
+			position: relative;
+		}
+		@keyframes light{
+			from{
+				bottom: 0px;
+			}
+			to{
+				bottom: 750px;
+			}
+			/*to{
+				bottom: 0px;
+			}*/
+		}
+		.box2{
+			/*border:1px solid red;*/
+			width: 30px;
+			height: 750px;
+			position: absolute;
+			left: 200px;
+			bottom: 0px;
+			transform: rotateZ(20deg);
+			/*animation: light 1s ease-out 0s infinite normal;*/
+		}
+		.box3{
+			
+			width: 20px;
+			height: 20px;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0px 0px 5px 5px #565656;
+			/*position: absolute;
+			left: 100px;
+			bottom: 0px;*/
+			position: absolute;
+			left: -5px;
+			bottom: 0px;
+			transform: rotateZ(20deg);
+			animation: light 1s ease-out 0s infinite;
+		}
+		.box4{
+			width: 250px;
+			height: 250px;
+			/*background-color: black;*/
+			border-radius: 150px;
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			position: relative;
+		}
+		@keyframes ball{
+			from{
+				bottom: 0px;
+			}
+			to{
+				bottom: 80px;
+			}
+		}
+		.c1{
+			width: 15px;
+			height: 80px;
+		/*	border:1px solid red;*/
+			position: absolute;
+			left: 120px;
+			top: 20px;
+			
+		}
+		.c11{
+			width: 15px;
+			height: 15px;
+			background-color: #234921;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			animation: ball 1s ease-out 0s infinite;
+
+		}
+		.c2{
+			width: 15px;
+			height: 90px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 180px;
+			top: 20px;
+			transform: rotateZ(45deg);
+		}
+		.c22{
+			width: 15px;
+			height: 15px;
+			background-color: #6a595c;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transform: rotateZ(45deg);
+			animation: ball 1s ease-out 0s infinite;
+
+		}
+		.c3{
+			width: 15px;
+			height: 90px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 60px;
+			top: 20px;
+			transform: rotateZ(-45deg);
+		}
+		.c33{
+			width: 15px;
+			height: 15px;
+			background-color: #6a595c;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transform: rotateZ(-45deg);
+			animation: ball 1s ease-out 0s infinite;
+		}
+		.c4{
+			width: 15px;
+			height: 90px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 40px;
+			top: 95px;
+			transform: rotateZ(-90deg);
+		}
+		.c44{
+			width: 15px;
+			height: 15px;
+			background-color: #8b888b;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transform: rotateZ(-90deg);
+			animation: ball 1s ease-out 0s infinite;
+		}
+		.c5{
+			width: 15px;
+			height: 90px;
+            /*border:1px solid red;*/
+			position: absolute;
+			left: 200px;
+			top: 95px;
+			transform: rotateZ(90deg);
+		}
+		.c55{
+			width: 15px;
+			height: 15px;
+			background-color: #782c2d;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transform: rotateZ(90deg);
+			animation: ball 1s ease-out 0s infinite;
+		}
+		.c6{
+			width: 15px;
+			height: 90px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 60px;
+			top: 150px;
+			transform: rotateZ(-135deg);
+		}
+		.c66{
+			width: 15px;
+			height: 15px;
+			background-color: #b07a14;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transform: rotateZ(-135deg);
+			animation: ball 1s ease-out 0s infinite;
+		}
+		.c7{
+			width: 15px;
+			height: 80px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 120px;
+			top: 160px;
+			transform: rotateZ(-180deg);
+		}
+		.c77{
+			width: 15px;
+			height: 15px;
+			background-color: #ad1411;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transform: rotateZ(-180deg);
+			animation: ball 1s ease-out 0s infinite;
+		}
+		.c8{
+			width: 15px;
+			height: 90px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 180px;
+			top: 150px;
+			transform: rotateZ(135deg);
+		}
+		.c88{
+			width: 15px;
+			height: 15px;
+			background-color: #aeaf10;
+			border-radius: 10px;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transform: rotateZ(135deg);
+			animation: ball 1s ease-out 0s infinite;
+		}
+		
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">
+			<div class="box2">
+				<div class="box3"></div>
+		    </div>
+		    <div class="box4">
+		    	<div class="c1">
+		    		<div class="c11"></div>
+		    	</div>
+		    	<div class="c2">
+		    		<div class="c22"></div>
+		    	</div>
+		    	<div class="c3">
+		    		<div class="c33"></div>
+		    	</div>
+		    	<div class="c4">
+		    		<div class="c44"></div>
+		    	</div>
+		    	<div class="c5">
+		    		<div class="c55"></div>
+		    	</div>
+		    	<div class="c6">
+		    		<div class="c66"></div>
+		    	</div>
+		    	<div class="c7">
+		    		<div class="c77"></div>
+		    	</div>
+		    	<div class="c8">
+		    		<div class="c88"></div>
+		    	</div>
+		    </div>
+			
+		</div>
+	</div>
+	
+</body>
+</html>

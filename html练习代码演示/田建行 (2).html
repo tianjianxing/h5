@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin:0;
+			padding: 0;
+			border:1px solid black; 
+		}
+		.box{
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+		}
+		.box6{
+			height: 50px;
+			display: flex;
+		}
+		.box1{
+			width: 80px;
+			line-height: 50px;
+			text-align: center;
+		}
+		.box2{
+			line-height: 50px;
+			flex-grow:1;
+			text-align: center;
+		}
+		.box3{
+			width: 80px;
+			text-align: center;
+			line-height: 50px;
+		}
+		.box4{
+			display: flex;
+			flex-grow: 1;
+			justify-content: center;
+			align-items: center;
+		}
+		.box5{
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box6">
+			<div class="box1">返回</div>
+		    <div class="box2">首页</div>
+		    <div class="box3">下一步</div>
+		</div>
+		<div class="box4">内容</div>
+		<div class="box5">确定</div>
+	</div>
+	
+</body>
+</html>

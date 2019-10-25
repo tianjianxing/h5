@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		header{
+			margin: 0;
+			padding: 0;
+			height: 30px;
+			background-color: #fda400;
+			position: relative;
+		}
+		header span,b{
+			margin-left: 80px;
+			font-size: 20px;
+			color: white;
+		}
+		header .box1{
+			display: inline-block;
+			padding-right: 50px;
+            position: absolute;
+            right: 0;
+            top: 5px;
+		}
+		.box1 a{
+			margin: 10px 20px;
+			text-decoration: none;
+			color: white;
+		}
+		.box1 :nth-child(3){
+			background-color: #00007b;
+			padding:5px 20px;
+		}
+		form{
+			margin: 0 10px;
+			background-color: #ebebeb;
+			height: 93vh;
+		}
+		nav{
+			padding: 40px 20px;
+		}
+		nav .text1{
+			width: 300px;
+			height: 30px;
+			border: none;
+		}
+		nav .btn1{
+			border: none;
+			width: 80px;
+			height: 30px;
+			color: white;
+			background-color: #fda400;
+		}
+        nav .textarea1{
+        	width: 100%;
+        	height: 300px;
+        	border: none;
+        	resize: none;
+        	background-color: white;
+        	overflow: auto;
+        }
+        nav .btn2{
+        	background-color: #0000fd;
+        	border-radius: 3px;
+        	border: none;
+        	color: white;
+        	padding: 5px;
+        }
+        nav p{
+        	text-align: right;
+        }
+        fieldset{
+        	padding: 0 20px;
+        	margin: 0 20px; 
+        }
+        fieldset textarea{
+        	width: 100%;
+        	height: 100px;
+        	resize: none;
+        }
+        fieldset p{
+        	/*text-align: right;*/
+        	position: relative;
+        }
+        fieldset p .span2{
+        	position: absolute;
+        	right: 0;
+        }
+        fieldset p input{
+        	margin-left: 0;
+        }
+        fieldset div{
+        	text-align: center;
+        	padding-bottom: 5px; 	
+        }
+        fieldset div input{
+        	border: none;
+        	background-color: blue;
+        	width: 100px;
+        	height: 30px;
+        	border-radius: 5px;
+        	color: white;
+        }
+        .textarea1 div{
+        	padding:20px;
+        }
+        .textarea1 div .textarea3{
+        	width: 100%;
+        	resize: none;
+        	border: 1px dashed black;
+        }
+        .textarea1 div footer{
+        	position: relative;
+        }
+        .textarea1 div footer input{
+        	border:none;
+        	background-color: blue;
+        	width: 100px;
+        	height: 30px;
+        	border-radius: 5px;
+        	color: white;
+        	position: absolute;
+        	right: 0;
+        }
+        nav div div{
+        	border-bottom: 2px dashed black;
+        }
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<span>LOGO</span>
+		<b>我的留言板</b>
+		<div class="box1">
+			<a href="">主页</a>
+			<a href="">个人简介</a>
+			<a href="">留言</a>
+			<a href="">联系我</a>
+		</div>
+	</header>
+	<form action="">
+		<nav>
+			<h2>本期话题：</h2>
+			<br>
+		    <input type="text" class="text1"><input type="button" value="确定" class="btn1">
+            <br>
+            <br>
+            <br>
+            <div name="" class="textarea1">
+            	<span class="span4">暂时没有留言......</span>
+            </div>
+            <p>
+                <input type="button" value="删除所有留言" class="btn2">
+                <span>共有<span class="span1">0</span>条留言</span>
+            </p>
+	    </nav>
+	    <fieldset>
+	    	<legend>我要留言</legend>
+	    	<textarea class="textarea2" placeholder="请输入留言内容："></textarea>
+	    	<br>
+	    	<p>
+	    		留言者姓名：<input type="text" placeholder="请输入姓名" class="text2">
+	    	    <span class="span2">已输入<span class="span3">0</span>字符</span >
+	    	</p>
+	    	<div>
+	    		<input type="button" value="发布留言" class="btn3">
+	    	</div>
+	    </fieldset>	
+	</form>
+	<script>
+		var btn1 = document.querySelector(".btn1");
+		var btn3 = document.querySelector(".btn3");
+		var textarea2 = document.querySelector(".textarea2");
+		var text2 = document.querySelector(".text2");
+		var span3 = document.querySelector(".span3");
+        var text1 = document.querySelector(".text1");
+        var textarea1 = document.querySelector(".textarea1");
+        var span1 = document.querySelector(".span1");
+        var btn4 = document.querySelector(".btn4");
+        var btn2 = document.querySelector(".btn2");
+        var span4 = document.querySelector(".span4");
+		btn1.onclick = function(){
+		    if(btn1.value == "确定"){
+		    	// if(text1.value)
+		    	btn1.value = "编辑话题";
+                text1.disabled = true;
+            }
+            else{		
+            	btn1.value = "确定";
+            	text1.disabled = false;
+			    text1.focus();
+			    text1.value = "";
+			    }
+		}
+        btn3.onclick = function(){
+        	span4.innerHTML = "";
+        	if(!textarea2.value){
+        		alert("请输入留言内容");
+        		textarea2.focus();
+        	}else if(!text2.value){
+        		alert("请输入姓名");
+        		text2.focus();
+        	}else{
+        			var date = new Date();
+				    var year = date.getFullYear(),
+					month = date.getMonth()+1,
+					day = date.getDate(),
+					hour = date.getHours(),
+					minute = date.getMinutes(),
+					second = date.getSeconds();
+        		    textarea1.innerHTML = '<div>\
+            		<span>来自</span>'+text2.value+'<span>的留言：</span>\
+            		<p>\
+                    <textarea class="textarea3">'+textarea2.value+'</textarea>\
+                    </p>\
+                    <footer>发布时间：'+year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second+
+                    	'<input type="button" value="删除留言" class="btn4" onclick="ele1(this)"></footer>\
+            	    </div>' + textarea1.innerHTML;
+            	    span1.innerHTML++;
+            	    textarea2.value = "";
+            	    text2.value = "";
+                    span3.textContent = "0";   
+        	}
+        }
+        textarea2.oninput = function(){
+        	span3.textContent = this.value.length;
+        }
+        function ele1(ele){
+        	textarea1.removeChild(ele.parentElement.parentElement);
+        	span1.innerHTML--;
+        	if(span1.innerHTML == 0){
+        		textarea1.innerHTML = "暂时没有留言......";
+        	}
+        }
+        btn2.onclick = function(){
+        	var i = confirm("是否全部删除");
+        	if(i){
+        		textarea1.innerHTML = "暂时没有留言......";
+        		span1.innerHTML = 0;
+        	}
+        }
+
+	</script>
+</body>
+</html>

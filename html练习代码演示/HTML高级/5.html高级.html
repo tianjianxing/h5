@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jf7DCB3d9lBeInofLzMZ53OF0Pw3dMWG"></script>
+</head>
+<body>
+<!-- 	<script>
+		navigator.geolocation.getCurrentPosition(function(p){
+			console.log(p);
+		},function(err){
+			console.log(err);
+		})
+	</script> -->
+	<style>
+		#box,#box1{
+			width: 500px;
+			height: 500px;
+			border:1px solid red;
+		}
+	</style>
+	<div id="box"></div>
+	<script>
+		var map = new BMap.Map("box");
+
+		// var point = new BMap.Point(117.175584,34.241947);
+		// map.centerAndZoom(point,16);
+
+		// map.addControl(new BMap.NavigationControl());
+		// map.addControl(new BMap.ScaleControl());
+		// map.addControl(new BMap.GeolocationControl());
+		// map.enableScrollWheelZoom();
+		// map.disableContinuousZoom();
+		// map.disableInertialDragging();
+
+		map.centerAndZoom(new BMap.Point(116.339249,37.476083),12);
+		map.enableScrollWheelZoom(true);
+		map.addTileLayer(new BMap.PanoramaCoverageLayer());
+		var stCtrl = new BMap.PanoramaControl();
+		stCtrl.setOffset(new BMap.Size(20,20));
+		map.addControl(stCtrl);
+		
+		var geo = new BMap.Geolocation();
+
+		geo.getCurrentPosition(function(p){
+			console.log(p);
+			var point = p.point;
+			console.log(point);
+			// map.centerAndZoom(point,16);
+		})
+
+		var gc = new BMap.Geocoder();
+		gc.getPoint("德州学院",function(p){
+			console.log(p);
+			if(p){
+				map.centerAndZoom(p,16);
+				map.addOverlay(new BMap.Marker(p));
+			}else{
+				alert("未找到");
+			}
+		},"德州市")
+	</script>
+	<div id="box1"></div>
+	<script>
+		var map1 = new BMap.Map("box1");
+		map1.centerAndZoom(new BMap.Point(116.339249,37.476083),12);
+
+
+		var local = new BMap.LocalSearch(map1,{renderOptions:{map:map1}
+		})
+		local.search("教育局");
+	</script>
+</body>
+</html>

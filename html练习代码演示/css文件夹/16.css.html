@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			border: 1px solid red;
+			column-count:6;
+			column-gap: 50px;
+			/*column-width: 250px;*/
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			/*margin: auto;*/
+			background-color: red;
+			/*transform: translate(100px);*/
+			/*transform: translate(100px,200px);*/
+			transform: translateX(200px) translateY(100px) rotate(45deg) scaleX(2) scaleY(.8);
+			/*transform: rotate(45deg);*/
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			margin: auto;
+			transform: skewX(30deg) skewY(30deg);
+			transform-origin: right top;
+		}
+		.box3{
+			width: 300px;
+			height: 200px;
+			background-color: purple;
+			margin: auto;
+			-webkit-transform-style:preserve-3d;
+			transform-style: preserve-3d;
+			
+			transform: perspective(200px) rotateX(45deg) scale3d(2,2,2);
+
+		}
+		.box4{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			margin: auto;
+			-webkit-transform-style:preserve-3d;
+			transform-style: preserve-3d;
+			transform: perspective(200px) translate3d(30px,30px,30px) rotateZ(45deg) rotateX(45deg);
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		第八部分
+   
+1、多列
+	1）分割列
+	将元素分割成多列显示内容
+	语法：column-count：正整数;
+	2）设置列间隔
+	column-gap:尺寸属性;
+	设置列之间的间隔
+	3）设置列宽
+	column-width:尺寸属性;
+2、转换
+	1）概念
+	转换就是元素改变形状、尺寸和位置的一种效果，也叫变形，可以向元素添加2D或者3D转换，从而对元素进行旋转、缩放、移动和倾斜；
+	2D转换是元素在x轴和y轴平面上发生变化；3D转换指元素还可以在Z轴进行变化
+	2）转换属性
+	transform属性用于向元素添加2D或3D转换样式
+	语法：
+	transform:none/转换函数;
+	转换函数取值可以为多个，函数之间用空格隔开
+	转换函数的分类
+	3）2D位移
+	translate()方法用于将元素从当前位置移动到指定位置
+	语法：
+	transform:translate(value);元素沿x轴移动
+	transform:translate(x,y);元素沿x轴和y轴移动，取值为尺寸单位;
+	transform:translateX(value);沿X轴
+	transform:translateY(value);沿Y轴
+	4）2D旋转
+	rotate()方法用于旋转元素，根据原点按照顺时针给定的角度进行旋转，允许为负值，表示逆时针
+	语法:
+	transform:rotate(deg);
+	5）2D缩放
+	scale()方法用于根据给定的缩放比例改变元素的尺寸
+	语法
+	transform:scale(value);x轴缩放，第二个参数默认与第一个相等
+	transform:scale(value,value);x轴和y轴
+	注意，当scale的取值小于1时，表示缩小，大于1时表示放大
+	transform:scaleX();
+	transform:scaleY();
+6）2D倾斜
+	skew()方法用于让元素倾斜，围绕x轴和y轴，按照一定角度的倾斜，可能会改变元素的形状；
+	语法：
+	transform:skew(x,y);取值为角度
+	transform:skewX();
+	transform:skewY();
+	7）转换原点
+	transform-origin属性用来指定元素的转换原点位置，默认情况下转换的原点为元素的中心点
+	语法:
+	transform-origin:vlaue;x/y/z轴的点
+	transform-origin:value value;表示x轴和y轴（2D转换）
+	transform-origin:x y z；三个轴的坐标点
+	元素的左上角为（0,0），可取值center,left,right,top,bottom
+3、3D转换
+	transform-style
+	该属性是指定嵌套元素如何在3D空间中呈现，取值：flat（默认值，表示所有子元素在2D平面呈现），preserve-3d（表示子元素在3D空间中呈现）
+	该属性设置到需要进行3D转换的元素的父元素，再配合后面的功能属性和变形配置查看效果，注意浏览器兼容性
+	-ms-transform-style:IE
+	-moz-  火狐
+	-webkit-  谷歌、Safari
+	-o-  Opera(欧朋)
+
+	perspective()
+	该函数用于定义3D元素的距离，以像素记。元素会获得透视效果，只影响3D转换元素
+
+	1）3D位移
+	可以改变元素在Z轴的位置
+	语法：
+	transform:translate3d(x,y,z);
+	或
+	transform:translateZ(z);
+	2）3D旋转
+	语法：
+	transform:rotateX(deg);
+	transform:rotateY(deg);
+	transform:rotateZ(deg);
+	3）3d缩放
+	语法:
+	transform:scale3d(x,y,z);
+	</div>
+	<div class="box1">
+		
+	</div>
+	<div class="box2">
+		
+	</div>
+	<div class="box3">
+		
+	</div>
+	<div class="box4">
+		
+	</div>
+	
+</body>
+</html>

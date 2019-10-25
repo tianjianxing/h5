@@ -1,0 +1,191 @@
+section{
+	width: 100%;
+}
+section .section-contain{
+	width: 1050px;
+	height: 600px;
+	margin: auto;
+	background-color: #3f3a32;
+	position: relative;
+}
+section  .section-contain .breadcrumb{
+	width: 1030px;
+	height: 60px;
+	margin: 0 10px;
+	background-color: #3f3a32;
+	color: white;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+section  .section-contain .breadcrumb li:first-child::before{
+	content: " ";
+}
+section  .section-contain .breadcrumb li a{
+	color: white;
+	font-size: 15px;
+}
+section  .section-contain .breadcrumb li::before{
+	content: ">";
+}
+section .section-contain video{
+	margin-left: 10px;
+}
+section .section-contain .video-shadow{
+	width: 750px;
+	height: 422px;
+	position: absolute;
+	background-color: #0005;
+	left: 10px;
+	background-image: url(../image/20180918154901_175.png);
+	background-size: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: none;
+}
+section .section-contain .about-video{
+	display: inline-block;
+	width: 280px;
+	background-color: #000;
+	position: absolute;
+	top: 58px;
+}
+section .section-contain .about-video ul li img{
+	width: 120px;
+	height: 67px;
+}
+section .section-contain .about-video>div:first-child{
+	width: 280px;
+	height: 49px;
+	color: rgba(255,255,255,0.9);
+	font-size: 18px;
+	padding: 12px 15px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+section .section-contain .about-video ul{
+	padding: 12px 0;
+	width: 280px;
+	height: 371px;
+	margin: 0;
+	overflow: auto;
+}
+section .section-contain .about-video ul li a>span{
+	display: inline-block;
+}
+section .section-contain .about-video ul li{
+	margin-bottom: 10px;
+}
+section .section-contain .about-video ul li a>span span{
+	font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 18px;
+    margin-top: 4px;
+}
+section .section-contain .about-video ul li a span b{
+	display: block;
+	width: 110px;
+	height: 20px;
+	font-size: 13px;
+	margin: 4px 0 0 0;
+	color: rgba(255,255,255,0.9);
+}
+section .section-contain h1{
+	width: 1030px;
+	height: 67px;
+	font-size: 28px;
+	padding: 25px 0 0 0;
+	color: white;
+	margin: 0 auto;
+}
+section .section-contain h1+span{
+	font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 18px;
+    margin-left: 10px;
+}
+section .video-contain{
+	width: 1030px;
+	margin: auto;
+	margin-top: 30px;
+	background-color: white;
+}
+section .video-contain b{
+	display: inline-block;
+	width: 1030px;
+	height: 54px;
+	color: #333;
+	font-size: 22px;
+	padding: 30px 30px 0;
+}
+section .video-contain p{
+	width: 1030px;
+	height: 170px;
+	color: #333;
+	font-size: 16px;
+	padding: 10px 30px 30px;
+}
+nav .nav-contain li:nth-child(7) a b{
+	border-bottom: 4px solid red;
+}
+section h3{
+	width: 1030px;
+	height: 120px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section .food-video-box{
+	width: 1050px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+section .food-video-box .food-video{
+	position: relative;
+	width: 330px;
+	display: block;
+	transition: box-shadow 500ms;
+	margin-bottom: 20px;
+}
+section .food-video-box .food-video:hover{
+	text-decoration: none;
+	box-shadow: 0 15px 15px #0001;
+}
+section .food-video-box .food-video img{
+	width: 330px;
+	height: 186px;
+}
+section .food-video-box .food-video .food-way{
+	width: 330px;
+	height: 72px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #333;
+	padding: 12px 15px;
+	background-color: white;
+}
+section .food-video-box .food-video .video-shadow{
+	width: 330px;
+	height: 186px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #0003;
+	background-image: url(../image/20180918141145_205.png);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-weight: bold;
+}
+section .food-video-box .food-video .video-shadow div{
+	padding: 5px 20px;
+}

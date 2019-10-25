@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>路由vue</title>
+	<script src="vue.js"></script>
+	<script src="vue-router.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h1>路由</h1>
+		<p>
+			<router-link to="/home">主页</router-link>
+			<router-link to="/nav">导航</router-link>
+			<router-link to="session">主体</router-link>
+			<router-link to="/footer">尾部</router-link>
+		</p>
+		<router-view></router-view>
+	</div>
+	<script>
+		var home = {template:"<div>这是主页</div>"}
+		var nav = {template:"<div>这是导航</div>"}
+		var session = {template:"<div>这是主体</div>"}
+		var footer = {template:"<div>这是尾部</div>"}
+
+
+		var routes = [
+			{path:"/home",component:home},
+			{path:"/nav",component:nav},
+			{path:"/session",component:session},
+			{path:"/footer",component:footer}
+		]
+
+		var router = new VueRouter({
+			routes
+		})
+
+		var app = new Vue({
+			el:"#app",
+			router
+		})
+	</script>
+</body>
+</html>

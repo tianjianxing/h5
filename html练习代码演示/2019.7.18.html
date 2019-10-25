@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var zifu = "asabde13asd21435bd";
+		
+		// String.prototype.num = function(){
+		// 	var time = 1;
+		// 	for(var i = 0;i < zifu.length;i++){
+		// 		for(var j = 1;j < zifu.length;j++){
+		// 		if(zifu[i]=zifu[j]){
+		// 			return time += 1;
+
+		// 		    }
+		// 		}
+  //           console.log(time);
+		// 	} 
+         
+		// }
+                                                                                                                                                                                                                                                                                                                                                                       
+		// console.log(zifu.num());
+		function Num(str3){
+			var str = {};
+		    for(var i = 0;i <str3.length;i++){
+		    	str[str3[i]]?str[str3[i]]++:str[str3[i]]=1;
+		    }
+		    return str;
+		}
+		var str9 = "asabde13asd21435bd";
+		console.log(Num(str9));
+		// console.log(Num("asabde13asd21435bd"));
+    </script>
+    <script>
+    	var str = "asabde13asd21435bd";
+    	var obj = {};
+    	for(var i = 0;i < str.length;i++){
+    		var char = str[i];
+    		//if(obj[char])中obj[char]是对属性的访问，而读取一个不存在的属性时会得到undefined，而if(undefined)为flase。
+    		//还可以写成if(char in obj)或者
+    		//if(obj.hasOwnPProperty(char))
+    		if(obj[char]){
+    			obj[char]++;
+    		}else{
+    			obj[char] = 1;
+    		}
+    	}
+    	console.log(obj);
+
+    	var str1 = str.split("").sort().join("");
+    	var index = 0,obj1 ={};
+    	while(index < str.length){
+    		var c = str1[index];
+    		var lastIndex = str1.lastIndexOf(c);
+    		var count = lastIndex - index + 1;
+    		obj1[c] = count;
+    		index = lastIndex + 1;
+    	}
+    	console.log(obj1);
+    </script>
+	<!-- <script>
+		var str={};
+		str["a"]=1;
+		console.log(str);
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		header{
+			height: 70px;
+			background-color: blue;
+			display: flex;
+			justify-content: space-around;
+		}
+		span{
+			background-color: orange;
+			display: block;
+			line-height: 50px;
+			width: 200px;
+			height: 70px;
+			font-size: 20px;
+			text-align: center;
+			margin-left: 24px;
+		}
+		span:hover{
+			background-color: red;
+		}
+		.box2{
+			display: none;
+		}
+		a{
+			display: block;
+			margin-left: 24px;
+			height: 50px;
+			text-align: center;
+			width: 200px;
+			background-color: green;
+			/*display: none;*/
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="box1">
+			<span>111</span>
+			<div class="box2">
+				<a href="">111</a>
+				<a href="">111</a>
+				<a href="">111</a>
+				<a href="">111</a>
+				<a href="">111</a>
+			</div>
+		</div>
+		<div class="box1">
+			<span>222</span>
+			<div class="box2">
+				<a href="">222</a>
+				<a href="">222</a>
+				<a href="">222</a>
+				<a href="">222</a>
+				<a href="">222</a>
+			</div>
+		</div>
+		<div class="box1">
+			<span>333</span>
+			<div class="box2">
+				<a href="">333</a>
+				<a href="">333</a>
+				<a href="">333</a>
+				<a href="">333</a>
+				<a href="">333</a>
+			</div>
+		</div>
+		<div class="box1">
+			<span>444</span>
+			<div class="box2">
+				<a href="">444</a>
+				<a href="">444</a>
+				<a href="">444</a>
+				<a href="">444</a>
+				<a href="">444</a>
+			</div>
+		</div>
+		<div class="box1">
+			<span>555</span>
+			<div class="box2">
+				<a href="">555</a>
+				<a href="">555</a>
+				<a href="">555</a>
+				<a href="">555</a>
+				<a href="">555</a>
+			</div>
+		</div>
+	</header>
+	<script>
+		$("span").mouseover(function(){
+			$(this).next().stop().slideDown(1000);				
+		})
+		$("span").mouseout(function(){
+			$(this).next().stop().slideUp(1000);
+		})
+	</script>
+</body>
+</html>

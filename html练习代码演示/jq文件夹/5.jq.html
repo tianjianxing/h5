@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="box">111</div>
+	<div class="box box1">222</div>
+	<div class="box">333</div>
+	<script>
+		console.log($(".box").length);
+		$(".box").each(function(i,j){
+			console.log(i,j);
+			$(this).text(i);						
+		})
+		$(".box").each(function(a){
+            console.log(a,this);
+		})
+		console.log($(".box").get());
+
+		console.log($(".box").index($(".box")));
+		//默认找到第一个
+		console.log($(".box").index($(".box1")));
+	</script>
+</body>
+</html>

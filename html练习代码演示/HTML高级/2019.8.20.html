@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<textarea class="textarea" cols="30" rows="10"></textarea>
+	<br>
+	<input type="button" value="搜索" class="btn1">
+	<input type="button" value="删除" class="btn2">
+	<input type="button" value="全部删除" class="btn3">
+	<br>
+	<div class="box">
+		<!-- <input type="checkbox"> -->
+	</div>
+	<script>
+		for(var i = 0;i < localStorage.length;i++){
+			var ss = localStorage.getItem(localStorage.key(i));
+			$(".box").append(ss);
+		}
+
+		$(".btn1").click(function(){
+			var text = $(".textarea").val();
+			if(text){
+				localStorage.setItem(text,'<div><input type="checkbox" class="chk">'+text+'</div>')
+				$(".box").append(localStorage.getItem(text));
+				// $(".box").append('<div><input type="checkbox" class="chk">'+text+'</div>');
+				// $(".textarea").val("");
+			}
+			$(".textarea").val("");	
+		})
+		$(".btn2").click(function(){
+			var chk = $(".chk");
+		 // console.log(chk);
+			chk.each(function(i){
+				// console.log(chk[i]);
+				if(chk[i].checked){
+					localStorage.removeItem($(chk[i]).parent().text());
+					$(chk[i]).parent().remove();
+				}
+				// if(chk[i].checked){
+				// 	$(chk[i]).parent().remove();
+				// }
+			})
+		})
+		$(".btn3").click(function(){
+			// $(".box").remove();
+			$(".box").empty();
+			localStorage.clear();
+		})
+		
+		
+	</script>
+</body>
+</html>

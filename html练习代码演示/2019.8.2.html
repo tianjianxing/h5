@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<!-- <style>
+		.box1{
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+			float: left;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.box1 input{
+			border:none;
+			background-color: red;
+			color: white;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		.box1 span{
+			font-size: 100px;
+			font-weight: bolder;
+			color: white;
+			position: absolute;
+			left: 50px;
+			top: 80px;
+		}
+	</style> -->
+
+
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			font-size: 50px;
+			font-weight: block;
+			text-align: center;
+			line-height: 200px;
+			position: relative;
+			background-color: blue;
+			color: white;
+			display: none;
+		}
+		span{
+			display: block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 28px;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		广告
+		<span>&times;</span>
+	</div>
+	<script>
+		// var x = $(window).width()-200,
+		//     y = $(window).height()-200,
+		//     i = 0,
+		//     j = 0,
+		//     time;
+	 //    $(".box").mouseout(function(){
+	 //    	$(".box").show();
+	 //    	$("span").hide();
+	 //    	    time = setInterval(function(){
+		// 		if(i<x){
+		// 			i++;
+		// 		}else if(i>x){
+		// 			i--;
+		// 		}
+		// 		if(i>$(window).width()-201){
+		// 			i--;
+		// 			x=-1;
+		// 		}else if(i<0){
+		// 			i++;
+		// 			x=$(window).width();
+		// 		}
+		// 		if(j<y){
+		// 			j++;
+		// 		}else if(j>y){
+		// 			j--;
+		// 		}
+		// 		if(j>$(window).height()-201){
+		// 			j--;
+		// 			y=-1;
+		// 		}else if(j<0){
+		// 			j++;
+		// 			y=$(window).height();
+		// 		}
+		// 		$(".box").css({
+		// 		"left":i,
+		// 		"top":j
+		// 		});
+		// 	},5)
+	 //    }).mouseover(function(){
+		// 	clearInterval(time);
+		// 	time = null;
+		// 	$("span").show();
+		// }).on("click","span",function(){
+		// 	$(this).closest(".box").remove();
+		// })
+
+		// $("span").click(function(){
+		// 	$(".box").remove();
+		// 	clearInterval(time);
+		// })
+
+		// $(".box").mouseout();
+
+
+
+
+	    	var timer,
+	    	    innerW = $(window).width(),
+	    	    innerH = $(window).height(),
+	    	    w = $(".box").width(),
+	    	    h = $(".box").height(),
+	    	    l = $(".box").offset().left,
+	    	    t = $(".box").offset().top,
+	    	    x,
+	    	    y;
+	    	$(".box").mouseout(function(){
+	    		$(".box").show();
+	    		$("span").hide();
+	    		if(!timer){
+	    			timer = setInterval(function(){
+	    				if(t>innerH-h){
+	    					y=true;
+	    				}
+	    				if(t<0){
+	    					y=false;
+	    				}
+	    				if(l>innerW-w){
+	    					x=true;
+	    				}
+	    				if(l<0){
+	    					x=false;
+	    				}
+	    				t += y ? -1 : 1;
+	    				l += x ? -1 : 1;
+	    				$(".box").offset({
+	    					top:t,
+	    					left:l
+	    				})
+	    			},5)
+	    		}
+	    	}).mouseover(function(){
+	    		if(timer){
+	    			clearInterval(timer);
+	    			timer = null;
+	    			$("span").show();
+	    		}
+	    	}).on("click","span",function(){
+	    		$(this).closest(".box").remove();
+	    		clearInterval(timer);
+	    	})
+	    	$(".box").mouseout();
+
+
+
+
+
+
+		
+	</script>
+
+
+	<!-- <div class="box1">
+		<input type="button" value="&times;" class="btn">
+		<span>广告</span>
+	</div>
+	<script>
+		var x = 0,
+		    y = 0,
+
+		    X = $(window).width()-300,
+		    Y = $(window).height()-300;
+		var start = function(){
+			if(x<X){
+				x++;
+			}else if(x>X){
+				x--;
+			}
+			if(x>$(window).width()-301){
+				x--;
+				X=-1;
+			}else if(x<0){
+                x++
+                X=$(window).width()-300;
+			}
+			if(y<Y){
+				y++
+			}else if(y>Y){
+				y--;
+			}
+			if(y>$(window).height()-301){
+				y--;
+				Y=-1;
+			}else if(y<0){
+				y++;
+				Y=$(window).height()-300;
+			}
+			$(".box1").css({
+				"left":x,
+				"top":y
+			});
+
+		}
+		var time = setInterval(function(){
+			start();
+		},10)	
+        $(".box1").mouseover(function(){
+        	clearInterval(time);
+        });
+        $(".box1").mouseout(function(){
+        	time = setInterval(function(){
+        		start()
+        	})
+        });
+        $(".btn").click(function(){
+        	$(".box1").fadeOut(100);
+        });
+	</script> -->
+	
+</body>
+</html>

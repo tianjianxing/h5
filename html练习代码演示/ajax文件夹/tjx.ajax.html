@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	今晚安排鸡屁股嘛？
+	<br><br><br>
+	<input type="button" value="安排">
+	<input type="button" value="必须安排">
+</body>
+<script>
+	var xxx = new XMLHttpRequest();
+	xxx.onreadystatechange = function(){
+		if(xxx.readyState == 4){
+			console.log(JSON.parse(xxx.responseText));
+		}
+	}
+	xxx.open('get',"http://route.showapi.com/119-42?showapi_appid=102193&showapi_sign=bdfc6bc9a71543b886b7d527bb402622");
+	// xxx.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=utf-8");
+	xxx.send(null);
+</script>
+</html>

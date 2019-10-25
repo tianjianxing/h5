@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+	<!-- <table border="1px" width="600px" id="table">
+		<tr>
+			<th><input type="button" value="全选" onclick="alls(this)"></th>
+			<th>ID</th>
+			<th>姓名</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="c1"></td>
+			<td>1</td>
+			<td>abc</td>
+			<td>编辑</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="c1"></td>
+			<td>1</td>
+			<td>abc</td>
+			<td>编辑</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="c1"></td>
+			<td>1</td>
+			<td>abc</td>
+			<td>编辑</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" class="c1"></td>
+			<td>1</td>
+			<td>abc</td>
+			<td>编辑</td>
+		</tr>
+	</table>
+	<input type="button" value="取消全选" onclick="allns(this)">
+	<script src="./1.js"></script> -->
+
+   <!--  </script>
+	<ul id="box6"></ul>
+	<input type="button" value="按钮5" onclick="fun13()">
+	<script>
+		var arr = [1,2,3,4,5,6];
+		var w7 = document.all.box6;
+		function fun13(){
+			for(var i = 0;i < arr.length;i++){
+				var li = document.createElement('li');
+				li.textContent = arr[i];
+				w7.appendChild(li);
+
+				// var li = "<li>"+arr[i]+"</li>";
+				// w7.innerHTML += li;	
+						}
+		}
+	</script> -->
+
+
+
+
+    
+	<!-- <select name="" id="select1" onchange="sel1(this)">
+		<option value="">北京市</option>
+		<option value="">上海市</option>
+		<option value="">江苏省</option>
+		<option value="">河北省</option>
+		<option value="">四川省</option>
+	</select>
+	
+	<select name="" id="select2">
+		<option value="">东城区</option>
+		<option value="">西城区</option>
+		<option value="">海定区</option>
+		<option value="">朝阳区</option>
+		<option value="">石景山区</option>
+	</select>
+	<script src="./1.js"></script> -->
+
+
+
+
+
+    <!-- <style>
+    	table td{
+    		text-align: center;
+    	}
+    	.lastt{
+    		text-align: right;
+    	}
+    	td input:nth-child(2){
+    		border: none;
+    		background-color: white;
+    	}
+    	td:last-child input{
+    		border: none;
+    		background-color: white;
+    	}
+    </style>
+	<table border="1px" cellspacing="0" width="600px" id="table1">
+		<tr>
+			<th>商品名称</th>
+			<th>单价</th>
+			<th>数量</th>
+			<th>小计</th>
+		</tr>
+		<tr>
+			<td>iphone6</td>
+			<td>&yen;4488</td>
+			<td>
+				<input type="button" 
+				value="-" onclick="jian(this)">
+				<input id="num1" type="button"
+				value="0">
+				<input type="button"
+				value="+" onclick="jia(this)">
+			</td>
+			<td>&yen;<input id="total1" type="button" value="0"></td>
+		</tr>
+		<tr>
+			<td>iphone6 plus</td>
+			<td>&yen;5288</td>
+			<td>
+				<input type="button" 
+				value="-" onclick="jian1(this)">
+				<input id="num2" type="button"
+				value="0">
+				<input type="button"
+				value="+" onclick="jia1(this)">
+			</td>
+			<td>&yen;<input id="total2" type="button" value="0"></td>
+		<tr>
+			<td>iPad Air 2</td>
+			<td>&yen;4288</td>
+			<td>
+				<input type="button" 
+				value="-" onclick="jian2(this)">
+				<input id="num3" type="button"
+				value="0">
+				<input type="button"
+				value="+" onclick="jia2(this)">
+			</td>
+			<td>&yen;<input id="total3" type="button" value="0"></td>
+		</tr>
+		<tr>
+			<td colspan="3" class="lastt">Total：</td>
+			<td>&yen;<input type="button" id="total" value="0"></td>
+		</tr>
+	</table> -->
+	<!-- <script src="./1.js"></script> -->
+
+
+
+
+	<!-- <table>
+		<tr>
+			<th>商品名称</th>
+			<th>单价</th>
+			<th>数量</th>
+			<th>小计</th>
+		</tr>
+		<tr>
+			<td>iphone6</td>
+			<td>&yen;4488</td>
+			<td>
+				<input type="button" value="-" onclick = "calculate(this)">
+				<span>0</span>
+				<input type="button" value="+" onclick = "calculate(this)">
+			</td>
+			<td>&yen;0</td>
+		</tr>
+		<tr>
+			<td>iphone6 plus</td>
+			<td>&yen;5228</td>
+			<td>
+				<input type="button" value="-" onclick = "calculate(this)">
+				<span>0</span>
+				<input type="button" value="+" onclick = "calculate(this)">
+			</td>
+			<td>&yen;0</td>
+		</tr>
+		<tr>
+			<td>ipad</td>
+			<td>&yen;4228</td>
+			<td>
+				<input type="button" value="-" onclick = "calculate(this)">
+				<span>0</span>
+				<input type="button" value="+" onclick = "calculate(this)">
+			</td>
+			<td>&yen;0</td>
+		</tr>
+		<tr>
+			<td colspan="3">Total:</td>
+			<td class = "totalPrice">&yen;0</td>
+		</tr>
+	</table>
+	<script>
+		var totalPrice = document.querySelector(".totalPrice");
+        var table = document.querySelector("table");
+        function calculate(ele){
+        	if(ele.value == "+"){
+        		var countNum = ele.previousElementSibling;
+        		countNum.textContent++;
+        	}else{
+        		var countNum = ele.nextElementSibling;
+        		if(parseInt(countNum.textContent)>0){
+        			countNum.textContent--;
+        		}
+        	}
+            var price = parseFloat(ele.parentElement.previousElementSibling.textContent.slice(1));
+            var subTotal = ele.parentElement.nextElementSibling;
+            subTotal.innerHTML = "&yen;" + price * countNum.textContent;
+            var sum = 0;
+            for(var i = 1;i < table.rows.length - 1;i++){
+            	var tempPrice = parseFloat(table.rows[i].cells[3].textContent.slice(1));
+            	sum += tempPrice;
+            }
+            totalPrice.innerHTML = "&yen;" + sum;
+        }
+	</script> -->
+
+
+
+
+
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box1{
+		background-color: #989898;
+		font-size: 20px;
+		padding-left: 100px;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		margin-left: 100px;
+	}
+	.s1{
+		margin-left: 800px;
+	}
+	section{
+		width: 90%;
+		margin: auto;
+		background-color: #ebebeb;
+		padding:20px;
+	}
+    .box2{
+    	border: 1px solid red;
+    	margin: 30px 0;
+    	padding: 20px 0;
+    	height: 50px;
+    }
+    textarea{
+    	width: 100%;
+    	height: 100px;
+    }
+    form p{
+    	text-align: right;
+    }
+    .box3{
+    	text-align: center;
+    }
+    #box2{
+    	margin: 20px 0;
+    	border:1px solid red;
+    	padding:20px 0;
+    	overflow: auto;
+    	max-height: 300px;
+    }
+    .box4{
+    	background-color: #ccc;
+    	padding: 10px;
+    	border-bottom: 1px solid #000;
+    }
+    .box4 p{
+        border-top: 1px dashed #333;
+        border-bottom: 1px dashed #333;
+    }
+    .box4 footer{
+    	text-align: right;
+    }
+</style>
+	<div class="box1">
+		<b>我的页面</b>
+	  <span class="s1">
+		<a href="">首页</a>
+		<a href="">商城</a>
+		<a href="">分类</a>
+		<a href="">关于</a>
+	  </span>
+	</div>
+	<section>
+		<h2>我的留言板</h2>
+		<p>欢迎前来留言！</p>
+        <div id="box2">
+        	<!-- <div class="box4">
+        		<span>来自+userName.value+的留言</span>
+        		<p>+msg.value+</p>
+                <footer>+发布时间：time+</footer>
+        	</div> -->
+        </div>
+        <form action="">
+        	留言者姓名：<input type="text" placeholder="请输入姓名">
+        	<br>
+        	<textarea name="" id="" placeholder="请输入要发布的内容（最多500字符）" oninput="msglegcount(this)" maxlength="500"></textarea>
+        	<p>已输入：<span class="s2">0</span>/500</p>
+        	<div class="box3">
+        		<input type="button" value="发布" onclick="sendMsg()">
+        	    <input type="reset" value="重填" onclick="resetMsg()">
+            </div>
+        </form>
+	</section>
+	<script>
+		var userName = document.querySelector('form [type = text]');
+		var msg = document.querySelector("form textarea");
+		var box2 = document.all.box2;
+		var s2 = document.querySelector(".s2");
+		function sendMsg(){
+			if(!userName.value){
+				alert("请输入姓名");
+				userName.focus();
+			}else if(!msg.value){
+				alert("请输入留言");
+				msg.focus();
+			}else{
+				var time = new Date();
+				box2.innerHTML = '<div class="box4">\
+        		<span>来自'+userName.value+'的留言</span>\
+        		<p>'+msg.value+'</p>\
+                <footer>发布时间：'+time+'</footer>\
+        	</div>' + box2.innerHTML;
+
+        	userName.value = "";
+        	msg.value = "";
+        	s2.textContent = "0";
+			}
+		}
+		function msglegcount(ele){
+			s2.textContent = ele.value.length;
+		}
+		function resetMsg(){
+			s2.textContent = "0";
+		}
+	</script>
+
+
+	<!-- <h1>发表留言</h1>
+	<form action="">
+	姓名：<input type="text">
+	<br>
+	内容：<textarea name="" id="" cols="30" rows="10"></textarea>
+	<br>
+	<input type="checkbox" onclick="selectd(this)">我已阅读《用户隐私协议》
+	<br>
+	<input type="button" value="提交" disabled onclick="sendmsg()">
+    </form>
+	<script>
+		
+		
+		var btn = document.querySelector("[type = button]");
+		var userName = document.querySelector("[type = text]");
+		var msg = document.querySelector("textarea");
+		function selectd(ele){
+			// btn.setAttribute("disabled","")
+			// btn.removeAttribute("disabled");
+			btn.disabled = !ele.checked;
+		}
+		function sendmsg(){
+			if(!userName.value){
+				userName.focus();
+			}else if(!msg.value){
+				msg.focus();
+			}else{
+                document.forms[0].submit();
+			}
+		}
+	</script> -->
+
+
+
+
+
+
+
+
+	<script>
+		//    var box = document.all.table;
+	// function alls(ele){
+	// 	document.getElementsByClassName("c1")[0].checked = true;
+	// }
+	// function allns(ele){
+ //        document.getElementsByClassName("c1")[0].checked = false;	
+	// }
+
+	
+
+
+	// var cities = [
+	// ["东城区","西城区","海定区","朝阳区","石景山区"],
+	// ["浦东区","嘉定区","奉贤区","宝山区","闵行区"],
+	// ["南京市","苏州市","无锡市","南通市","常州市"],
+	// ["石家庄市","唐山市","秦皇岛市","保定市","沧州市"],
+	// ["成都市","绵阳市","攀枝花市","乐山市","自贡市"]
+	// ];
+	// var select1 = document.all.select1.children;
+	// var select2 = document.all.select2;
+	// function sel1(ele){
+	// 	select2.textContent="";
+	// 	var index = ele.selectedIndex;
+	// 			for(var j = 0;j < cities.length;j++){	
+	// 		var opt = document.createElement('option');
+	// 		opt.textContent = cities[index][j];
+	// 		select2.appendChild(opt);
+	// 	}
+	// 	// console.log(select2.innerHTML);
+	// }
+
+
+
+    
+    // var box1 = document.all.table1;
+    // // function jian(ele){
+    // 	if(document.getElementsByClassName("num")[0].value>0){
+    // 		document.getElementsByClassName("num")[0].value--;	
+    // 	}
+    // }
+    // function jia(ele){
+    //     document.getElementsByClassName("num")[0].value++;   
+    // }
+    // function jian1(ele){
+    // 	if(document.getElementsByClassName("num")[1].value>0){
+    // 		document.getElementsByClassName("num")[1].value--;	
+    // 	}
+    // }
+    // function jia1(ele){
+    //     document.getElementsByClassName("num")[1].value++;   
+    // }
+    // function jian2(ele){
+    // 	if(document.getElementsByClassName("num")[2].value>0){
+    // 		document.getElementsByClassName("num")[2].value--;	
+    // 	}
+    // }
+    // function jia2(ele){
+    //     document.getElementsByClassName("num")[2].value++;   
+    // }
+
+
+    //  var box1 = document.all.table1;
+    //  function jian(ele){
+    // 	if(document.getElementById("num1").value>0){
+    // 		document.getElementById("num1").value--;
+    // 		document.getElementById("total1").value = parseInt(document.getElementById("num1").value)*4488;
+    // 		document.getElementById("total").value = parseInt(document.getElementById("total1").value)+parseInt(document.getElementById("total2").value)+parseInt(document.getElementById("total3").value);
+    // 	}
+    	
+    // }
+    // function jia(ele){
+    //     document.getElementById("num1").value++;  
+    //     document.getElementById("total1").value = parseInt(document.getElementById("num1").value)*4488;
+    //     document.getElementById("total").value = parseInt(document.getElementById("total1").value)+parseInt(document.getElementById("total2").value)+parseInt(document.getElementById("total3").value);
+    // }
+    // function jian1(ele){
+    // 	if(document.getElementById("num2").value>0){
+    // 		document.getElementById("num2").value--;
+    // 		document.getElementById("total2").value = parseInt(document.getElementById("num2").value)*5288;
+    // 		document.getElementById("total").value = parseInt(document.getElementById("total1").value)+parseInt(document.getElementById("total2").value)+parseInt(document.getElementById("total3").value);
+    // 	}
+    // }
+    // function jia1(ele){
+    //     document.getElementById("num2").value++; 
+    //     document.getElementById("total2").value = parseInt(document.getElementById("num2").value)*5288;
+    //     document.getElementById("total").value = parseInt(document.getElementById("total1").value)+parseInt(document.getElementById("total2").value)+parseInt(document.getElementById("total3").value);
+    // }
+    // function jian2(ele){
+    // 	if(document.getElementById("num3").value>0){
+    // 		document.getElementById("num3").value--;
+    // 		document.getElementById("total3").value = parseInt(document.getElementById("num3").value)*4288;
+    // 		document.getElementById("total").value = parseInt(document.getElementById("total1").value)+parseInt(document.getElementById("total2").value)+parseInt(document.getElementById("total3").value);
+    // 	}
+    // }
+    // function jia2(ele){
+    //     document.getElementById("num3").value++;  
+    //     document.getElementById("total3").value = parseInt(document.getElementById("num3").value)*4288;
+    //     document.getElementById("total").value = parseInt(document.getElementById("total1").value)+parseInt(document.getElementById("total2").value)+parseInt(document.getElementById("total3").value);
+    // }
+	</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app1">
+		密码：<input type="text" v-model="pwd">
+		输入密码后可查看表格信息！（默认密码：123456）
+		<div>
+			<table border="1px" cellspacing="0" cellpadding="10px">
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>性别</th>
+					<th>民族</th>
+					<th>生日</th>
+					<th>住址</th>
+					<th>电话</th>
+					<th>备注</th>
+				</tr>
+				<tr v-if="pwd == 123456" v-for="i in items">
+					<td v-for="n in i">{{n}}</td>
+					<!-- <td>{{i.num}}</td>
+					<td>{{i.name}}</td>
+					<td>{{i.age}}</td>
+					<td>{{i.sex}}</td>
+					<td>{{i.nation}}</td>
+					<td>{{i.birthday}}</td>
+					<td>{{i.address}}</td>
+					<td>{{i.phone}}</td>
+					<td>{{i.memo}}</td> -->
+				</tr>
+			</table>
+	    </div>
+	</div>
+	<script>
+		new Vue({
+			el:"#app1",
+			data:{
+				pwd:"",
+				items:[
+					{num:"001",name:"张三",age:22,sex:"男",nation:"汉",birthday:"1999-01-22",address:"山东济南",phone:"123456",memo:""},
+					{num:"002",name:"李四",age:22,sex:"女",nation:"汉",birthday:"1999-01-22",address:"山东烟台",phone:"124644",memo:""},
+					{num:"003",name:"王五",age:22,sex:"男",nation:"回",birthday:"1999-01-22",address:"山东德州",phone:"124646",memo:""},
+					{num:"004",name:"赵六",age:22,sex:"女",nation:"满",birthday:"1999-01-22",address:"山东青岛",phone:"128973",memo:""},
+					{num:"005",name:"胜七",age:22,sex:"男",nation:"汉",birthday:"1999-01-22",address:"山东潍坊",phone:"123468",memo:""}
+				]
+			}
+		})
+	</script>
+	<style>
+		p{
+			font-size: 50px;
+			border: 1px solid black;
+			width: 200px;
+		}
+		/*.a{
+			background-color: red;
+		}
+		.b{
+			background-color: blue;
+		}
+		.c{
+			background-color: green;
+		}
+		.d{
+			background-color: silver;
+		}
+		.e{
+			background-color: pink;
+		}
+		.aa{
+			color: red;
+		}
+		.bb{
+			color: blue;
+		}
+		.cc{
+			color: green;
+		}
+		.dd{
+			color: silver;
+		}
+		.ee{
+			color: pink;
+		}*/
+	</style>
+	<div id="app2">
+		<div>
+			背景颜色：<input type="checkbox" v-model="chk1">
+			<select name="" id="" v-model="color1"  v-bind:disabled="!chk1">
+				<option value="red" v-model="opt1">红色</option>
+				<option value="blue" v-model="opt1">蓝色</option>
+				<option value="green" v-model="opt1">绿色</option>
+				<option value="silver" v-model="opt1">银色</option>
+				<option value="pink" v-model="opt1">粉色</option>
+			</select>
+		</div>
+		<div>
+			文本颜色：<input type="checkbox" v-model="chk2">
+			<select name="" id="" v-model="color2"   v-bind:disabled="!chk2">
+				<option value="red" v-model="opt1">红色</option>
+				<option value="blue" v-model="opt1">蓝色</option>
+				<option value="green" v-model="opt1">绿色</option>
+				<option value="silver" v-model="opt1">银色</option>
+				<option value="pink" v-model="opt1">粉色</option>
+			</select>
+		</div>
+		<p v-bind:style="{backgroundColor:color1,color:color2}">一些文字</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app2",
+			data:{
+				chk1:false,
+				color1:"red",
+				chk2:false,
+				color2:"pink"
+			}
+		})
+	</script>
+</body>
+</html>

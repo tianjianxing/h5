@@ -1,0 +1,224 @@
+.section-contain{
+	display: flex;
+	flex-wrap: wrap;
+}
+.section-contain .section-contain-nav{
+	width: 100%;
+	height: 60px;
+	background-color: #fdf4e4;
+}
+.section-contain .section-contain-nav ul{
+	width: 940px;
+	height: 60px;
+	margin: auto;
+}
+.section-contain .section-contain-nav ul li{
+	display: inline-block;
+	line-height: 60px;
+	margin-right: 55px;
+	text-decoration: none;
+	color: #444444;
+	font-weight: bold;
+}
+.section-contain .section-contain-nav ul li a{
+	color: #333333;
+}
+.section-contain .section-contain-nav ul li .four-a{
+	color: #ff504e;
+	text-decoration: underline;
+}
+.section-contain .section-contain-nav ul li a:hover{
+	text-decoration: underline;
+}
+.section-contain .section-contain-middle{
+	display: inline-block;
+	width: 720px;
+	height: 1170px;
+	margin-left: 460px;
+	margin-top: 20px;
+	background-color: #ffffff;
+}
+.section-contain .section-contain-middle>p{
+	height: 70px;
+	line-height: 70px;
+	padding-left: 20px;
+	font-size: 18px;
+}
+.section-contain .section-contain-middle .one-picture{
+	height: 200px;
+}
+.section-contain .section-contain-middle .one-picture img{
+	float: left;
+	height: 160px;
+	margin:20px 20px;
+}
+.section-contain .section-contain-middle .one-picture .one-font{
+	display: inline-block;
+	height: 160px;
+	width: 400px;
+	margin-top: 20px;
+}
+.section-contain .section-contain-middle .one-picture .one-font a{
+	color: #333333;
+	
+}
+.section-contain .section-contain-middle .one-picture .one-font a:hover{
+	color: #ff3232;
+	text-decoration: 
+}
+.section-contain .section-contain-middle .one-picture .one-font p span{
+	display: block;
+	padding-top: 5px;
+	font-size: 14px;
+	color: #999999;
+}
+.section-contain .section-contain-middle .one-picture .one-font button{
+	border-style: none;
+	background-color: #eeeeee;
+	padding: 10px 20px;
+}
+.section-contain .section-contain-middle .one-picture .one-font input{
+	color: #ffffff;
+	border-style: none;
+	padding: 10px 20px;
+	background-color: #ff3232;
+}
+.section-contain .section-contain-middle .one-picture .one-font input:hover{
+	background-color: #e80000;
+}
+.section-contain .section-contain-middle .footer{
+	margin-top: 30px;
+}
+.section-contain .section-contain-middle .footer div{
+	width: 350px;
+	margin: auto;
+}
+.section-contain .section-contain-middle .footer input{
+	border-style: none;
+	color: #333333;
+	background-color: #eeeeee;
+	padding: 15px 20px;
+}
+.section-contain .section-contain-middle .footer input:hover{
+	background-color: #ff3232;
+}
+.section-contain .section-contain-middle .footer input:first-child{
+	background-color: #ff3232;
+	color: #ffffff;
+}
+.section-contain .section-contain-middle-aside{
+	display: inline-block;
+	width: 255px;
+	height: 1200px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.section-contain .section-contain-middle-aside .one,
+.section-contain .section-contain-middle-aside .two,
+.section-contain .section-contain-middle-aside .three,
+.section-contain .section-contain-middle-aside .four{
+	width: 250px;
+	height: 215px;
+	padding: 10px 10px;
+	background-color: #ffffff
+}
+.section-contain .section-contain-middle-aside .two{
+	height: 480px;
+	margin-top: 20px;
+}
+.section-contain .section-contain-middle-aside .three{
+	margin-top: 20px;
+	height: 280px;
+	transition: all 1s;
+}
+.section-contain .section-contain-middle-aside .four{
+	margin-top: 20px;
+	height: 90px;
+}
+.section-contain .section-contain-middle-aside .one .one-p,
+.section-contain .section-contain-middle-aside .two p,
+.section-contain .section-contain-middle-aside .three p,
+.section-contain .section-contain-middle-aside .four p{
+	color: #999999; 
+	padding-bottom: 20px;
+}
+.section-contain .section-contain-middle-aside .one span{
+	color: #ff3232;
+}
+.section-contain .section-contain-middle-aside .one .two-p{
+	font-size: 12px;
+	padding-top: 10px;
+}
+.section-contain .section-contain-middle-aside .one input{
+	border-style: none;
+	background-color: #ff3232;
+	color: #ffffff;
+	padding: 10px 20px;
+	margin-top: -10px;
+}
+.section-contain .section-contain-middle-aside .two dl,
+.section-contain .section-contain-middle-aside .three{
+	font-size: 12px;
+}
+.section-contain .section-contain-middle-aside .two dd,
+.section-contain .section-contain-middle-aside .three span{
+	color: #999999
+}
+.section-contain .section-contain-middle-aside .two dt{
+	margin: 10px 0px;
+}
+.section-contain .section-contain-middle-aside .three a{
+	position: relative;
+	display: block;
+	width: 222px;
+	height: 50px;
+	color: #666666;
+	font-size: 14px;
+	text-decoration: none;
+	border: 1px solid white;
+	margin: 0 5px;
+	overflow: hidden;
+	padding-left: 80px;
+	line-height: 50px;
+}
+.section-contain .section-contain-middle-aside .three a:hover{
+	border: 1px solid red;
+}
+.section-contain .section-contain-middle-aside .three a img{
+	float: left;
+}
+.section-contain .section-contain-middle-aside .three .three-a{
+	margin-top: 20px;
+}
+.section-contain .section-contain-middle-aside .three .three-a3{
+	width: 222px;
+	height: 50px;
+	transition: all 1s;
+}
+.section-contain .section-contain-middle-aside .three a .img1{
+	position: absolute;
+	left: 0px;
+}
+.section-contain .section-contain-middle-aside .three a .img2{
+	position: absolute;
+	top: -50px;
+	left: 0px;
+}
+.section-contain .section-contain-middle-aside .three a .img3{
+	position: absolute;
+	top: -100px;
+	left: 0px;
+}
+.section-contain .section-contain-middle-aside .three a .img4{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 40px;
+	left: 8px;
+}
+.section-contain .section-contain-middle-aside .three .three-a3:hover{
+	height: 255px;
+}
+.section-contain .section-contain-middle-aside .three:hover{
+	height: 490px;
+}

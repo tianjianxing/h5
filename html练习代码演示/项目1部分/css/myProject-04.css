@@ -1,0 +1,270 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.header-section{
+	position: relative;
+	height: 577px;
+	background-image: url(../image/20190104170950_407.jpg);
+}
+.header-section .header-section-nav{
+	z-index: 3
+}
+.header{
+	width: 85%;
+	height: 120px;
+	margin: auto;
+	position: relative;
+}
+.header-section .header a{
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff;
+}
+.header-section .header>a img{
+	float: left;
+	width: 150px;
+	height: 120px;
+}
+.header-section .header .header-nav{
+	display: inline-block;
+	margin-top: 48px;
+	float: right;
+}
+.header-section .header .header-nav li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header-section .header .header-nav li a{
+	font-size: 24px;
+}
+.header-section .header .header-nav li:nth-child(4) a{
+	color: #f45d52;
+	border-bottom: 3px solid #f45d52;
+}
+.header-section .header .header-nav li a:hover{
+	color: #f45d52;
+}
+.header-section .section{
+	position: absolute;
+	width: 800px;
+	height: 200px;
+	top: 260px;
+	left: 560px;
+	color: #ffffff;
+}
+.header-section .section div{
+	font-size: 72px;
+	letter-spacing: 40px;
+	margin-left: 80px;
+}
+.header-section .section hr{
+	border-width: 2px;
+	width: 80%;
+	color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+.header-section .section p{
+	font-size: 32px;
+	letter-spacing: 10px;
+	margin-left: 150px;
+	margin-top: 20px;
+}
+.font{
+	margin-top: 50px;
+}
+.font p{
+	width: 1425px;
+	height: 165px;
+	font-size: 27px;
+	margin: auto;
+	line-height: 50px;
+}
+.middle-first-box .title,
+.middle-first-box .title-two{
+	font-size: 48px;
+	height: 100px;
+}
+.middle-first-box .title-two{
+	margin-top: 100px;
+}
+.middle-first-box .title b,
+.middle-first-box .title-two b{
+	margin-left: 230px;
+}
+.middle-first-box .title p,
+.middle-first-box .title-two p{
+	color: #f45d52;
+	margin-left: 230px;
+}
+.middle-first-box .first-picture,
+.middle-first-box .second-picture,
+.middle-first-box .three-picture,
+.middle-first-box .four-picture,
+.middle-first-box .five-picture,
+.middle-first-box .six-picture{
+	display: inline-block;
+	height: 630px;
+	background-size: 577px 434px;
+	background-position: 230px 65px;
+	background-repeat: no-repeat;
+}
+.middle-first-box .first-picture{
+	width: 50%;
+	background-image: url(../image/20190104172648_581.jpg);
+}
+.middle-first-box .second-picture{
+	width: 49%;
+	background-image: url(../image/20190104172648_945.jpg);
+}
+.middle-first-box .three-picture{
+	width: 50%;
+	background-image: url(../image/20190104172648_180.jpg);
+}
+.middle-first-box .four-picture{
+	width: 49%;
+	background-image: url(../image/20190104172648_688.jpg);
+}.middle-first-box .five-picture{
+	width: 50%;
+	background-image: url(../image/20190104172648_836.jpg);
+}.middle-first-box .six-picture{
+	width: 49%;
+	background-image: url(../image/20190104172648_444.jpg);
+}
+.middle-first-box .first-picture p,
+.middle-first-box .second-picture p,
+.middle-first-box .three-picture p,
+.middle-first-box .four-picture p,
+.middle-first-box .five-picture p,
+.middle-first-box .six-picture p{
+	margin-top: 525px;
+	margin-left: 230px;
+}
+.middle-first-box .first-picture p :first-child,
+.middle-first-box .second-picture p :first-child,
+.middle-first-box .three-picture p :first-child,
+.middle-first-box .four-picture p :first-child,
+.middle-first-box .five-picture p :first-child,
+.middle-first-box .six-picture p :first-child{
+	font-size: 48px;
+}
+.middle-first-box .first-picture p :last-child,
+.middle-first-box .second-picture p :last-child,
+.middle-first-box .three-picture p :last-child,
+.middle-first-box .four-picture p :last-child,
+.middle-first-box .five-picture p :last-child,
+.middle-first-box .six-picture p :last-child{
+	font-size: 32px;
+}
+.footer-section .first-box,
+.footer-section .two-box,
+.footer-section .three-box,
+.footer-section .four-box,
+.footer-section .five-box{
+	height: 800px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.footer-section .two-box{
+	height: 960px;
+}
+.footer-section .three-box{
+	height: 700px;
+}
+.footer-section .four-box{
+	height: 1060px;
+}
+.footer-section .five-box{
+	height: 880px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.footer-section .first-box{
+	background-image: url(../image/20190104181031_969.jpg);
+}
+.footer-section .two-box{
+	background-image: url(../image/20190104180656_296.jpg);
+}
+.footer-section .three-box{
+	background-image: url(../image/20190104181307_941.jpg);
+}
+.footer-section .four-box{
+	background-image: url(../image/20190104180657_252.jpg);
+}
+.footer-section .five-box{
+	background-image: url(../image/20190104180657_630.jpg);
+}
+.footer-section .first-box>div,
+.footer-section .two-box>div,
+.footer-section .three-box>div,
+.footer-section .four-box>div,
+.footer-section .five-box>div{
+	width: 960px;
+	height: 800px;
+	margin-left: 230px;
+}
+.footer-section .first-box>div p:nth-child(1),
+.footer-section .two-box>div p:nth-child(1),
+.footer-section .three-box>div p:nth-child(1),
+.footer-section .four-box>div p:nth-child(1),
+.footer-section .five-box>div p:nth-child(1){
+	font-size: 32px;
+	font-weight: bold;
+	padding-top: 100px;
+}
+.footer-section .first-box>div p:nth-child(2),
+.footer-section .first-box>div p:nth-child(4),
+.footer-section .two-box>div p:nth-child(2),
+.footer-section .two-box>div p:nth-child(4),
+.footer-section .three-box>div p:nth-child(2),
+.footer-section .three-box>div p:nth-child(4),
+.footer-section .four-box>div p:nth-child(2),
+.footer-section .four-box>div p:nth-child(4),
+.footer-section .five-box>div p:nth-child(2),
+.footer-section .five-box>div p:nth-child(4){
+	font-size: 28px;
+	font-weight: bold;
+}
+.footer-section .first-box>div p:nth-child(3),
+.footer-section .first-box>div p:nth-child(5),
+.footer-section .two-box>div p:nth-child(3),
+.footer-section .two-box>div p:nth-child(5),
+.footer-section .three-box>div p:nth-child(3),
+.footer-section .three-box>div p:nth-child(5),
+.footer-section .four-box>div p:nth-child(3),
+.footer-section .four-box>div p:nth-child(5),
+.footer-section .five-box>div p:nth-child(3),
+.footer-section .five-box>div p:nth-child(5){
+	font-size: 24px;
+}
+.footer-section .first-box>div p span,
+.footer-section .two-box>div p span,
+.footer-section .three-box>div p span,
+.footer-section .four-box>div p span,
+.footer-section .five-box>div p span{
+	display: block;
+}
+.footer-section .first-box>div p:nth-child(6),
+.footer-section .two-box>div p:nth-child(6),
+.footer-section .three-box>div p:nth-child(6),
+.footer-section .four-box>div p:nth-child(6),
+.footer-section .five-box>div p:nth-child(6){
+	width: 739px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.footer-section .first-box>div p,
+.footer-section .two-box>div p,
+.footer-section .three-box>div p,
+.footer-section .four-box>div p,
+.footer-section .five-box>div p{
+	margin-bottom: 30px;
+}
+.all-footer{
+	height: 180px;
+	line-height: 150px;
+	text-align: center;
+	font-size: 18px;
+	color: #666666;
+}

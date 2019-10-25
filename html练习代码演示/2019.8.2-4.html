@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<!-- <style>
+		nav{
+			width: 800px;
+			border:1px solid red;
+			height: 500px;
+			outline: black solid 2px;
+			display: flex;
+		}
+		div{
+			width: 100px;
+			flex-grow: 1;
+			border:1px solid red;
+		}
+		.box1{
+			flex-grow: 3;
+		}
+	</style> -->
+
+
+	<style>
+		.box{
+			width: 700px;
+			height: 500px;
+			border:2px solid red;
+			outline:black solid 2px; 
+			display: flex;
+		}
+		.box div{
+			width: 100px;
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">0001</div>
+		<div class="box1">0002</div>
+		<div class="box1">0003</div>
+		<div class="box1">0004</div>
+		<div class="box1">0005</div>
+	</div>
+	<script>
+		$(".box1:first").css("flex-grow",1);
+		$(".box1").mouseover(function(){
+			$(".box1").stop().animate({"flex-grow":0},1000);
+			$(this).stop().animate({"flex-grow":1},1000);
+			// console.log(this);
+		})
+	</script>
+	
+
+
+	<!-- <nav>
+		<div class="box1">001</div>
+		<div class="box2">002</div>
+		<div class="box3">003</div>
+		<div class="box4">004</div>
+		<div class="box5">005</div>
+	</nav>
+	<script>
+		$("div").mouseover(function(){
+			$(this).animate({"flex-grow":"3"},1000);
+			$(this).siblings().stop().animate({"flex-grow":"1"},1000);
+		})
+	</script> -->
+</body>
+</html>

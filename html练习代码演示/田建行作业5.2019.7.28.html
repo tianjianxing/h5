@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			height: 50px;
+			width: 400px;
+            border: 1px solid black;
+			border-radius: 10px;		
+		}
+		span{
+			width: 0px;
+			height: 50px;
+			text-align: right;
+			line-height: 50px;
+			color: white;
+			display: inline-block;
+			background-image: linear-gradient(to top,#298493,#f00,#298493);
+			border-radius: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box"><span id="i1"></span></div>
+	<br>
+	<br>
+	<input type="button" value="开始加载" onclick="load()">
+	<!-- <script>
+		var i1 = document.all.i1;
+		var i;
+		var j = 0;
+		function load(){
+			// clearInterval(fun);
+			i = 0;
+			j = 0;
+			i1.style.width = "0%";
+			i1.innerHTML = j-1 + "%";
+			var fun = setInterval(function(){
+				   i1.style.width = i + "%";
+                   i++;
+                   j++;
+                   i1.innerHTML = j-1 + "%";
+			       if(j >= 101){
+			       	clearInterval(fun);
+			       }
+	        },100)
+		}
+	</script> -->
+	<!-- <script>
+		var i1 = document.all.i1;
+		function load(){
+			var i = 0;
+			var fun = setInterval(function(){
+				i1.style.width = i + "%";
+				i1.textContent = i + "%";
+				i++;
+				if(i >=101){
+					clearInterval(fun);
+				}
+			},50)
+		}
+	</script> -->
+	<script>
+		var i1 = document.all.i1;
+		function load(){
+			var i = 0;
+			var fun = setInterval(function(){
+				i1.style.width = i + "%";
+				i1.textContent = i + "%";
+				if(i >=100){
+					clearInterval(fun);
+				}
+				i++;
+			},50)
+		}
+	</script>
+</body>
+</html>

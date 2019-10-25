@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>这小饼饭菜一锅出，比包子简单，比油条好吃，做少了根本不够吃-美食杰 - 美食，菜谱-中国最全的家常菜谱美食网</title>
+	<link rel='icon' href='image/favicon.ico' type='image/x-icon'>
+	<link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index-mode.css">
+	<link rel="stylesheet" href="css/yellow-cake.css">
+</head>
+<body>
+	<!--你想知道的width = 990px-->
+	<!--LOGO 搜索 登录-->
+	<header>
+		<div class="header-contain">
+			<div class="logo2"><a href=""></a></div>
+			<div class="header-search">
+				<form class="header-search-box">
+					<input type="text" placeholder ="请输入菜谱/食材/菜单/作者"  list="header-search-datalist">
+					<datalist id="header-search-datalist">
+						<option value="卤鸡"></option>
+						<option value="卤鸭"></option>
+						<option value="酱鸡"></option>
+						<option value="腊肉"></option>
+						<option value="红烧狮子头"></option>
+						<option value="土豆丝"></option>
+						<option value="地三鲜"></option>
+						<option value="红烧带鱼"></option>
+						<option value="鲅鱼饺子"></option>
+						<option value="麻婆豆腐"></option>
+						<option value="糖醋里脊"></option>
+						<option value="炸排骨"></option>
+					</datalist>
+					<input type="button" value="搜 索">
+				</form>
+				
+			</div>
+			<ul class="log-on">
+				<li>
+					<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=100233147&redirect_uri=http://i.meishi.cc/connect/callback.php?site=qq">QQ登录</a>
+				</li>
+				<li>
+					<a href="https://api.weibo.com/oauth2/authorize?client_id=3274300248&redirect_uri=https%3A%2F%2Fi.meishi.cc%2Fconnect%2Fcallback.php%3Fsite%3Dsina">微博登录</a>
+				</li>
+				<li>
+					<a href="user-login.html?f=0">注册</a>
+				</li>
+				<li>
+					<a href="user-login.html?f=1">登录</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<!--导航栏-->
+	<nav>
+		<ul class="nav-contain">
+			<li>
+				<a href="index.html">
+					<b>首页</b>
+				</a>
+			</li>
+			<li class="menu-totle-contain">
+				<a href="recipe-daqo.html">
+					<b>菜谱大全</b>
+					<span class="glyphicon glyphicon-menu-down "></span>
+				</a>
+				<!-- 菜谱大全的展开-->
+					<div class="menu-totle">
+						<p>家常菜谱</p>
+						<dl>
+							<dd>
+								<a href="recipe-daqo.html">家常菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">凉菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">素食</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">晚餐</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">私家菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">热菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">海鲜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">孕妇</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">早餐</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">午餐</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">甜品点心</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">汤粥</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">宝宝食谱-婴儿食谱</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">糕点主食</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">微波炉</a>
+							</dd>
+						</dl>
+						<!-- 用两个块定位 world-menu small-food-->
+						<div class="world-menu">
+							<p>中华菜系</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">川菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">粤菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">东北菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">湘菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">鲁菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">浙菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">湖北菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">清真菜</a>
+								</dd>
+							</dl>
+							<p>外国菜谱</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">韩国料理</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">日本料理</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">法国菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">意大利餐</a>
+								</dd>
+							</dl>
+							<p>厨房百科</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">摆盘周边</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">烹饪技巧</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">生活妙招</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">美食专题</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="small-food">
+							<p>各地小吃</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">四川小吃</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">广东小吃</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">北京小吃</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">陕西小吃</a>
+								</dd>
+							</dl>
+							<p>烘焙</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">蛋糕面包</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">饼干配方</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">甜品点心</a>
+								</dd>
+							</dl>
+							<p>食材百科</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">蔬菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">水果</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">谷类</a>
+								</dd>
+							</dl>
+						</div>
+						<!-- 螃蟹图片-->
+						<img src="image/jccp_navbgg.png" alt="" class="crab">
+					</div>
+			</li>
+			<li class="eat-heathy-contain">
+				<a href="food-heathy.html">
+					<b>饮食健康</b>
+					<span class="glyphicon glyphicon-menu-down "></span>
+				</a>
+					<!-- 饮食健康-->
+					<div class="eat-heathy">
+						<p>饮食健康</p>
+						<dl>
+							<dd>
+								<a href="food-heathy.html">饮食小常识</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">美容瘦身</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">饮食健康</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">养生妙方</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">饮食禁忌</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">中医保健</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">母婴健康饮食</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">饮食新闻</a>
+							</dd>
+						</dl>
+						<p>功能性调理</p>
+						<dl>
+							<dd>
+								<a href="food-heathy.html">清热去火</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">减肥</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">祛痰</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">乌发</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">滋阴补肾</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">健脾开胃</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">消化不良</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">清热解毒</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">补阳壮阳</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">增肥</a>
+							</dd>
+						</dl>
+						<!-- 用两个块定位 eat-heathy-left -->
+						<div class="eat-heathy-left">
+							<p>人群膳食</p>
+							<dl>
+								<dd>
+									<a href="food-heathy.html">孕妇</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">老人</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">产妇</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">哺乳期</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">青少年</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">幼儿</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">学龄期儿童</a>
+								</dd>
+							</dl>
+							<p>脏腑调理</p>
+							<dl>
+								<dd>
+									<a href="food-heathy.html">感冒</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">补肾</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">阳痿早泄</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">补血</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">便秘</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">腹泻</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">活血化瘀</a>
+								</dd>
+							</dl>
+						</div>
+						
+						<div class="eat-heathy-right">
+							<p>疾病调理</p>
+							<dl>
+								<dd>
+									<a href="food-heathy.html">糖尿病</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">高血压</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">痛风</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">胃炎</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">痔疮</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">更年期</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">甲状腺</a>
+								</dd>
+							</dl>
+						</div>
+						<!--大葱图片-->
+						<img src="image/ysjk_navbg.png" alt="" class="onion">
+					</div>
+			</li>
+			<li>
+				<a href="food-menu.html"><b>美食菜单</b></a>
+			</li>
+			<li class="home">
+				<a href=""><b>家居馆</b></a>
+			</li>
+			<li>
+				<a href="nicefoodman.html"><b>美食达人</b> <img src="image/20160909164810_443.png" alt="" class="crown"></a>
+			</li>
+			<li>
+				<a href="food-video.html"><b>菜谱视频</b></a>
+			</li>
+			<li>
+				<a href=""><b>产品下载</b></a>
+			</li>
+		</ul>
+	</nav>
+	<!--自个写嘚-->
+	<section>
+		<div class="section-contain">
+			<div class="cake-title">
+				<h1>	这小饼饭菜一锅出，比包子简单，比油条好吃，做少了根本不够吃</h1>
+				<span>
+					789693浏览 · 36赞 · 40评论 · 2018-12-10 09:18:50
+				</span>
+			</div>
+			<div class="cake-content">
+				<p>
+					早餐不可忽视，对人体健康十分重要，尤其老人孩子更为重要。俗话说，一日之计在于晨，早餐要吃好，就是说早餐的营养价值要高一些，才能保证一天有一个良好的工作、生活状态。早餐别总吃面包油条了，这小饼饭菜一锅出，比包子简单，比油条好吃，做少了根本不够吃。重要的是无需提前做各种准备，更不需要早起，食材简单搭配，真正的快手菜，10分钟左右就可以端上桌，简单还有营养。
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl60BfpK7c" alt="">
+				<p>
+					说起这小饼，就想起妈妈的味道，小时候为了省面，妈妈就常给我们烙这种饼吃，多放菜少放面，长身体的孩子们吃得多，有时候妈妈还掺点玉米面一起烙，那叫一个香，口感萱软，有滋有味，做少了真是不够吃。几十年过去了，这小饼依然是我家的家常饭，常常临时上桌。虽然现在物质生活极大的丰富了，什么都不缺，各种早点应有尽有，但是当真不如这款小饼来的营养，因为里边加了鸡蛋和各种蔬菜，不但好吃，营养更丰富了，尤其适合老人和孩子。而且做法极其简单，对食材也没有特别的要求，喜欢的蔬菜都可以搭配，几种食材加上面粉搅拌均匀，上锅一烙，真是分分钟就可以端上桌，咬一口也是各种滋味，喜欢的朋友不妨试试。
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl8bvghgcy" alt="">
+				<p>
+					【胡萝卜土豆鸡蛋饼】所需食材：胡萝卜1根；土豆1个；鸡蛋1个；面粉100g；油适量；盐适量；胡椒粉适量。
+				</p>
+				<p>
+					做法：1、备齐食材，土豆和胡萝卜分别去皮洗净备用；
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl8lyiwbfE" alt="">
+				<p>
+					2、土豆和胡萝卜分别用擦丝器擦成丝，加入盐、胡椒粉调味；
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl8lyq6kc4" alt="">
+				<p>
+					3、打入鸡蛋，筛入面粉搅拌均匀；
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl8lyoyL3o" alt="">
+				<p>
+					4、加入适量的水搅拌均匀；
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl8lzns5GC" alt="">
+				<p>
+					5、锅中加入适量的油，用汤匙一汤匙一个饼，入锅烙；
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl8m04WxJw" alt="">
+				<p>
+					6、翻面烙熟，平底锅最好，我是懒人，没换锅，直接大勺烙也不错，就是一次烙的少；
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl8m0p56RM" alt="">
+				<p>
+					7、出锅装盘，配上早餐粥，美味又营养。
+				</p>
+				<img src="http://si1.go2yd.com/get-image/0Sl60ECcYE4" alt="">
+				<p>
+					小贴士：
+				</p>
+				<p>
+					1、这道快手菜对食材没有特别要求，喜欢的都可以搭配，重要的是营养搭配要合理，富含维生素A的胡萝卜搭配十全十美的土豆，可以提供身体充足的营养成分，土豆是一种碱性蔬菜，有利于体内酸碱平衡，中和体内代谢后产生的酸性物质，从而还有一定的美容、抗衰老作用。
+				</p>
+				<p>
+					2、这道菜不只做早餐，我家时常临时上桌，只因简单快手，和煮面条差不多，口感更好。最好用平底锅，达到简单快捷的目的。
+				</p>
+				<div class="little-tips">
+					<b>
+						本文著作权归作者本人和美食杰共同所有，未经许可不得转载。文章仅代表作者看法，如有更多内容分享或是对文中观点有不同见解，美食杰原创欢迎您的投稿。
+					</b>
+					<span class="red">
+						投稿须知：
+					</span>
+					<span>
+						分享温暖食谱、美食故事，展示生活态度、传播经验体会，美食杰欢迎您的投稿，请了解并熟悉投稿流程和审核要求，如果您对原创投稿有任何疑问或者建议，欢迎发送邮件至luochao@meishi.cc
+					</span>
+				</div>
+			</div>
+			<div class="user-zan">
+				<a href="user-login.html" class="zan">赞</a>
+				<span>已有36人赞过</span>
+				<div class="user-daibiao">
+					<a href="people-space.html">
+						<img src="https://s1.st.meishij.net/user/105/225/t1306355_154212844286871.jpg" alt="">
+					</a>
+					<a href="people-space.html">
+						<img src="https://s1.st.meishij.net/user/106/04/st1813606_59659.jpg" alt="">
+					</a>
+					<a href="people-space.html">
+						<img src="https://s1.st.meishij.net/user/112/48/st10449612_155288850746686.jpg" alt="">
+					</a>
+					<a href="people-space.html">
+						<img src="https://s1.st.meishij.net/user/122/80/t13520122_154812475326170.jpg" alt="">
+					</a>
+					<a href="people-space.html">
+						<img src="https://s1.st.meishij.net/user/136/141/st13410386_154406233927709.jpg" alt="">
+					</a>
+					<a href="people-space.html">
+						<img src="https://s1.st.meishij.net/user/137/33/st6695887_148553367701438.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="yourself-talk">
+				<a href="people-space.html">
+					<img src="https://s1.st.meishij.net/user/106/04/st1813606_59659.jpg" alt="">
+				</a>
+				<form>
+					<textarea name="" id="" cols="30" rows="10" placeholder="说点什么吧"></textarea>
+					<a href="user-login.html"><input type="button" value="提交" class="sumbtn"></a>
+				</form>
+			</div>
+			<script>
+				if(!localStorage.getItem("a")){
+					localStorage.setItem("a","未登录")
+					$(".sumbtn").click(function(){
+						if($("textarea").val()){
+							alert("请登录")
+						}else{
+							alert("请输入评论内容")
+							// 跳转
+						}
+					})
+				}
+				if(localStorage.getItem("a")=="登录"){
+					$(".sumbtn").parent().removeAttr("href");
+					$(".zan").removeAttr("href");
+					$(".zan").click(function(){
+						$(".zan").html("已赞")
+					})
+					$(".sumbtn").click(function(){
+						if($("textarea").val()){
+							alert("提交成功")
+						}else{
+							alert("请输入评论内容")
+							// 跳转
+						}
+					})
+				}
+
+				
+			</script>
+		</div>
+
+
+		<div class="user-info">
+			
+		</div>
+	</section>
+	<!--页脚-->
+	<footer>
+		<div class="footer-contain">
+			<div class="footer-photo">
+				<div class="footer-logo"></div>
+				<ul class="footer-logonext-links">
+					<li>
+						<a href="https://weibo.com/meishij?is_hot=1">关注：49万</a>
+						<p><a href="https://weibo.com/meishij?is_hot=1">点击进入<br>美食杰官方微博</a></p>
+					</li>
+					<li>
+						<a href="https://user.qzone.qq.com/613171717">关注：10.9万</a>
+						<p><a href="https://user.qzone.qq.com/613171717">点击进入<br>美食杰QQ空间</a></p>
+					</li>
+					<!-- 二维码写自己链接 -->
+					<li>
+						<a href=""></a>
+						<p><a href="">扫描二维码添加<br>美食杰为微信好友</a></p>
+					</li>
+					<li>
+						<a href=""></a>
+						<p><a href="">扫描二维码下载<br>美食杰手机客户端</a></p>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-link">
+				<dl class="friend_link clearfix">
+
+					<!-- 链接到别人的网页 -->
+					<dt>友情链接</dt>
+					<dd><a target="_blank" href="http://www.meishij.net" title="美食">美食</a></dd>
+					<dd><a target="_blank" href="http://tizhi.meishi.cc" title="体质测试">体质测试</a></dd>
+					<dd><a target="_blank" href="http://sj.meishi.cc/app.php?to=guanjia" title="伊特">伊特</a></dd>
+					<dd><a target="_blank" href="http://www.9ku.com/ " title="9酷音乐网">9酷音乐网</a></dd>
+					<dd><a target="_blank" href="http://www.yue365.com" title="365音乐网">365音乐网</a></dd>
+					<dd><a target="_blank" href="http://www.mapbar.com/" title="图吧">图吧</a></dd>
+					<dd><a target="_blank" href="http://baa.bitauto.com/" title="汽车论坛">汽车论坛</a></dd>
+					<dd><a target="_blank" href="http://food.39.net" title="39健康饮食">39健康饮食</a></dd>
+					<dd><a target="_blank" href="http://www.qqtn.com/ " title="QQ下载 ">QQ下载</a></dd>
+					<dd><a target="_blank" href="http://www.meilele.com/" title="家具网">家具网</a></dd>
+					<dd><a target="_blank" href="http://chihe.sohu.com" title="搜狐美食">搜狐美食</a></dd>
+					<dd><a target="_blank" href="http://www.meishichina.com" title="美食天下">美食天下</a></dd>
+					<dd><a target="_blank" href="http://www.zhms.cn" title="中华美食网">中华美食网</a></dd>
+					<dd><a target="_blank" href="http://hefei.8684.cn/" title="合肥公交网">合肥公交网</a></dd>
+					<dd><a target="_blank" href="http://www.canyin88.com/" title="红餐微杂志">红餐微杂志</a></dd>
+					<dd><a target="_blank" href="http://bj.fang.com" title="北京搜房网">北京搜房网</a></dd>
+					<dd><a target="_blank" href="https://www.meishij.net/siteinfo/links.php" title="更多友情链接">更多友情链接</a></dd>
+				</dl>
+
+					链接到自己的网页
+				<div class="in-link">
+					<ul>
+						<li><a target="_blank" href="" title="公司简介">公司简介</a></li>
+						<li><a target="_blank" href="" title="关于我们">关于我们</a></li>
+						<li><a target="_blank" href="" title="产品下载">产品下载</a></li>
+						<li><a target="_blank" href="" title="加入我们">加入我们</a></li>
+						<li><a target="_blank" href="" title="联系我们">联系我们</a></li>		
+						<li><a target="_blank" href="" title="商务合作">商务合作</a></li>
+						<li><a target="_blank" href="" title="用户协议">用户协议</a></li>
+						<li><a target="_blank" href="" title="用户协议">隐私政策</a></li>
+						<li><a target="_blank" href="" title="网站地图">网站地图</a></li>
+						<li><a target="_blank" href="" title="友情链接">友情链接</a></li>			
+					</ul>
+					<p>
+						<a target="_blank" href="https://www.miibeian.gov.cn/">京ICP备14030359号</a>
+						<a target="_blank" href="https://beian.gov.cn/"><img src="image/20180208111357_93713.png" alt="">京公网安备11010802026928</a>
+						Copyright © 2003-2019 MEISHIJ CO.,LTD.
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--页面底部的搜索框 -->
+	<div class="main-search-box">
+		<div class="main-search">
+			<div class="main-search-show">点击显示</div>
+			<div class="main-search-hide">点击收缩</div>
+			<form action="">
+				<input type="text" placeholder="输入菜谱、食材、作者"><input type="button" value="搜索">
+			</form>
+			<!--返回顶部 -->	
+			<a href="#" class="back-to-top"></a>		
+		</div>
+	</div>
+	<script src="lib/jquery-3.4.1.js"></script>
+	<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+	</script>
+	<script src="js/index-mode.js"></script>
+</body>
+</html>

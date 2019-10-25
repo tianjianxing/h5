@@ -1,0 +1,225 @@
+section{
+    width: 100%;
+    background-color: #fae8c8;
+}
+.section-contain{
+    width: 990px;
+    margin: auto;
+}
+.food-heathy-content{
+    border-bottom: 5px solid red;
+}
+/*标题*/
+section .section-contain p{
+    width: 990px;
+    height: 88px;
+    font-size: 18px;
+    line-height: 88px;
+}
+section .section-contain p a{
+    color: #333;
+}
+section .section-contain p a:hover{
+    color: red;
+    text-decoration: none;
+}
+section .section-contain .food-news-title{
+    width: 670px;
+    height: 150px;
+    background: #fff;
+    margin: 0px 0px 20px;
+    padding: 0px 24px;
+    position: relative;
+}
+section .section-contain .food-news-title h3{
+    width: 520px;
+    font-weight: bold;
+    margin: auto;
+    padding: 22px 0;
+    font-size: 26px;
+}
+/*用户信息*/
+section .section-contain .food-news-title .user-content{
+    height: 50px;
+    padding: 20px 0px 20px 0px;
+    position: relative;
+    width: 622px;
+    display: flex;
+}
+section .section-contain .food-news-title .user-content>a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: url(../image/q_default.png) no-repeat;
+    background-size: contain;
+}
+section .section-contain .food-news-title .user-content .info{
+    margin: 5px 0 0 10px;
+}
+section .section-contain .food-news-title .user-content .info h4{
+    margin: 0px;
+    padding: 0px;
+    height: 22px;
+}
+section .section-contain .food-news-title .user-content .info h4 span{
+    font-size: 12px;
+    display: inline-block;
+    background: #ff3232;
+    color: #fff;
+    padding: 5px 6px;
+    margin-right: 10px;
+}
+section .section-contain .food-news-title .user-content .info>span{
+    font-size: 10px;
+    color: #999;
+}
+/*收藏分享*/
+section .section-contain .enjoy{
+    width: 230px;
+    display: flex;
+    position: absolute;
+    top: 24px;
+    right: 20px;
+}
+section .section-contain .enjoy a{
+    display: inline-block;
+    background: #ff3232;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    height: 44px;
+    padding: 0px 14px;
+    border: 1px solid #e90808;
+    border-right: 0px;
+    line-height: 44px;
+}
+section .section-contain .enjoy a:hover{
+    background: #f00;
+    text-decoration: none;
+}
+section .section-contain .enjoy .enjoy-to{
+    height: 44px;
+    width: 167px;
+    padding-left: 10px;
+    text-align: left;
+    line-height: 44px;
+    color: #999;
+    font-weight: bold;
+    border: 1px solid #999;
+}
+/*文章内容*/
+section .section-contain .food-news-content{
+    width: 670px;
+    height: 1750px;
+    background-color: #fff;
+    padding: 20px 0px;
+    line-height: 24px;
+    color: #666;
+    font-size: 14px;
+}
+section .section-contain .food-news-content .xi{
+    font-size: 12px;
+}
+section .section-contain .food-news-content .cu{
+    font-size: 14px;
+}
+section .section-contain .food-news-content span{
+    width: 528px;
+    height: 40px;
+    display: block;
+    margin: 20px auto 0;
+    font-size: 10px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*讨论框*/
+section .dumpling-talk{
+	width: 670px;
+	background-color: #fff;
+}
+section .dumpling-talk .user-talk{
+	width: 630px;
+	padding: 0px 20px;
+	display: flex;
+}
+section .dumpling-talk .user-talk .user-talk-content{
+	margin-left: 30px;
+	position: relative;
+}
+section .dumpling-talk .user-talk .user-talk-content .user-tip{
+	margin-bottom: 10px;
+}
+section .dumpling-talk .user-talk .intobtn{
+	height: 40px;
+	line-height: 40px;
+    text-align: center;
+    width: 140px;
+    background: #ff3232;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+}
+section .dumpling-talk .user-talk .btn{
+	height: 40px;
+    width: 80px;
+    background: #ff3232;
+    border-radius: 0px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+section .dumpling-talk textarea{
+	height: 70px;
+    width: 530px;
+    padding: 14px;
+    border: 1px solid #ddd;
+    background: #fcfcfc;
+    color: #333;
+    font-size: 14px;
+	resize: none;
+}
+section .dumpling-talk span{
+	cursor: pointer;
+    line-height: 24px; 
+    color: #000;
+    font-size: 12px;
+    display: inline-block;
+    height: 24px;
+    padding: 0px 10px;
+    background: #eee;
+    margin-right: 10px;
+}
+section .dumpling-talk span:hover{
+	background-color: #999;
+	color: #fff;
+}
+#fix{
+	position: absolute;
+	top: -300px;
+	right: -140px;
+}
+.beitai{
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    top: 500px;
+}
+.shabi{
+    width: 900px;
+    height: 10px;
+    margin: auto;
+    position: relative;
+}
+.beitai-box{
+    position: absolute;
+    right: -40px;
+    top: 500px;
+    width: 10px;
+    height: 10px;
+}

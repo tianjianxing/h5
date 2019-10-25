@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="react.js"></script>
+	<script src="react-dom.js"></script>
+	<script src="browser.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+		ReactDOM.render(
+			<h1>Hellow,world!</h1>,
+			document.getElementById('example')
+		)
+	</script>
+	<div id="e1"></div>
+	<script type="text/babel">
+		var names = ['aaa','bbb','ccc'];
+		ReactDOM.render(
+			<div>
+				{
+					names.map(function(name,i){
+					return <div key={i}>Hellow,{name}!</div>
+				})
+				}
+			</div>,
+			document.getElementById('e1')
+		)
+	</script>
+	<div id="e2"></div>
+	<script type="text/babel">
+		var arr = [<h1 key='h1'>Hellow,world!</h1>,<h2 key='h2'>切克闹</h2>];
+		ReactDOM.render(
+			<div>{arr}</div>,
+			document.getElementById('e2')
+		)
+	</script>
+	<div id="e3"></div>
+	<script type="text/babel">
+		var HelloMsg = React.createClass({
+		render:function(){
+		return <h1>Hellow,{this.props.name}!</h1>
+	}
+	})
+	ReactDOM.render(
+		<HelloMsg name='boss' />,
+		document.getElementById('e3')
+	)
+	</script>
+	<div id="e4"></div>
+	<script type="text/babel">
+		var NotesList = React.createClass({
+		render:function(){
+			return <ol>{
+				React.Children.map(
+				this.props.children,function(child){
+					return <li>{child}</li>
+			}
+			)
+			/*map遍历只能针对数组，即下面写法只适用于组件存在两个及以上的子元素的情况
+			this.props.children.map(function(child,i){
+			return <li key={i}>{child}</li>
+		})*/
+			}	
+			</ol>
+	}
+	})
+	ReactDOM.render(
+		<NotesList>
+			<span>Hello</span>
+			<span>world</span>
+		</NotesList>,
+		document.getElementById('e4')
+	)
+	</script>
+
+	<div id="e5"></div>
+	<script type="text/babel">
+		var MyTitle = React.createClass({
+			getDefaultProps:function(){
+				return{
+					title:"hello world"
+			}
+		},
+			propTypes:{
+				title:React.PropTypes.string.isRequired,
+		},
+			render:function(){
+				return <h1>{this.props.title}</h1>
+		}
+	});
+		var data = "123";
+		ReactDOM.render(
+			<MyTitle title={data} />,
+			document.getElementById('e5')
+		);
+	</script>
+	<div id="e6"></div>
+	<script type="text/babel">
+	var MyComponent = React.createClass({
+		handleClick:function(){
+		this.refs.myTextInput.focus();
+		this.refs.ss.value;
+	},
+		render:function(){
+		return <div>
+			<span ref="ss">ssssss</span>
+			<input type="text" ref="myTextInput" />
+			<input type="button" value="获取焦点" onClick={this.handleClick} />
+		</div>
+	}
+	})
+	ReactDOM.render(
+		<MyComponent />,
+		document.getElementById('e6')
+	)
+	</script>
+	<div id="e7"></div>
+	<script type="text/babel">
+		var LikeButton = React.createClass({
+			getInitialState:function(){
+				return{
+					liked:false
+			}
+		},
+			handleClick:function(){
+				this.setState({liked:!this.state.liked});
+		},
+			render:function(){
+				var text = this.state.liked ? "like" : "haven't liked";
+				return <p onClick={this.handleClick}>
+					You {text} this. 
+					Click to toggle.
+				</p>
+		}
+	})
+		ReactDOM.render(
+			<LikeButton />,
+			document.getElementById('e7')
+		)
+	</script>
+	<div id="e8"></div>
+	<script type="text/babel">
+		var Input = React.createClass({
+			getInitialState:function(){
+				return {value:'hello!'}
+		},
+			handleChange:function(event){
+				this.setState({value:event.target.value})
+		},
+			render:function(){
+				var  value = this.state.value;
+				return <div>
+					<input type="text" value={value} onChange={this.handleChange} />
+					<p>{value}</p>
+				</div>
+		}
+	})
+		ReactDOM.render(
+			<Input />,
+			document.getElementById('e8')
+		)
+	</script>
+
+	<div id="e9"></div>
+	<script type="text/babel">
+		var Hello = React.createClass({
+			getInitialState(){
+				return {
+					v:"000"
+			}
+		},
+			componentWillMount(){
+				console.log("componentWillMount");
+		},
+			componentDidMount(){
+				console.log("componentDidMount");
+		},
+			componentWillUpdate(np,ns){
+				console.log("componentWillUpdate");
+				console.log(np,ns);
+		},
+			componentDidUpdate(pp,ps){
+				console.log("componentDidUpdate");
+				console.log(pp,ps);
+		},
+			handleChange(event){
+				this.setState({v:event.target.value});
+		
+		},
+			render:function(){
+				return <div>
+					<input type="text" value={this.state.v} onChange={this.handleChange} />
+				</div>
+		}
+
+	})
+	ReactDOM.render(
+		<Hello />,
+		document.all.e9
+	)
+	</script>
+	<div id="e10"></div>
+	<script type="text/babel">
+		var Component1 = React.createClass({
+			ComponentWillReceiveProps(np){
+			console.log("componentWillReceiveProps");
+			console.log(np);
+		},
+			render(){
+			return <p>{this.props.title}</p>	
+		}
+	})
+		var HelloWorld = React.createClass({
+			getInitialState(){
+			return {
+			v:"666666"
+		}
+		},
+		handleChange(event){
+		this.setState({v:event.target.value});
+	},
+		render(){
+		return <div>
+			<input type="text" value={this.state.v} onChange={this.handleChange} />
+			<Component1 title={this.state.v} />
+		</div>
+	}
+	})
+			ReactDOM.render(
+			<HelloWorld />,
+			document.all.e10
+		)
+	</script>
+	<div id="e11"></div>
+	<script type="text/babel">
+		var Component2 = React.createClass({
+		componentWillUnmount(){
+		console.log("componentWillUnmount");
+	},
+		render(){
+		return <p>这里是Component2</p>
+	}
+	})
+		var HW = React.createClass({
+		getInitialState(){
+		return {
+		f:true
+	}
+	},
+		handleChange(event){
+		this.setState({f:!this.state.f});
+	},
+		render(){
+		return <div>
+			<input type="button" value="按钮" onClick={this.handleChange} />
+			{this.state.f ? <Component2 /> : ""}
+		</div>
+	}
+	})
+		ReactDOM.render(
+		<HW />,
+		document.all.e11
+		)
+	</script>
+	<div id="e12"></div>
+	<script type="text/babel">
+		var HW1 = React.createClass({
+		getInitialState(){
+		return {
+		v:"333"
+	}
+	},
+		shouldComponentUpdate(np,ns){
+		return ns.v != "999";
+	},
+		handleChange(event){
+		this.setState({v:event.target.value});
+	},
+		render(){
+		return <div>
+			<input type="text" value={this.state.v} onChange={this.handleChange} />
+			<p>{this.state.v}</p>
+		</div>
+	}
+	})
+		ReactDOM.render(
+		<HW1 />,
+		document.all.e12
+		)
+	</script>
+</body>
+</html>

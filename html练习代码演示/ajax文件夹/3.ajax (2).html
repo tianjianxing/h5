@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var fruits = {
+			sweet:[
+			{
+				watermelon:"big"
+			},
+			{
+				pear:"small"
+			},
+			{
+				peach:"soft"
+			}
+		],
+		sour:[
+			{
+				orange:"cheap"
+			},
+			{
+				lemon:"hard"
+			},
+			{
+				cherry:{
+					volume:"small",
+					count:"many"
+				}
+			}
+		]
+	}
+
+		var hards = fruits.sour[1].lemon;
+		console.log(hards);
+		var more = fruits.sour[2].cherry.count;
+		console.log(more);
+	</script>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				var res = xhr.responseText;
+				console.log(res);
+				var resObj = eval('('+res+')');
+				console.log(resObj);
+				var cities = resObj.province[0].cities;
+				console.log(cities);
+				for(var i in cities){
+					console.log(cities[i].city+":"+cities[i].scenery);
+				}
+
+				
+			}
+		}
+		xhr.open("get","1.json");
+		xhr.send(null);
+	</script>
+</body>
+</html>

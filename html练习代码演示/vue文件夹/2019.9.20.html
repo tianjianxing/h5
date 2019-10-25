@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<style>
+		.p{
+			color: red;
+		}
+	</style>
+	<p class="p">将字符串中的大写字母转换成小写字母，并将用户输入的字符作为各词之间的间隔符</p>
+	<div id="app">
+		输入分隔符：
+		<input type="text" v-model="s">
+		<br>转换前字符串：
+		<p>{{mess}}</p>
+		转换后字符串：
+		<p>{{mess | capitalize(s)}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				mess:"thisIsMyFilter!",
+				s:""
+			},
+			filters:{
+				capitalize:function(v,s){
+					// var arr = [];
+					// var str = v.toLowerCase();
+					// for(var i = 0;i < v.length;i++){
+					// 	if(str[i] != v[i]){
+					// 		arr.push(i);
+					// 	}
+					// }
+					// for(var j = arr.length-1;j >=0;j--){
+					// 	var tstr = s+str[arr[j]];
+					// 	str = str.slice(0,arr[j]) + tstr + str.slice(arr[j]+1);
+					// 	}
+					// 	return str;
+
+
+
+
+
+
+
+
+						// var arr = [];
+						// for(var i = 0;i < v.length;i++){
+						// 	if(v.charCodeAt(i)>64 && v.charCodeAt(i)<91){
+						// 		arr.push(i);
+						// 	}
+						// }
+
+
+						var arr = [];
+						for(var i=0;i<v.length;i++){
+							if(v[i]>="A" && v[i]<="Z"){
+								arr.push(i);
+							}
+						}
+						for(var j = arr.length-1;j>=0;j--){
+							var tstr = s + v[arr[j]].toLowerCase();
+							v=v.slice(0,arr[j])+tstr+v.slice(arr[j]+1);
+						}
+						return v;
+
+
+
+
+
+
+
+
+						// return (value.slice(0,4)+s+value.slice(4,6)+s+value.slice(6,8)+s+value.slice(8)).toLowerCase();
+				}
+			}
+		})
+	</script>
+	<br>
+	<style>
+		.box{
+			background-color: #a5c5d5;
+			width: 450px;
+			height: 650px;
+			border-radius: 10px;
+			overflow: auto;
+		}
+		h2,h4{
+			width: 120px;
+			margin: auto;
+			text-align: center;
+		}
+		.ipt{
+			display: block;
+			margin: auto;
+			width: 400px;
+			height: 40px;
+			border-radius: 10px;
+			border: none;
+		}
+		ul{
+			list-style-type: none;
+		}
+		.li1{
+			padding-left: 0px;
+			border-bottom: 1px dashed #81807f;
+			color: #81807f;
+			font-weight: bold;
+			text-align: center;
+			margin-right: 40px;
+			padding: 0px 0;
+		}
+		li{
+			display: flex;
+			height: 40px;
+			justify-content: space-around;
+			margin-right: 40px;
+			/*border: 1px solid red;*/
+			border-bottom: 1px dashed #81807f;
+		}
+		li [type="checkbox"]{
+			width: 20px;
+			height: 20px;
+			margin-top: 10px;
+		}
+		li [type="button"]{
+			border: none;
+			border-radius: 3px;
+			padding: 10px 8px;
+			color: white;
+			background-color: #fda400;
+		}
+		li b{
+			display: inline-block;
+			/*border: 1px solid red;*/
+			margin-top: 10px;
+			width: 250px;
+			height: 20px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.del{
+			text-decoration: line-through;
+			color: red;
+		}
+	</style>
+	<div class="box" id="app1">
+		<h2>我的备忘录</h2>
+		<h4>共<span>{{arr.length}}</span>项备忘信息，已完成{{count}}</h4>
+		<br>
+		<input
+			class="ipt" 
+			type="text" 
+			placeholder="请输入备忘信息" 
+			v-model="mess" 
+			@keyup.enter="fun">
+		<br>
+		<ul>
+			<li v-if="arr.length == 0">暂时没有备忘信息</li>
+			<li v-for="(m,n) in arr" v-bind:title="m.text">
+				<input type="checkbox" v-model="m.finished">
+				<b :class="{'del':m.finished}">{{n+1}}.{{m.text}}</b>
+				<input type="button" value="删 除" @click="arr.splice(n,1)">
+			</li>
+		</ul>
+	</div>
+	<script>
+		// var count = 0;
+		new Vue({
+			el:"#app1",
+			data:{
+				mess:"",
+				arr:[]
+			},
+			methods:{
+				fun:function(){
+					if(this.mess){
+						this.arr.push({text:this.mess,finished:false});
+						this.mess="";
+					}
+				}
+			},
+			computed:{
+				count:function(){
+					return this.arr.filter(v=>v.finished).length;
+				}
+			}
+		})
+	</script>
+</body>
+</html>

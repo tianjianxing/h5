@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p>这是一些什么道理</p>
+	</div>
+	<script id="tp1" type="x-template">
+		<div class="box">
+			<b>bbbbb</b>
+			<s>sssss</s>
+		</div>
+	</script>
+	<script>
+		var vm = new Vue({
+			el:"#app",
+			// template:"#tp1"
+			template:"<div class='box'>465454684</div>"
+		});
+	</script>
+	<div id="app1"></div>
+	<script>
+		var data1 = {a:1,b:2};
+		var vm1 = new Vue({
+			el:"#app1",
+			data:data1
+		})
+		console.log(vm1.$data === data1);
+		console.log(vm1.$data.a === data1.a);
+		vm1.$data.a = 5;
+		console.log(data1.a);
+	</script>
+	<div id="app2">{{ a }}</div>
+	<script>
+		var vm2 = new Vue({
+			el:"#app2",
+			data:{
+				a:1,
+				b:2
+			}
+		})
+	</script>
+	<div id="app3">
+		<input type="button" value="按钮" v-on:click="fun1">
+	</div>
+	<script>
+		var vm3 = new Vue({
+			el:"#app3",
+			data:{
+				a:1,
+				b:2
+			},
+			methods:{
+				fun1:function(){
+					console.log(this.a + this.b);
+				}
+			}
+		})
+	</script>
+	<style>
+		.aaa{
+			background-color: green;
+		}
+	</style>
+	<div id="app4">
+		<my-tag t1="第一个标题" abc="001"></my-tag>
+		<my-tag t1="第二个标题" abc="002"></my-tag>
+		<my-tag t1="第三个标题"></my-tag>
+	</div>
+	<script>
+		var myTag = Vue.component('my-tag',{
+			props:['t1','abc'],
+			data:function(){
+				return {
+					a:"yyyyyy",
+					b:2
+				}
+			},
+			template:"<h2 class='aaa'>{{t1}}<b>{{abc}}</b>{{a}}</h2>"
+		})
+		new Vue({
+			el:"#app4"
+		})
+	</script>
+</body>
+</html>

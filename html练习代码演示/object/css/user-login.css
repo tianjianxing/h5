@@ -1,0 +1,258 @@
+section .section-contain{
+	width: 1000px;
+	background-color: #fff;
+	margin: auto;
+	margin: 40px auto 0px;
+    padding: 1px 0px 60px;
+}
+section .section-contain h3{
+	height: 43px;
+    line-height: 43px;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin: 40px auto;
+}
+section .section-contain .login-fun{
+	margin: auto;
+	width: 500px;
+	display: flex;
+	justify-content: space-around;
+}
+section .section-contain .login-fun a span{
+	display: block;
+	width: 108px;
+	height: 108px;
+	background: url(https://s1.c.meishij.net/web1/images/nl_dsficon1.png) no-repeat;
+}
+section .section-contain .login-fun a:nth-child(1) span:hover{
+	background-position:  0px -108px;
+}
+section .section-contain .login-fun a:nth-child(2) span{
+	background-position:  -108px 0px;
+}
+section .section-contain .login-fun a:nth-child(3) span{
+	background-position:  -216px 0px;
+}
+section .section-contain .login-fun a:nth-child(2) span:hover{
+	background-position:  -108px -108px;
+}
+section .section-contain .login-fun a:nth-child(3) span:hover{
+	background-position:  -216px -108px;
+}
+section .section-contain>a{
+	font-size: 15px;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 66px;
+    height: 66px;
+    color: #333;
+}
+section .section-contain>a:hover{
+	color: red;
+	cursor: pointer;
+}
+section .section-contain .others-login-fun{
+	width: 60%;
+    text-align: center;
+    height: 0px;
+    margin: 0px auto;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 1s;
+}
+section .section-contain .others-login-fun a{
+	display: inline-block;
+    vertical-align: top;
+    height: 16px;
+    margin-top: 42px;
+    line-height: 16px;
+    padding: 0px 20px;
+    color: #333;
+    background: url(https://s1.c.meishij.net/web1/images/nl_moredsf_icons.png) no-repeat;
+}
+section .section-contain .others-login-fun a:nth-child(2){
+	background-position: 0 -16px;
+}
+section .section-contain .others-login-fun a:nth-child(3){
+	background-position: 0 -32px;
+}
+section .section-contain .others-login-fun a:nth-child(4){
+	background-position: 0 -48px;
+}
+section .section-contain .OR-image{
+	width: 100%;
+	height: 69px;
+	background: url(https://s1.c.meishij.net/web1/images/nl_or.png) no-repeat center;
+}
+section .section-contain .phone-email-login,
+section .section-contain .phone-email-enroll{
+	width: 320px;
+	height: 207px;
+	margin: auto;
+	transition: all 500ms;
+}
+section .section-contain .phone-email-login>input,
+section .section-contain .phone-email-enroll>input{
+	width: 100%;
+	height: 46px;
+	padding: 11px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+}
+section .section-contain .phone-email-login>div,
+section .section-contain .phone-enroll .loginitem,
+section .section-contain .phone-email-enroll>div{
+	width: 320px;
+	height: 33px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 14px;
+}
+section .section-contain .phone-email-login>div span label,
+section .section-contain .phone-email-enroll>div span label{
+	color: #666;
+	font-size: 13px;
+	font-weight: normal;
+}
+section .section-contain .phone-email-login .loginitem,
+section .section-contain .phone-enroll .loginitem,
+section .section-contain .phone-email-enroll .loginitem{
+	justify-content: center;
+	align-items: center;
+}
+section .section-contain .phone-email-login .loginitem input,
+section .section-contain .phone-email-enroll .loginitem input{
+	width: 80px;
+	height: 42px;
+	padding: 0 24px;
+	background-color: #ec5541;
+	border: none;
+	border-radius: 4px;
+	color: white;
+}
+section .section-contain .phone-email-login .loginitem input:hover,
+section .section-contain .phone-email-enroll .loginitem input:hover{
+	background-color: #db432e;
+}
+section .section-contain .enroll-fun{
+	width: 100%;
+	height: 32px;
+	margin: 32px auto 0;
+	text-align: center;
+}
+section .section-contain .enroll-fun a{
+	display: inline-block;
+	width: 72px;
+	height: 42px;
+	font-size: 18px;
+	color: #333;
+	font-weight: bold;
+}
+section .section-contain .enroll-fun a{
+	text-decoration: none;
+}
+section .section-contain .enroll-fun a:last-child{
+	font-weight: normal; 	
+	color: #999;
+}
+section .section-contain .enroll-fun a:hover{
+	cursor: pointer;
+}
+section .section-contain .phone-enroll{
+	width: 320px;
+	margin: auto;
+	position: relative;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 500ms;
+}
+section .section-contain .phone-enroll>input:nth-child(1),.phone-enroll .four-input{
+	width: 100%;
+	height: 46px;
+	padding: 11px;
+	border-radius: 4px;
+	margin: 10px 0;
+	border: 1px solid #ddd;
+}
+section .section-contain .phone-enroll .two-input{
+	width: 174px;
+	height: 46px;
+	padding: 11px;
+}
+section .section-contain .phone-enroll .san-a{
+	width: 136px;
+	height: 45px;
+	display: inline-block;
+	line-height: 45px;
+	border-radius: 4px;
+	text-align: center;
+	background-color: #ddd;
+	color: #999;
+}
+section .section-contain .phone-enroll span{
+	margin-bottom: 10px;
+}
+section .section-contain .phone-enroll span label{
+	color:#666;
+	font-weight: normal;
+}
+section .section-contain .phone-enroll span a{
+	color: #ec5541;
+	font-size: 13px;
+}
+section .section-contain .phone-enroll .enroll-btn{
+	width: 80px;
+	height: 42px;
+	padding: 0 24px;
+	background-color: #ec5541;
+	border: none;
+	border-radius: 4px;
+	color: white;
+}
+section .section-contain .phone-enroll .enroll-btn:hover{
+	background-color: #db432e;
+}
+section .section-contain .last-form{
+	position: absolute;
+	top: 74px;
+	right: -325px;
+	transition: all 500ms;
+}
+section .section-contain .enroll-box{
+	width: 320px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+section .section-contain .all-box{
+	width: 602px;
+	height: 220px;
+	margin: auto;
+	overflow: hidden;
+	transition: all 500ms;
+}
+section .section-contain form{
+	background-color: white;
+}
+section .section-contain .error1{
+	width: 320px;
+	height: 44px;
+    line-height: 44px;
+    border: 1px solid #c90000;
+    color: #fff;
+    background: #c90000;
+    text-align: center;
+    font-size: 14px;
+    margin:0 auto 20px;
+}
+#userName-error{
+	width: 100%;
+	color: red;
+}

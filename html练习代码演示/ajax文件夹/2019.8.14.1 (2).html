@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		ol{
+			position: relative;
+			display: flex;
+		}
+		li{
+			margin-left: 0;
+			border:1px solid black;
+			width: 200px;
+			height: 200px;
+			list-style: none;
+			padding-left: 0;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="请输入城市名" class="i1">
+	<input type="button" value="点击获取" class="btn">
+	<div class="box1"></div>
+   	<ol></ol>
+	<script>
+		// var xhr = new XMLHttpRequest();
+		// var box1 = document.querySelector(".box1");
+		// var ol = document.querySelector("ol");
+		// var btn = document.querySelector("[type=button]");
+		// btn.onclick=function(){
+		// 	var value1 = document.querySelector("[type=text]");
+		// 	xhr.onreadystatechange = function(){
+		// 	if(xhr.readyState == 4){
+		// 		var res = xhr.responseText;
+		// 		console.log(res);
+		// 		var resObj = JSON.parse(res);
+		// 		console.log(resObj);
+		// 		var list = resObj.data.forecast;
+		// 		box1.innerHTML = '<p>当前城市：'+resObj.data.city+'，当前温度：'+resObj.data.wendu+'</p>\
+		// 		<p>温馨提示：'+resObj.data.ganmao+'</p>\
+		// 		<h4>建行预测未来五天天气预报：</h4>'
+		// 		for(var i in list){
+		// 			var li = document.createElement('li');
+		// 			li.innerHTML =
+		// 			 '<li>'+resObj.data.forecast[i].date+'<p>天气：'+resObj.data.forecast[i].type+'</p>\
+		// 			  <p>最高气温：'+resObj.data.forecast[i].high+'</p>\
+		// 			  <p>最低气温：'+resObj.data.forecast[i].low+'</p>\
+		// 			  <p>'+resObj.data.forecast[i].fengxiang+resObj.data.forecast[i].fengli+'</p></li>';
+		// 			ol.appendChild(li);
+		// 		}
+		// 	}	
+		// }
+		// xhr.open("get","https://www.apiopen.top/weatherApi?city="+value1.value);
+		// 	xhr.send(null);
+		// 	value1.value="";
+        // }
+        $('.btn').click(function(){
+        	$.ajax({
+			url:'https://www.apiopen.top/weatherApi',
+			type:'get',
+			data:{
+				'city':$('.i1').val()
+			},
+			success:function(res){
+				console.log(res);
+                $(".i1").val("");
+				var list = res.data.forecast;
+        	$('.box1').html('<p>当前城市：'+res.data.city+'，当前温度：'+res.data.wendu+'℃</p>\
+				<p>温馨提示：'+res.data.ganmao+'</p>\
+				<h4>建行预测未来五天天气预报：</h4>')
+        	//下式中的res.data.forecast可以用list
+        	for(var i in list){
+        		var left = res.data.forecast[i].fengli.lastIndexOf("[")+1;
+        	    var right = res.data.forecast[i].fengli.indexOf("]");
+        		$('ol').append('<li>'+res.data.forecast[i].date+'<p>天气：'+res.data.forecast[i].type+'</p>\
+					  <p>最高气温：'+res.data.forecast[i].high+'</p>\
+					  <p>最低气温：'+res.data.forecast[i].low+'</p>\
+					  <p>'+res.data.forecast[i].fengxiang+res.data.forecast[i].fengli.slice(left,right)+'</p></li>')
+
+        	}
+
+        }
+	})
+})
+
+   
+		
+	
+		
+		
+	</script>
+</body>
+</html>

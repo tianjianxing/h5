@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<a>
+	<b>bb</b>
+	<c>ccc</c>
+	<d>dddd</d>
+	<e>
+		<f>fffff</f>
+	</e>
+</a>

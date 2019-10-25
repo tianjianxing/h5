@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">999</div>
+	qwer
+	<b>aaa</b>
+	<!-- 注释 -->
+	<script>
+		var b = document.getElementById("box");
+		console.log(b);
+		console.log(b.nodeType);
+		console.log(b.nodeName);
+		console.log(b.nodeValue);
+		console.log(b.attributes[0].nodeName);
+		console.log(b.attributes[0].nodeType);
+		console.log(b.attributes[0].nodeValue);
+		console.log(b.childNodes[0].nodeName);
+		console.log(b.childNodes[0].nodeType);
+
+		console.log(b.childNodes[0].nodeValue);
+
+		var bb = document.querySelector("b");
+		console.log(bb.nextSibling.nextSibling.nodeName);
+		console.log(bb.nextSibling.nextSibling.nodeType);
+		console.log(bb.nextSibling.nextSibling.nodeValue);
+		
+		console.log(document.nodeName);
+		console.log(document.nodeType);
+		console.log(document.nodeValue);
+	</script>
+	<div id="box1">
+		<p class="p1">
+			<s>sss</s>
+			sf666
+			<a href="">aaa</a>
+		</p>
+		只是文本
+		<div class="box2">
+			<u>uuu</u>
+		</div>
+		<!-- 这是注释 -->
+	</div>
+	<script>
+		var cc = document.getElementById("box1");
+		console.log(cc);
+		console.log(cc.parentNode);
+		console.log(cc.childNodes[2]);
+		console.log(cc.firstChild.nextSibling.childNodes);
+		console.log(cc.lastChild.previousSibling.nodeValue);
+	</script>
+
+
+	<div id="d1">
+		<p id="p1">
+			<a href="">aaaa</a>
+			<b>bbbbb</b>
+			<i>iiiiiii</i>
+		</p>
+	</div>
+	<script>
+		var pp = document.getElementById("p1");
+		console.log(pp);
+		console.log(pp.parentElement);
+		console.log(pp.children);
+		console.log(pp.firstElementChild.nextElementSibling);
+		console.log(pp.lastElementChild.previousElementSibling);
+	</script>
+	<div id="d2">
+		<p class="p2">
+			<a href=""></a>
+			<b class="b1" name="n1"></b>
+		</p>
+		<p id="p3">
+			<u class="u1" name="n1"></u>
+		</p>
+		<div class="boxd3">
+			<b></b>
+		</div>
+	</div>
+	<script>
+		var pq = document.getElementById("d2");
+        console.log(pq);
+        var ww = document.getElementsByTagName("p");
+        console.log(ww);
+        var ww1 = d2.getElementsByTagName("p");
+        console.log(ww1);
+        var ww2 = document.getElementsByName("n1");
+        console.log(ww2);
+
+        var ww3 = document.querySelector(".p2 b");
+        console.log(ww3);
+
+        var ww4 = document.querySelectorAll("#d2 b");
+        console.log(ww4);
+        var all = document.all;
+        console.log(all);
+        var ww5 = document.all["d2"];
+        //var ww5 = document.all.d2;
+        console.log(ww5);
+        var ww6 = document.all[2];
+        console.log(ww6);
+
+        console.log(document.head);
+        console.log(document.title);
+        document.title = "这是一个网页";
+        console.log(document.body);
+	</script>
+</body>
+</html>

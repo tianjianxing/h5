@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		.ss1{
+			border:2px solid green;
+		}
+		.box{
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="aaa">aaaaa</div>
+	<input type="button" value="切换class值" class="btn1">
+	<script>
+		$("#aaa").attr("style","color:red;background-color:yellow");
+		$("#aaa").addClass("ss1");
+		$("#aaa").removeClass("box");
+		$(".btn1").click(function(){
+			$("#aaa").toggleClass("box");
+			console.log($("#aaa").hasClass("box"));
+		})
+        console.log($("#aaa").css("border"));
+        $("#aaa").css("font-size","40px;");
+	</script>
+    <div id="bbb">bbbbbbbb</div>
+    <script>
+    	$("#bbb").css({
+    		"color":"blue",
+    		"border":"1px dashed orange",
+    		"font-size":"30px",
+    		"width":"300px"
+    	});
+    </script>
+    <div id="ccc">
+    	<p>ppppp
+    		<u>uuu</u>
+    	</p>
+    	<b>bbbbbbb</b>
+    	<s>sssss</s>
+    	<u>uuuuuu</u>
+    </div>
+    <script>
+    	console.log($("#ccc").children());
+    	console.log($("#ccc p").next("b"));
+    	console.log($("#ccc b").siblings());
+    	console.log($("#ccc").find("u"));
+    	var ccc = $("#ccc");
+    	ccc.css("border","1px dashed black");
+    	ccc.find("u").css("color","pink");
+    	console.log(ccc.parent());
+    </script>
+    <div id="ddd">
+    	<div class="box1">
+    		<p>afasad
+    			<u>afasgsad</u>
+    		</p>
+    		<div class="box1">
+    			<p>
+    				<s>adsafa</s>
+    			</p>
+    		</div>
+    	</div>
+    </div>
+    <script>
+    	var qq = $("#ddd s");
+    	console.log(qq.parent().parent());
+    	console.log(qq.closest(".box1"));
+    </script>
+    <div class="box2">
+    	<s>sss</s>
+    </div>
+    <script>
+    	var p1 = $("<p class='pp'>ppppp<b>bbbb</b></p>");
+    	console.log(p1);
+    	$(".box2").append(p1);
+    	var p2 = $("<p>p2222</>");
+    	$(".box2").prepend(p2);
+    	console.log($(".box2").children());
+
+    	var p3 = $("<p>p333</p>");
+    	$(".box2 s").after(p3);
+    	$(".box2").after(p3);
+    	$(".box2 s").after(p3).children();
+         
+    	$(".box2 s").remove();
+    </script>
+    <div class="box3">001</div>
+    <div class="box3 box33">002</div>
+    <div class="box33">003</div>
+    <div class="box3">004</div>
+    <script>
+    	$(".box3").remove(".box33");
+    </script>
+    <div class="box4">
+    	<p>pppp
+    		<i>iiiii</i>
+    	</p>
+    	<u>uuuu</u>
+    	<a href="">aaaa</a>
+    </div>
+    <script>
+    	// $(".box4").empty();
+    	// $(".box4").html("");
+    </script>
+    <div class="box5">
+    	<u>u1</u>
+    	<s>s1</s>
+    	<i>i1</i>
+    	<u>u2</u>
+    	<s>s1</s>
+    </div>
+    <script>
+    	var b1 =$("<b>bbbbbbbb</b>");
+    	$(".box5 u").replaceWith(b1);
+    	b1.replaceAll($(".box5 u"));
+    </script>
+    <div class="box6">
+    	<p>ppppppp</p>
+    </div>
+    <script>
+    	var bb = $("<i>iiiiii</i>");
+    	$(".box6").append(bb);
+    	$(".box6").prepend(bb.clone());
+    </script>
+    <div class="box7">
+    	<input type="button" value="按钮" class="box8">
+    </div>
+    <script>
+    	$(".box7 .box8").click(function(){
+    		console.log("qqqqqq");
+    	})
+    	$(".box7").append($(".box7 .box8").clone(true));
+    	var q = 1111;
+    	$(".box7").append("<p>pppp"+q+"</p>");
+    </script>
+    <div class="box9"></div>
+    <div class="box10"></div>
+    <script>
+    	$(".box9,.box10").append("<b>bbbb</b>");
+    </script>
+    
+</body>
+</html>

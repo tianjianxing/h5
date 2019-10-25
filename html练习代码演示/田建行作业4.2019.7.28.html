@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>幸运大抽奖</h1>
+	<h2>本次幸运儿是：<input type="text" value="孙涛" id="h222"></h2>
+	<input type="button" value = "开始" onclick="start()" id="btn1">
+	<input type="button" value = "结束" onclick="over()" id="btn2">
+	<script>
+		var btn1 = document.all.btn1;
+		var btn2 = document.all.btn2;
+		var h222 = document.all.h222;
+		var arr = ["孙涛","张创家","范海峰","王东旭","刘雄伟","范志斌","张睿","巩仕正","张卓","田建行"]
+		var start1;
+        function start(){
+        	clearInterval(start1);
+        	// var i = 0;
+        		   start1 = setInterval(function(){
+        		   	// h222.value = arr[i];
+        		   	var index = parseInt(Math.random()*arr.length);
+        		   	h222.value = arr[index];
+        		   // 	i++
+        		   // if(i==arr.length){
+        		   // 	i = 0;
+        		   // }
+        	},100)
+        }
+        function over(){
+        	clearInterval(start1);
+        } 
+	</script>
+</body>
+</html>

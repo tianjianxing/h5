@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<!-- <style>
+		ul li{
+			border:1px solid blue;
+			list-style: none;
+			line-height: 30px;
+			font-size: 20px;
+			font-weight: bolder;
+		}
+		table{
+			border:1px solid red;
+			width:100%;
+			display: none;
+		}
+		ul :first-child table{
+			display: block;
+		}
+	</style> -->
+
+	<style>
+		*{
+			margin:0;
+		}
+		.box{
+			border:1px solid blue;
+		}
+		.box1 h4{
+			border:1px solid black;
+		}
+		.box2{
+			border:1px solid red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">
+			<h4>标题1</h4>
+			<div class="box2">
+				0000001<br>
+				0000001<br>
+				0000001<br>
+				0000001<br>
+				0000001
+			</div>
+		</div>
+		<div class="box1">
+			<h4>标题2</h4>
+			<div class="box2">
+				0000002<br>
+				0000002<br>
+				0000002<br>
+				0000002<br>
+				0000002
+			</div>
+		</div>
+		<div class="box1">
+			<h4>标题3</h4>
+			<div class="box2">
+				0000003<br>
+				0000003<br>
+				0000003<br>
+				0000003<br>
+				0000003
+			</div>
+		</div>
+		<div class="box1">
+			<h4>标题4</h4>
+			<div class="box2">
+				0000004<br>
+				0000004<br>
+				0000004<br>
+				0000004<br>
+				0000004
+			</div>
+		</div>
+		<div class="box1">
+			<h4>标题5</h4>
+			<div class="box2">
+				0000005<br>
+				0000005<br>
+				0000005<br>
+				0000005<br>
+				0000005
+			</div>
+		</div>
+	</div>
+	<script>
+		$(".box2:first").show();
+		$("h4").click(function(){
+			$(".box2").stop().slideUp(1000);
+			$(this).next().stop().slideDown(1000);
+
+		})
+	</script>
+
+
+
+	<!-- <ul>
+		<li class = li1>
+			标题1
+			<table>
+				<tr>
+					<td>0000001</td>
+				</tr>
+				<tr>
+					<td>0000001</td>
+				</tr>
+				<tr>
+					<td>0000001</td>
+				</tr>
+				<tr>
+					<td>0000001</td>
+				</tr>
+			</table>
+		</li>
+		<li class = li2>
+			标题2
+			<table>
+				<tr>
+					<td>0000002</td>
+				</tr>
+				<tr>
+					<td>0000002</td>
+				</tr>
+				<tr>
+					<td>0000002</td>
+				</tr>
+				<tr>
+					<td>0000002</td>
+				</tr>
+			</table>
+		</li>
+		<li class = li3>
+			标题3
+			<table>
+				<tr>
+					<td>0000003</td>
+				</tr>
+				<tr>
+					<td>0000003</td>
+				</tr>
+				<tr>
+					<td>0000003</td>
+				</tr>
+				<tr>
+					<td>0000003</td>
+				</tr>
+			</table>
+		</li>
+		<li class = li4>
+			标题4
+			<table>
+				<tr>
+					<td>0000004</td>
+				</tr>
+				<tr>
+					<td>0000004</td>
+				</tr>
+				<tr>
+					<td>0000004</td>
+				</tr>
+				<tr>
+					<td>0000004</td>
+				</tr>
+			</table>
+		</li>
+		<li class = li5>
+			标题5
+			<table>
+				<tr>
+					<td>0000005</td>
+				</tr>
+				<tr>
+					<td>0000005</td>
+				</tr>
+				<tr>
+					<td>0000005</td>
+				</tr>
+				<tr>
+					<td>0000005</td>
+				</tr>
+			</table>
+		</li>
+	</ul>
+	<script>
+		$(".li1").click(function(){
+			$(".li1>table").slideDown(1000);
+			$(".li2>table").slideUp(1000);
+			$(".li3>table").slideUp(1000);
+			$(".li4>table").slideUp(1000);
+			$(".li5>table").slideUp(1000);
+
+		})
+		$(".li2").click(function(){
+			$(".li2>table").slideDown(1000);
+			$(".li1>table").slideUp(1000);
+			$(".li3>table").slideUp(1000);
+			$(".li4>table").slideUp(1000);
+			$(".li5>table").slideUp(1000);
+		})
+		$(".li3").click(function(){
+			$(".li3>table").slideDown(1000);
+			$(".li1>table").slideUp(1000);
+			$(".li2>table").slideUp(1000);
+			$(".li4>table").slideUp(1000);
+			$(".li5>table").slideUp(1000);
+		})
+		$(".li4").click(function(){
+			$(".li4>table").slideDown(1000);
+			$(".li1>table").slideUp(1000);
+			$(".li3>table").slideUp(1000);
+			$(".li2>table").slideUp(1000);
+			$(".li5>table").slideUp(1000);
+		})
+		$(".li5").click(function(){
+			$(".li5>table").slideDown(1000);
+			$(".li1>table").slideUp(1000);
+			$(".li3>table").slideUp(1000);
+			$(".li4>table").slideUp(1000);
+			$(".li2>table").slideUp(1000);
+		})
+	</script> -->
+</body>
+</html>

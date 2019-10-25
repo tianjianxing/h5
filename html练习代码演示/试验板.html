@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href=".css"> -->
+	<script src="jquery-3.4.1.js"></script> 
+	<style>
+	    .t1 :first-child{
+			color: red;
+		}
+		.t2 tr :first-child{
+			color: green;
+		}
+		.t3 tr:first-child{
+			color: orange;
+		}
+	    .t4 td:first-child{
+		color: blue;
+	    }
+	    header{
+	    	height: 500px;
+	    	border:1px solid red;
+	    	background-color: green;
+	    	text-align: center;
+
+	    }
+	    .box{
+	    	width: 200px;
+	    	background-color: white;
+	    	border-radius: 10px;
+	    	background-image: url(team-img_wps图片.png);
+	    	background-repeat: no-repeat;
+	    	padding: 150px 0px;
+	    	background-position: left 40px top 30px; 
+	    	margin-left: 500px;
+	    }
+	    h4{
+	    	text-align: center; 
+	    }
+	    .box p{
+	    	text-align: center;
+	    }
+	    .box a{
+	    	display: inline-block;
+	    	width: 32px;
+	    	height: 32px;
+	    	
+	    	border:1px solid blue;
+	    	background-image: url(social-icons1_wps图片.png);
+	    	background-repeat: no-repeat;
+	    	background-position: center;	
+	    }
+	    .box a:nth-last-child(3){
+	    	background-position: left;
+
+	    }
+	    .box a:last-child{
+	    	background-position: right;
+	    }
+	    .box a:hover{
+	    	background-image: url(social-iconshr_wps图片.png);
+	    }
+	    .box1{
+	    	border:1px solid red;
+	    	width: 100px;
+	    	height: 50px;
+	    	box-shadow: 0px 0px 1px 5px green inset;
+	    }
+	    textarea{
+	    	direction:ltr;
+	    	/*direction: rtl;*/
+	    	text-indent: 10px;
+	    	/*text-align: justify;*/
+	    	/*text-align: right;*/
+	    	/*word-wrap: break-word;*/
+	    	word-wrap: normal;
+	    	background-image: linear-gradient(to top,red,green);
+	    }
+	    .box2{
+	    	border:1px solid red;
+	    	width: 150px;
+	    	height: 50px;
+	    	overflow: hidden;
+	    	text-overflow: ellipsis;
+	    	white-space: nowrap; 
+	    }
+	    .t5{
+	    	width: 200px;
+	    	table-layout: fixed;
+	    	/*border-collapse: collapse;*/
+	    	empty-cells: hide;/*设置了边框合并该属性会被忽略*/
+	    }
+	    .box3{
+	    	width: 100px;
+	    	height: 100px;
+	    	background-color: black;
+	    	opacity: 0.6;
+	    }
+	    .box4{
+	    	width: 150px;
+	    	height: 50px;
+	    	background-color: red;
+
+	    }
+	    .box5{
+	    	width: 150px;
+	    	height: 50px;
+	    	background-color: red;
+	    	opacity:0.5;
+	    }
+	    ol li{
+	    	border:1px solid red;
+	    	/*list-style-type:none;*/
+	    	/*list-style-position: inside;*/
+	    }
+	    .box6{
+	    	width: 100px;
+	    	height: 100px;
+	    	border-radius:50px;
+	    	background-image: radial-gradient(at top 20px left 20px,red,yellow 60%);
+	    }
+	    .box7{
+	    	width: 0;
+	    	height: 0;
+	    	border:50px solid blue;
+	    	border-left-color: transparent;
+	    	border-bottom-color: transparent;
+	    	border-right-color: transparent;
+	    }
+	    .box8{
+	    	width: 200px;
+	    	height: 100px;
+	    	border-radius: 200px/100px;
+	    	background-color: green;
+	    }
+	    .box8:hover{
+	    	cursor: wait;
+	    	/*cursor: help;*/
+	    	/*cursor: move;*/
+	    }
+	    #c1{
+	    	border:2px dashed red;
+	    }
+	    .box9{
+	    	width: 200px;
+	    	height: 200px;
+	    	background-color: red;
+	    	/*position: relative;*/
+	    	overflow: hidden;
+	    }
+	    .box10{
+	    	width: 100px;
+	    	height: 300px;
+	    	background-color: yellow;
+	    	/*position: absolute;
+	    	left: 100px;
+	    	top: 100px;*/
+	    	
+	    }
+
+	</style>
+</head>
+<body>
+	我<sup>64</sup>是一个中国人<sub>china</sub>
+	<h1>中国人</h1>
+	<hgroup>
+		<h2>中国人</h2>
+		<h3>外国人</h3>
+	</hgroup>
+	<hgroup>
+		<h2>中国人</h2>
+		<h3>外国人</h3>
+	</hgroup>
+	<pre>
+		5、预格式化
+	该元素可以保留文档中的格式，可以保留换行，空格等样式
+	pre是一个封闭型标记，块级元素
+	</pre>
+	<b>
+		5、预格式化
+	该元素可以保留文档中的格式，可以保留换行，空格等样式
+	pre是一个封闭型标记，块级元素
+	</b>
+	<br>
+	<a href="#bbb">这里有一些网课的资源</a>
+	<a href="#iii">青年文摘</a>
+    <dl>
+			<dt>这是标题</dt>
+			<dd>这是说明文字</dd>
+	</dl>
+	<form action="">
+		<input type="text" name="文本框" value="123" disabled="">
+		<input type="text" name="文本框1" value="456" checked="">
+		<input type="text" name="文本框2" placeholder="789">
+		<input type="text" name="文本框3" value="123456789" readonly="">
+	</form>
+	<label for="a">用户名：</label>
+	<label for="a">用户名：</label>
+	<input type="text" id="a">
+	<br>
+	<!-- <iframe src="http://www.baidu.com" frameborder="1"></iframe> -->
+	<fieldset>
+		<legend>文本框</legend>
+		<legend>文本框</legend>
+		<input type="text">
+		<input type="text">
+	</fieldset>
+	<table class="t1" border="1px" cellspacing="0">
+		<tr>
+			<td>111</td>
+			<td>111</td>
+			<td>111</td>
+		</tr>
+		<tr>
+			<td>222</td>
+			<td>222</td>
+			<td>222</td>
+		</tr>
+		<tr>
+			<td>333</td>
+			<td>333</td>
+			<td>333</td>
+		</tr>
+	</table>
+	<table class="t2" border="1px" cellspacing="0" bgcolor="yellow">
+		<tr>
+			<td>111</td>
+			<td>111</td>
+			<td>111</td>
+		</tr>
+		<tr>
+			<td>222</td>
+			<td>222</td>
+			<td>222</td>
+		</tr>
+		<tr>
+			<td>333</td>
+			<td>333</td>
+			<td>333</td>
+		</tr>
+	</table>
+	<table class="t3" border="1px" cellspacing="0">
+		<tr>
+			<td>111</td>
+			<td>111</td>
+			<td>111</td>
+		</tr>
+		<tr>
+			<td>222</td>
+			<td>222</td>
+			<td>222</td>
+		</tr>
+		<tr>
+			<td>333</td>
+			<td>333</td>
+			<td>333</td>
+		</tr>
+	</table>
+	<table class="t4" border="1px" cellspacing="0">
+		<tr>
+			<td>111</td>
+			<td>111</td>
+			<td>111</td>
+		</tr>
+		<tr>
+			<td>222</td>
+			<td>222</td>
+			<td>222</td>
+		</tr>
+		<tr>
+			<td>333</td>
+			<td>333</td>
+			<td>333</td>
+		</tr>
+	</table>
+	<table class="t5" border="1px">
+		<tr>
+			<td>123</td>
+			<td>120</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1234564</td>
+			<td></td>
+			<td>000</td>
+		</tr>
+		<tr>
+			<td>111</td>
+			<td></td>
+			<td>123</td>
+			<td></td>
+		</tr>
+	</table>
+	<div class="box1">
+		1234567890
+	</div>
+	<br>
+	<textarea name="" id="" cols="30" rows="10">可以保留换行,可以保留换行,可以保留换行可以保留换行可以保留换行可以保留换行可以保留换行aaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+	</textarea>
+	<div class="box2">
+	行可以保留换行可以保留换行可以保行留换	
+	</div>
+	<br>
+	<div class="box3">
+		<div class="box4"></div>
+		<div class="box5"></div>
+	</div>
+	<ol>
+		<li>111111111111</li>
+		<li>222222222222</li>
+		<li>333333333333</li>
+	</ol>
+	<div class="box6"></div>
+	<div class="box7"></div>
+	<div class="box8"></div>
+
+	<canvas width="150px" height="150px" id="c1"></canvas>
+    <script>
+    	var c1 = document.all.c1;
+    	console.log(c1);
+    	var h1 = c1.getContext("2d");
+    	h1.beginPath();
+    	h1.moveTo(10,10);
+    	h1.lineTo(50,50);
+    	h1.lineTo(100,50);
+    	h1.stroke();
+    	// h1.fill();
+    </script>
+    <div class="box9">
+    	<div class="box10"></div>
+    </div>
+
+
+
+
+
+
+
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<header>
+		<div class="box">
+			<h4>MELISSA DOE</h4>
+			<p>Director</p>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+
+		</div>
+	</header>
+	<a name="bbb">对啊，课堂</a>
+	<b id="iii">这里有一些好文章</b>
+	
+
+	
+	
+</body>
+</html>

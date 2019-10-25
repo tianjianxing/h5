@@ -1,0 +1,55 @@
+p{
+	color:red;
+}
+b{
+	color: green;
+}
+s{
+	color: yellow;
+}
+u{
+	color: brown;
+}
+$nav: #131;
+nav{
+	color: $nav;
+	$width: 100px;
+	width: $width;
+}
+div{
+	color: red;
+}
+#content{
+	div{
+		h1{
+			color: red;
+		}
+		p{
+			color: green;
+		}
+		u{
+			color: yellow;
+		}
+	}
+}
+@mixin box{
+	border-color: red;
+	border-radius: 10px;
+}
+.b{
+	background-color: green;
+	@include box;
+}
+p{
+	@if 1+2==3{border-radius: 10px;}
+	@if 2>3{border-radius: 20px;}
+	@if null{border-radius: 30px;}
+}
+@for $i from 1 through 4{
+	.ss-#{$i}{width: 2px*$i;}
+}
+@for $i from 1 to 10{
+	.img#{$i}{
+		background-image: url(./images/img#{$i}.jpg);
+	}
+}

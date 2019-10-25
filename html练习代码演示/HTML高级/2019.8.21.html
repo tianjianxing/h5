@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		div{
+			border:1px solid red;
+		}
+		.box img{
+			width: 150px;
+		}
+		.box1 img{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"><img src="recycle.png"></div>
+	<div class="box1">
+		<img src="files.png"  draggable="true">
+	</div>
+	<div class="box1">
+		<img src="files.png"  draggable="true">
+	</div>
+	<div class="box1">
+		<img src="files.png"  draggable="true">
+	</div>
+	<div class="box1">
+		<img src="files.png"  draggable="true">
+	</div>
+	<!-- <div draggable="true">888</div> -->
+	<script>
+		// var x,
+		// 	y;
+		// $(".box1 img").on("dragstart",function(e){
+		// 	x = e.offsetX;
+		// 	y = e.offsetY;
+		// }).on("drag dragend",function(e){
+		// 	var xx = e.clientX;
+		// 	    yy = e.clientY;
+		// 	$(this).css({
+		// 		"left":xx - x + "px",
+		// 		"top":yy - y + "px"
+		// 	})
+		// 	var that = this;
+		// })
+		var that
+		$(".box1").on("dragstart",function(){
+			that = $(this);
+		}).on("dragend",function(){
+			that = null;
+		})
+		//如果不加dragend这一步，添加类似888这样的，当拖动一下文件，然后再拖动888到回收处依然会触发文件的消失，因为不加end，当开始拖动时，会触发后续的代码。找个类似的操作会实现同样的删除文件的效果。
+		$(".box").on("dragover",function(e){
+			e.preventDefault();
+		}).on("drop",function(){
+			$(that).remove();
+		    })
+
+		
+	</script>
+</body>
+</html>

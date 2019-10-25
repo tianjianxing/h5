@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+		var arr2 = "0a4C";
+	    do{
+	    	var code = prompt("请输入验证码：");
+	    }while(arr2.toLowerCase()!=code.toLowerCase());
+	    console.log("成功");
+	</script> -->
+	<!-- <script>
+		var email = prompt("请输入邮箱：");
+		console.log(email.split("@",2));
+	</script> -->
+	<!-- <script>
+		var num = prompt("请输入身份证号：");
+        console.log(num.slice(6,14));
+        if(num[16]%2==1){
+        	console.log("男");
+        }else{
+        	console.log("女");
+        }
+	</script> -->
+	<script>
+		var arr1 = "abcacabdeabf";
+		while(arr1.search("ab")!=-1){
+			arr1=arr1.replace("ab","AB");
+		}
+        console.log(arr1);
+        var arr9 = "abcacabdeabf";
+        do{
+        	var n = arr9;
+        	arr9=arr9.replace("ab","AB");
+        }while(n!=arr9)
+        console.log(arr9);
+	</script>
+	<script>
+		// console.log(Math.floor(Math.random()*11)-6);
+		var arr = ["张三","李四","王二","麻子"];
+		console.log("随机点名："+arr[Math.floor(Math.random()*(arr.length))]);
+	</script>
+	<script>
+		var time = new Date();
+		// console.log(time.getTime());
+		var time1 = new Date(2019,6,16,18,0,0);
+		// console.log(time1.getTime());
+		var intervaltime = time1.getTime() - time.getTime();
+		console.log("距离下课时间还有："+Math.floor(intervaltime/1000/60/60) + " 时 " + Math.floor(intervaltime/1000/60%60) + " 分 "+ Math.floor(intervaltime/1000%60) + " 秒");
+	</script>
+</body>
+</html>

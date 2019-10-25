@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	ssssssss
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				console.log(xhr.responseText);
+				var par = new DOMParser();
+				xmlDOM = par.parseFromString(xhr.responseText,"application/xml");
+				console.log(xmlDOM);
+				var bg = xmlDOM.getElementsByTagName("c")[0];
+				console.log(bg);
+				console.log(bg.textContent);
+
+
+				var xmlDOM1 = xhr.responseXML;
+				console.log(xmlDOM1);
+			}
+		}
+		xhr.open("get","1.xml");
+		xhr.send(null);
+	</script>
+</body>
+</html>

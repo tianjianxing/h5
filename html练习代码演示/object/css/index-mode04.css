@@ -1,0 +1,53 @@
+.section-contain .middle p{
+	height: 120px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 120px;
+}
+.section-contain .middle .div1{
+	width: 993px;
+	height: 300px;
+	background-color: #ffffff;
+	margin: auto;
+}
+.section-contain .middle .div2{
+	position: relative;
+}
+.section-contain .middle .div2 img{
+	display: block;
+	margin: auto;
+}
+.section-contain .middle .div2 .img2{
+	position: absolute;
+	top: 70px;
+	left: 815px;
+}
+.section-contain .middle .div1 .img1{
+	width: 72px;
+}
+.section-contain .middle .div1 div a{
+	display: inline-block;
+	width: 330px;
+	height: 100px;
+	float: left;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.section-contain .middle .div1 div a img{
+	float: left;
+}
+.section-contain .middle .div1 div a dt,
+.section-contain .middle .div1 div a dd{
+	display: inline-block;
+	margin-left: 10px;
+}
+.section-contain .middle .div1 div a dt{
+	font-size: 18px;
+	color: #333333;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.section-contain .middle .div1 div a dd{
+	color: #999999;
+	margin-left: 10px;
+}

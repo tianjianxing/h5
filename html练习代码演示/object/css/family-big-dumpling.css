@@ -1,0 +1,511 @@
+.index{
+	border-bottom: 5px solid red;
+}
+section{
+	width: 100%;
+	background-color: #fae8c8;
+}
+.section-contain{
+	width: 990px;
+	margin: auto;
+}
+section .section-contain .breadcrumb li:not(:first-child):before{
+	content: ">";
+	color: #222;
+}
+section .section-contain .breadcrumb{
+	background-color: #fae8c8;
+	height: 88px;
+    line-height: 88px;
+    padding: 0px;
+    margin: 0px;
+}
+section .section-contain .breadcrumb a{
+	color: #222;
+	font-size: 18px;
+}
+section .section-contain .breadcrumb a:hover{
+	color: red;
+}
+section .section-contain .big-dumpling{
+	display: flex;
+	background-color: #fff;
+	justify-content: space-between;
+}
+section .section-contain .big-dumpling-img{
+	width: 328px;
+	display: inline-block;
+}
+section .section-contain .big-dumpling-img img{
+	width: 328px;
+}
+section .section-contain .big-dumpling-fun{
+	position: relative;
+	width: 650px;
+	height: 440px;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name{
+	height: 160px;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name a:first-child{
+	color: #333;
+	font-size: 34px;
+	font-weight: bold;
+    padding: 28px 0px;
+    display: inline-block;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name .Qr-code{
+	display: inline-block;
+    height: 52px;
+    width: 52px;
+    background: url(../image/erweima_32.gif) 0px 0px no-repeat;
+    margin-left: 10px;
+    z-index: 100;
+    position: absolute;
+    top: 27px;
+    left: 270px;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name .enjoy{
+	width: 230px;
+	display: flex;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name .enjoy a{
+	display: inline-block;
+	background: #ff3232;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    height: 48px;
+    padding: 0px 14px;
+    border: 1px solid #e90808;
+    border-right: 0px;
+    line-height: 48px;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name .enjoy a:hover{
+	background: #f00;
+	text-decoration: none;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name .enjoy .enjoy-to{
+    height: 48px;
+    width: 167px;
+    padding-left: 10px;
+    text-align: left;
+    line-height: 48px;
+    color: #999;
+    font-weight: bold;
+    border: 1px solid #999;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name .puiet-spirit{
+    height: 34px;
+    width: 540px;
+}
+section .section-contain .big-dumpling-fun .big-dumpling-name .puiet-spirit a{
+	display: inline-block;
+    background: #60a531;
+    border: 1px solid #46811d;
+    height: 32px;
+    padding: 0px 8px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 14px;
+}
+section .section-contain .big-dumpling-fun .Qr-code-content{
+	width: 410px;
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 99;
+    top: 80px;
+    left: 0px;
+    position: absolute;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+    padding: 20px;
+    display: none;
+}
+section .section-contain .big-dumpling-fun .Qr-code:hover + .Qr-code-content{
+	display: block;
+}
+section .section-contain .big-dumpling-fun .Qr-code-content p{
+	color: #999;
+	font-size: 10px;
+}
+section .section-contain .big-dumpling-fun .Qr-code-content img{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+section .section-contain .big-dumpling-fun ul li:first-child{
+	width: 125px;
+	height: 85px;
+	float: left;
+	padding: 18px 0px 18px 20px;
+}
+section .section-contain .big-dumpling-fun ul li:not(:first-child){
+	width: 262px;
+	height: 85px;
+	float: left;
+	padding: 18px 0px 18px 20px;
+	position: relative;
+}
+section .section-contain .big-dumpling-fun ul{
+	width: 650px;
+	height: 84px;
+}
+section .section-contain .big-dumpling-fun ul li:first-child a{
+	font-size: 24px;
+	color: red;
+	line-height: 30px;
+    width: 100px;
+}
+section .dumpling-icon1,.dumpling-icon2,.dumpling-icon3,.dumpling-icon4{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+section .dumpling-icon1{
+	background: url(../image/cpinfo_icons.gif) no-repeat -3px -36px;
+}
+section .dumpling-icon2{
+	background: url(../image/cpinfo_icons.gif) no-repeat -3px -108px;
+}
+section .dumpling-icon3{
+	background: url(../image/cpinfo_icons.gif) no-repeat -3px 0px;
+}
+section .dumpling-icon4{
+	background: url(../image/cpinfo_icons.gif) no-repeat -3px -72px;
+}
+section .dumpling-histogram1,.dumpling-histogram2,.dumpling-histogram3,.dumpling-histogram4{
+	width: 140px;
+	height: 20px;
+	display: inline-block;
+}
+section .dumpling-histogram2{
+	background: url(../image/processing.gif) no-repeat;
+}
+section .dumpling-histogram3{
+	background: url(../image/processing.gif) no-repeat;
+}
+section .dumpling-histogram4{
+	background: url(../image/processing.gif) no-repeat 0px -200px;
+}
+section .dumpling-time{
+	color: #666;
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	font-size: 10px;
+}
+section .section-contain .big-dumpling-fun .user-infomation{
+	width: 650px;
+	height: 110px;
+	padding: 10px 0px 20px 20px;
+	position: relative;
+}
+section .section-contain .big-dumpling-fun .user-infomation .user-Head-portrait{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	border-radius: 35px;
+	background: url(../image/tx2_4.png);
+	background-size: contain;
+}
+section .section-contain .big-dumpling-fun .user-infomation .user-introduce{
+	width: 200px;
+	height: 70px;
+	position: absolute;
+	top: 10px;
+	left: 100px;
+	font-size: 10px;
+	color: #999;
+}
+section .section-contain .big-dumpling-fun .user-infomation .user-introduce a{
+	font-size: 14px;
+	color: red;
+}
+section .section-contain .big-dumpling-fun .user-infomation .user-introduce span{
+	padding: 8px 0;
+	display: inline-block;
+	color: #666;
+}
+section .section-contain .dumpling-material{
+	width: 670px;
+	background-color: #fff;
+}
+section .section-contain .dumpling-material p{
+	width: 670px;
+	height: 57px;
+	line-height: 24px;
+	font-size: 14px;
+	padding: 20px 24px 10px;
+	margin-top: 20px;
+	color: #666;
+}
+section .section-contain .dumpling-material b{
+	width: 670px;
+	height: 67px;
+	font-size: 24px;
+    color: #333;
+    height: 66px;
+    line-height: 66px;
+    border-bottom: 1px solid #eee;
+    text-indent: 24px;
+    display: block;
+}
+section .section-contain .dumpling-material .dumpling-main-material,.dumpling-secondary-material{
+	width: 670px;
+	height: 159px;
+	position: relative;
+}
+section .section-contain .dumpling-material .dumpling-main-material>a,.dumpling-secondary-material>a{
+	width: 54px;
+	height: 24px;
+	margin: 14px 5px 14px 25px;
+	color: #fff;
+    background: #ff3232;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+}
+section .section-contain .dumpling-material .dumpling-secondary-material>a{
+	background-color: #fff;
+	border: 1px solid #999;
+	color: #999;
+}
+section .dumpling-material .dumpling-main-material ul,section .dumpling-secondary-material ul{
+	width: 580px;
+	height: 158px;
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+    top: 0px;
+    right: 5px;
+}
+section .dumpling-secondary-material ul{
+	height: 111px;
+}
+section .dumpling-material .dumpling-main-material ul li{
+	width: 285px;
+	height: 79px;
+}
+section .dumpling-secondary-material ul li{
+	width: 285px;
+	height: 55px;
+}
+section .dumpling-material .dumpling-main-material ul li>a{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+section .dumpling-material .dumpling-main-material ul li:first-child>a{
+	background: url(../image/bafdaa6c502de74f311a2ad4f1cd085c_60x60.jpg);
+}
+section .dumpling-material .dumpling-main-material ul li:nth-child(2)>a{
+	background: url(../image/shicai24954_60x60.jpg);
+}
+section .dumpling-material .dumpling-main-material ul li:nth-child(3)>a{
+	background: url(../image/ysjk_navbg.png);
+}
+section .dumpling-material .dumpling-main-material .buy-main-material,.buy-secondary-material{
+	display: inline-block;
+	width: 214px;
+    height: 50px;
+    padding: 14px 0px 14px 10px;
+}
+section .dumpling-material .dumpling-main-material .buy-main-material a:first-child,
+.buy-secondary-material a:first-child{
+	width: 240px;
+	height: 24px;
+	color: #222;
+	position: relative;
+	display: inline-block;
+}
+section .dumpling-material .dumpling-main-material .buy-main-material a:first-child:hover{
+	color: red;
+}
+.buy-secondary-material a:first-child{
+	display: flex;
+	align-items: center;
+}
+.buy-secondary-material a:first-child:hover{
+	color: red;
+}
+section .dumpling-material .dumpling-main-material .buy-main-material a:first-child span,.buy-secondary-material a:first-child span{
+	color: #999;
+	font-size: 10px;
+	position: absolute;
+	top: 3px;
+	right: 30px;
+}
+section .dumpling-material .buy-secondary-material a:first-child span{
+	top: 5px;
+	right: -25px;
+}
+section .dumpling-material .dumpling-main-material .buy-main-material a:last-child{
+	display: inline-block;
+	height: 26px;
+    width: 204px;
+    background: url(../image/cart_26.gif) no-repeat;
+}
+section .dumpling-main-material .buy-main-material a:last-child:hover{
+	background: url(../image/cart_26.gif) no-repeat 0px -27px;
+}
+section .dumpling-secondary-material .buy-secondary-material>a b{
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	margin-left: 5px;
+	background: url(../image/cart_26.gif) no-repeat;
+}
+section .dumpling-secondary-material .buy-secondary-material>a b:hover{
+	background: url(../image/cart_26.gif) no-repeat 0px -27px;
+}
+section .dumpling-specific-fun{
+	width: 670px;
+	background-color: #fff;
+}
+section .dumpling-specific-fun h2{
+	font-size: 24px;
+    color: #333;
+    height: 66px;
+    line-height: 66px;
+    border-bottom: 1px solid #eee;
+    text-indent: 24px;
+    font-family: Microsoft Yahei;
+    display: block;
+}
+section .dumpling-specific-fun em{
+	font-size: 50px;
+    color: #ff3232;
+    font-style: italic;
+    text-align: center;
+    font-family: arial;
+    float: left;
+    height: 50px;
+    width: 100px;
+    display: inline-block;
+    line-height: 50px;
+}
+section .dumpling-specific-fun p{
+	line-height: 24px;
+    color: #666;
+    padding: 10px 20px 10px 0px;
+    position: relative;
+    font-size: 14px;
+}
+section .dumpling-specific-fun .content1-specific,section .dumpling-specific-fun img{
+	width: 550px;
+	display: inline-block;
+	margin: 5px 0;
+}
+section .dumpling-specific-fun h2,section .dumpling-talk h2{
+	font-size: 24px;
+    color: #333;
+    height: 66px;
+    line-height: 66px;
+    border-bottom: 1px solid #eee;
+    text-indent: 24px;
+    font-family: Microsoft Yahei;
+}
+section .dumpling-specific-fun h2+img{
+	margin-left: 100px;
+}
+section .dumpling-specific-fun h2+p{
+	line-height: 24px;
+	color: #666;
+	font-size: 14px;
+	padding: 10px 20px 10px 0;
+	margin-left: 100px;
+}
+section .dumpling-talk{
+	width: 670px;
+	background-color: #fff;
+}
+section .dumpling-talk .user-talk{
+	width: 630px;
+	padding: 0px 20px;
+	display: flex;
+}
+section .dumpling-talk .user-talk .user-talk-content{
+	margin-left: 30px;
+	position: relative;
+}
+section .dumpling-talk .user-talk .user-talk-content .user-tip{
+	margin-bottom: 10px;
+}
+section .dumpling-talk .user-talk .intobtn{
+	height: 40px;
+	line-height: 40px;
+    text-align: center;
+    width: 140px;
+    background: #ff3232;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+}
+section .dumpling-talk .user-talk .btn{
+	height: 40px;
+    width: 80px;
+    background: #ff3232;
+    border-radius: 0px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+section .dumpling-talk textarea{
+	height: 70px;
+    width: 530px;
+    padding: 14px;
+    border: 1px solid #ddd;
+    background: #fcfcfc;
+    color: #333;
+    font-size: 14px;
+	resize: none;
+}
+section .dumpling-talk span{
+	cursor: pointer;
+    line-height: 24px; 
+    color: #000;
+    font-size: 12px;
+    display: inline-block;
+    height: 24px;
+    padding: 0px 10px;
+    background: #eee;
+    margin-right: 10px;
+}
+section .dumpling-talk span:hover{
+	background-color: #999;
+	color: #fff;
+}
+#fix{
+	position: absolute;
+	top: -300px;
+	right: -140px;
+}
+.beitai{
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    top: 500px;
+}
+.shabi{
+    width: 900px;
+    height: 10px;
+    margin: auto;
+    position: relative;
+}
+.beitai-box{
+    position: absolute;
+    right: -40px;
+    top: 500px;
+    width: 10px;
+    height: 10px;
+}
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<div class="box"></div>
+	<script>
+		var box = document.querySelector(".box");
+		box.onclick = function(){
+			var e = window.event || arguments[0];
+			console.log(e);
+			console.log(e.clientX,e.clientY);
+			console.log(e.x,e.y);
+			console.log(e.pageX,e.pageY);
+			console.log(e.screenX,e.screenY);
+			console.log(e.offsetX,e.offsetY);
+            	}
+            window.onscroll = function(){
+				var top = document.documentElement.scrollTop ||document.body.scrollTop;
+				console.log(top);
+				if(top > 100){
+					console.log("大于100了");
+			}
+		}
+	</script>
+	<input type="button" value="to100" id="btn1">
+	<script>
+		var btn1 = document.all.btn1;
+		btn1.onclick = function(){
+			document.documentElement.scrollTop = 100;
+		}
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

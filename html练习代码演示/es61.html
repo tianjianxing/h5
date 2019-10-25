@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var a = 1;
+		for(var i = 0;i < 5;i++){
+			console.log(i);
+		}
+		console.log(i);
+	</script>
+	<script>
+		{
+			var x = 5;
+		}
+		console.log(x);
+		{
+			let y = 6;
+			console.log(y);
+		}
+		// console.log(y);
+		for(let n = 1;n < 5;n++){
+			console.log(n);
+		}
+		// console.log(n);
+	</script>
+	<script>
+		var a = [];
+		for(var i = 0;i < 10;i++){
+			a[i] = function(){
+				console.log(i);
+			};
+		}
+		a[0]();
+		var b = [];
+		for(let i = 0;i < 10;i++){
+			b[i] = function(){
+				console.log(i);
+			};
+		}
+		b[5]();
+	</script>
+	<script>
+		// console.log(aa);
+		let aa = 1;
+		console.log(aa);
+
+		var bb = 4;
+		var bb = 7;
+		console.log(bb);
+		let cc = 2;
+		cc = 7;
+		{
+			let cc = 6;
+			console.log(cc);
+		}
+		console.log(cc);
+		const dd = 3;
+	</script>
+	<script>
+		const obj = {};
+		obj.abc = 11;
+		console.log(obj);
+
+		const obj1 = {bbb:222};
+		// obj1 = {bbb:333};
+		//将 obj 指向另一个对象，就会报错
+
+		obj1.bbb = 333;
+	</script>
+	<script>
+		let [aaa,bbb,ccc] = [1,2,3];
+		let arr = [aaa,bbb,ccc];
+		console.log(aaa,bbb,ccc,arr);
+
+		let [e,[[f],g]] = [1,[[2],3]];
+		console.log(e,f,g);
+
+		let [h,[p,l],m] = [1,[2,3],4];
+		console.log(h,p,l,m);
+	</script>
+	<script>
+		let [t,y] = [1,2];
+		let obj2 = {t,y};
+		console.log(obj2);
+	</script>
+	<script>
+		let z = 1,s = 2,v;
+		v = z;
+		z = s;
+		s = v;
+
+		let qq = 1,ww = 2;
+		qq = qq + ww;
+		ww = qq - ww;
+		qq = qq - ww;
+
+		let xx = 1, yy = 2;
+		[xx,yy] = [yy,xx];
+
+		console.log(z,s,qq,ww,xx,yy);
+	</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<script src="jquery.validate.js"></script>
+	<script src="messages_zh.js"></script>
+</head>
+<body>
+<!-- 	<form action="" class="f1">
+		用户名：<input type="text" name="username" required minlength="6" maxlength="8"><br>
+		密码：<input type="text" name="psaaword" required class="pwd"><br>
+		确认密码：<input type="text" name="repassword" equalTo=".pwd"><br>
+		<input type="email"><br>
+		<input type="submit">
+	</form>
+	<script>
+		$(".f1").validate();
+	</script>
+	<br>
+	<br>
+	<br>
+	<form action="" class="f2">
+		账号：<input type="text" name="user"><br>
+		密码：<input type="password" name="mima" class="pwd1"><br>
+		确认密码：<input type="password" name="remima"><br>
+		email：<input type="email" name="email1"><br>
+		url：<input type="url" name="url1"><br>
+		<input type="submit">
+	</form>
+	<script>
+		$(".f2").validate({
+			rules:{
+				user:"required",
+				mima:"required",
+				remima:{
+					equalTo:".pwd1"
+				},
+				emaile1:"required",
+                url1:"required"
+			},
+			message:{
+				user:"请填写账号",
+				mima:"请填写密码",
+				remima:{
+					equalTo:"请确认正确"
+				},
+				emaile1:"请输入邮箱",
+				url1:"请输入网址",
+			}
+		})
+	</script> -->
+	<br>
+	<br>
+	<br>
+	<br>
+	<style>
+		label.aaa{
+			color:red;
+		}
+	</style>
+	<form action="" class="f3">
+		用户名：<input type="text" name="user">
+		<br>
+		密码：<input type="password" name="pwd" class="pwd">
+		<br>
+		确认密码：<input type="password" name="repwd">
+		<br>
+		email: <input type="email" name="email">
+		<br>
+		<div class="wraper">
+			性别：
+			<input type="radio" value="male" name="sex">男
+			<input type="radio" value="female" name="sex">女	
+		</div>
+		<div class="wraper">
+			爱吃：
+			<input type="checkbox" name="like">香蕉
+			<input type="checkbox" name="like">橘子
+			<input type="checkbox" name="like">芒果
+			<input type="checkbox" name="like">西瓜
+			<input type="checkbox" name="like">苹果
+		</div>
+		年龄：<input type="number" name="age">
+		<br>
+		<input type="submit">
+	</form>
+	<script>
+		$(".f3").validate({
+			submitHandler:function(form){
+				console.log("验证合法");
+				console.log(form);
+				form.submit();
+			},
+			errorPlacement:function(err,ele){
+				if($(ele).parent().hasClass("wraper")){
+					$(ele).parent().append(err);
+				}else{
+					$(ele).after(err);
+				}
+			},
+			errorClass:"aaa",
+			rules:{
+				user:{
+					required:true,
+					rangelength:[3,6]
+				},
+				pwd:{
+					required:true,
+					rangelength:[6,12]
+				},
+				repwd:{
+					equalTo:".pwd"
+				},
+				emaile:"required",
+				sex:"required",
+				like:{
+					required:true,
+					minlength:3
+				},
+				age:{
+					required:true,
+					min:6,
+					max:22
+				}
+			},
+			message:{
+				user:{
+					required:"输入用户名",
+					rangelength:"用户名长度在${0}到${1}之间"
+				},
+				pwd:{
+					required:"输入密码",
+					rangelength:"密码长度在${0}到${1}之间"
+				},
+				repwd:{
+					equalTo:"密码不一样"
+				},
+				email:"输入邮箱",
+				sex:"选择性别",
+				like:{
+					required:"输入喜欢的水果",
+					minlength:"最少选${0}个"
+				},
+				age:{
+					required:"输入年龄",
+					range:"年龄范围在${0}到${1}之间"
+				}
+			}
+        
+		})
+	</script>	
+</body>
+</html>

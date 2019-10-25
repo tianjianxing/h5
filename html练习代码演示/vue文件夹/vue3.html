@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="radio" value="男" v-model="sex">男
+		<input type="radio" value="女" v-model="sex">女
+		<br>
+		{{sex}}
+	</div>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				sex:"女"
+			}
+		})
+	</script>
+	<div id="app1">
+		<input type="checkbox" v-model="check">
+		<br>
+		<span>{{check}}</span>
+	</div>
+	<script>
+		new Vue({
+			el:"#app1",
+			data:{
+				check:true
+			}
+		})
+	</script>
+	<div id="app2">
+		<input type="checkbox" value="1" v-model="multiCheck">1
+		<input type="checkbox" value="2" v-model="multiCheck">2
+		<input type="checkbox" value="3" v-model="multiCheck">3
+		<input type="checkbox" value="4" v-model="multiCheck">4
+		<input type="checkbox" value="5" v-model="multiCheck">5
+		<br>
+		<p>{{multiCheck}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app2",
+			data:{
+				multiCheck:["1","4"]
+			}
+		})
+	</script>
+	<div id="app3">
+		<select name="" id="" v-model="sel">
+			<option value="a">a</option>
+			<option value="b">b</option>
+			<option value="c">c</option>
+			<option value="d">d</option>
+			<option value="e">e</option>
+		</select>
+	</div>
+	<script>
+		new Vue({
+			el:"#app3",
+			data:{
+				sel:"c"
+			}
+		})
+	</script>
+	<div id="app4">
+		<select name="" id="" v-model="multiSelect" multiple="">
+			<option value="a">a</option>
+			<option value="b">b</option>
+			<option value="c">c</option>
+			<option value="d">d</option>
+			<option value="e">e</option>
+		</select>
+		<p>{{multiSelect}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app4",
+			data:{
+				multiSelect:["a","d"]
+			}
+		})
+	</script>
+	<div id="app5">
+		<input type="radio" v-bind:value="a" v-model="chk">
+		<p>{{a}}----{{chk}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app5",
+			data:{
+				a:5,
+				chk:2
+			}
+		})
+	</script>
+	<div id="app6">
+		<input type="checkbox" v-bind:true-value="a" v-bind:false-value="b" v-model="chk">
+		<p>{{a}}---{{b}}---{{chk}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app6",
+			data:{
+				a:1,
+				b:2,
+				chk:3
+			}
+		})
+	</script>
+	<div id="app7">
+		<select name="" id="" v-model="sel">
+			<option v-bind:value="{num:1}">1</option>
+			<option v-bind:value="{num:2}">2</option>
+			<option v-bind:value="{num:3}">3</option>
+			<option v-bind:value="{num:4}">4</option>
+			<option v-bind:value="{num:5}">5</option>
+		</select>
+		<p>{{sel.num}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app7",
+			data:{
+				sel:""
+			}
+		})
+	</script>
+</body>
+</html>

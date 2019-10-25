@@ -1,0 +1,47 @@
+$(function(){
+	/*header的搜索*/
+	$(".header-search-box").on("focus","[type='text']",function(){
+		$(this).attr("placeholder","")
+	}).on("blur","[type='text']",function(){
+		$(this).attr("placeholder","请输入菜谱/食材/菜单/作者")
+	})
+	/*页面底部的搜索框*/
+	$(".main-search-box").on("mouseover",function(){
+		$(this).css({
+			"bottom":"0",
+			"padding-top":"6px"
+		})
+		$(".back-to-top").css("bottom","12px")
+	}).on("mouseout",function(){
+		$(this).css({
+			"bottom":"-50px",
+			"padding-top":"10px"
+		})
+		$(".back-to-top").css("bottom","72px")
+	})
+	/*点击，搜索框切换*/
+	$(".main-search-show").click(function(){			
+		$(".main-search-box").off("mouseout");
+		$(this).hide()
+		$(".main-search-hide").show()
+	})
+	$(".main-search-hide").click(function(){			
+		$(".main-search-box").on("mouseout",function(){
+			$(this).css({
+				"bottom":"-50px",
+				"padding-top":"10px"
+			})
+			$(".back-to-top").css("bottom","72px")
+		})
+		$(".main-search-box").mouseout()
+		$(this).hide()
+		$(".main-search-show").show()
+	})
+	$(document).on("scroll",function(){
+		if($(document).scrollTop()>=400){
+			$(".back-to-top").fadeIn();
+		}else if($(document).scrollTop()<400){
+			$(".back-to-top").fadeOut();
+		}
+	})
+})

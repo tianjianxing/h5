@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="n">
+		<p v-global-directive="n">1111</p>
+		<my-tag></my-tag>
+		<p v-g-d v-if="ok">222222</p>
+		<input type="button" value="按钮" @click="ok=!ok">
+	</div>
+	<script>
+		Vue.directive("global-directive",{
+			bind:function(){
+				console.log("bind")
+			},
+			inserted:function(){
+				console.log("inserted")
+			},
+			update:function(){
+				console.log("update")
+			},
+			componentUpdated:function(){
+				console.log("componentUpdated")
+			}
+		})
+		Vue.directive("g-d",{
+			bind:function(){
+				console.log("bind")
+			},
+			unbind:function(){
+				console.log("unbind")
+			}
+		})
+		Vue.component("my-tag",{
+			template:`<div>aaaa
+			<input type="text" v-model="s" />
+			<span v-local-dir="m">spanspanspan
+			<i>{{s}}</i>
+			</span>
+			</div>`,
+			directives:{
+				"localDir":{
+					bind:function(){
+						console.log("bind")
+					},
+					inserted:function(){
+						console.log("inserted")
+					},
+					update:function(){
+						console.log("update")
+					},
+					componentUpdated:function(){
+						console.log("componentUpdated")
+					}
+				}
+			},
+			data:function(){
+				return {
+					m:8,
+					s:9
+				}
+			}
+		})
+		new Vue({
+			el:"#app",
+			data:{
+				n:5,
+				ok:true
+			}
+		})
+	</script>
+	<div id="app1">
+		<p v-aaa="11111">aaaaa</p>
+		<input type="button" value="按钮" v-on:click.enter="abc">
+		<br>
+		<p v-ht="msg"></p>
+		<p v-bbb="{color:'red',backgroundColor:'yellow'}">pppppp</p>
+		<p v-ccc="n">nnnnn</p>
+	</div>
+	<script>
+		Vue.directive("aaa",{
+			bind:function(el,binding){
+				console.log(el,binding,binding.value);
+			}
+		})
+		Vue.directive("ht",{
+			bind(el,binding){
+				el.innerHTML = binding.value;
+			}
+		})
+		Vue.directive("bbb",function(el,binding){
+			console.log(el,binding);
+			for(var i in binding.value){
+				el.style[i] = binding.value[i];
+			}
+		})
+		Vue.directive("ccc",function(el,binding){
+			console.log(binding);
+		})
+		new Vue({
+			el:"#app1",
+			data:{
+				m:8,
+				msg:"<s>只是太爱你</s>",
+				color:"red",
+				n:0
+			},
+			methods:{
+				abc(){
+
+				}
+			}
+		})
+	</script>
+</body>
+</html>

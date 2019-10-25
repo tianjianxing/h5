@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>美食杰 - 美食|菜谱大全|食谱|美食网 - 做你最喜爱的美食,食谱,菜谱网</title>
+	<link rel='icon' href='image/favicon.ico' type='image/x-icon'>
+	<link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index-mode.css">
+	<link rel="stylesheet" href="css/index-mode02.css">
+</head>
+<body>
+	<!--你想知道的width = 990px-->
+	<!--LOGO 搜索 登录-->
+	<header>
+		<div class="header-contain">
+			<div class="logo2"><a href=""></a></div>
+			<div class="header-search">
+				<form class="header-search-box">
+					<input type="text" placeholder ="请输入菜谱/食材/菜单/作者"  list="header-search-datalist">
+					<datalist id="header-search-datalist">
+						<option value="卤鸡"></option>
+						<option value="卤鸭"></option>
+						<option value="酱鸡"></option>
+						<option value="腊肉"></option>
+						<option value="红烧狮子头"></option>
+						<option value="土豆丝"></option>
+						<option value="地三鲜"></option>
+						<option value="红烧带鱼"></option>
+						<option value="鲅鱼饺子"></option>
+						<option value="麻婆豆腐"></option>
+						<option value="糖醋里脊"></option>
+						<option value="炸排骨"></option>
+					</datalist>
+					<input type="button" value="搜 索">
+				</form>
+				
+			</div>
+			<ul class="log-on">
+				<li>
+					<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=100233147&redirect_uri=http://i.meishi.cc/connect/callback.php?site=qq">QQ登录</a>
+				</li>
+				<li>
+					<a href="https://api.weibo.com/oauth2/authorize?client_id=3274300248&redirect_uri=https%3A%2F%2Fi.meishi.cc%2Fconnect%2Fcallback.php%3Fsite%3Dsina">微博登录</a>
+				</li>
+				<li>
+					<a href="user-login.html?f=0">注册</a>
+				</li>
+				<li>
+					<a href="user-login.html?f=1">登录</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<!--导航栏-->
+	<nav>
+		<ul class="nav-contain">
+			<li>
+				<a href="index.html">
+					<b>首页</b>
+				</a>
+			</li>
+			<li class="menu-totle-contain">
+				<a href="recipe-daqo.html">
+					<b>菜谱大全</b>
+					<span class="glyphicon glyphicon-menu-down "></span>
+				</a>
+				<!-- 菜谱大全的展开-->
+					<div class="menu-totle">
+						<p>家常菜谱</p>
+						<dl>
+							<dd>
+								<a href="recipe-daqo.html">家常菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">凉菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">素食</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">晚餐</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">私家菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">热菜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">海鲜</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">孕妇</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">早餐</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">午餐</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">甜品点心</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">汤粥</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">宝宝食谱-婴儿食谱</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">糕点主食</a>
+							</dd>
+							<dd>
+								<a href="recipe-daqo.html">微波炉</a>
+							</dd>
+						</dl>
+						<!-- 用两个块定位 world-menu small-food-->
+						<div class="world-menu">
+							<p>中华菜系</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">川菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">粤菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">东北菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">湘菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">鲁菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">浙菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">湖北菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">清真菜</a>
+								</dd>
+							</dl>
+							<p>外国菜谱</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">韩国料理</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">日本料理</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">法国菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">意大利餐</a>
+								</dd>
+							</dl>
+							<p>厨房百科</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">摆盘周边</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">烹饪技巧</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">生活妙招</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">美食专题</a>
+								</dd>
+							</dl>
+						</div>
+						<div class="small-food">
+							<p>各地小吃</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">四川小吃</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">广东小吃</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">北京小吃</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">陕西小吃</a>
+								</dd>
+							</dl>
+							<p>烘焙</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">蛋糕面包</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">饼干配方</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">甜品点心</a>
+								</dd>
+							</dl>
+							<p>食材百科</p>
+							<dl>
+								<dd>
+									<a href="recipe-daqo.html">蔬菜</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">水果</a>
+								</dd>
+								<dd>
+									<a href="recipe-daqo.html">谷类</a>
+								</dd>
+							</dl>
+						</div>
+						<!-- 螃蟹图片-->
+						<img src="image/jccp_navbgg.png" alt="" class="crab">
+					</div>
+			</li>
+			<li class="eat-heathy-contain">
+				<a href="food-heathy.html">
+					<b>饮食健康</b>
+					<span class="glyphicon glyphicon-menu-down "></span>
+				</a>
+					<!-- 饮食健康-->
+					<div class="eat-heathy">
+						<p>饮食健康</p>
+						<dl>
+							<dd>
+								<a href="food-heathy.html">饮食小常识</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">美容瘦身</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">饮食健康</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">养生妙方</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">饮食禁忌</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">中医保健</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">母婴健康饮食</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">饮食新闻</a>
+							</dd>
+						</dl>
+						<p>功能性调理</p>
+						<dl>
+							<dd>
+								<a href="food-heathy.html">清热去火</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">减肥</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">祛痰</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">乌发</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">滋阴补肾</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">健脾开胃</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">消化不良</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">清热解毒</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">补阳壮阳</a>
+							</dd>
+							<dd>
+								<a href="food-heathy.html">增肥</a>
+							</dd>
+						</dl>
+						<!-- 用两个块定位 eat-heathy-left -->
+						<div class="eat-heathy-left">
+							<p>人群膳食</p>
+							<dl>
+								<dd>
+									<a href="food-heathy.html">孕妇</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">老人</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">产妇</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">哺乳期</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">青少年</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">幼儿</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">学龄期儿童</a>
+								</dd>
+							</dl>
+							<p>脏腑调理</p>
+							<dl>
+								<dd>
+									<a href="food-heathy.html">感冒</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">补肾</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">阳痿早泄</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">补血</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">便秘</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">腹泻</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">活血化瘀</a>
+								</dd>
+							</dl>
+						</div>
+						
+						<div class="eat-heathy-right">
+							<p>疾病调理</p>
+							<dl>
+								<dd>
+									<a href="food-heathy.html">糖尿病</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">高血压</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">痛风</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">胃炎</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">痔疮</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">更年期</a>
+								</dd>
+								<dd>
+									<a href="food-heathy.html">甲状腺</a>
+								</dd>
+							</dl>
+						</div>
+						<!--大葱图片-->
+						<img src="image/ysjk_navbg.png" alt="" class="onion">
+					</div>
+			</li>
+			<li>
+				<a href="food-menu.html"><b>美食菜单</b></a>
+			</li>
+			<li class="home">
+				<a href="index-mode02.html"><b>家居馆</b></a>
+			</li>
+			<li>
+				<a href="nicefoodman.html"><b class="red-line">美食达人</b> <img src="image/20160909164810_443.png" alt="" class="crown"></a>
+			</li>
+			<li>
+				<a href="food-video.html"><b>菜谱视频</b></a>
+			</li>
+			<li>
+				<a href="myProject-01.html"><b>产品下载</b></a>
+			</li>
+		</ul>
+	</nav>
+	<!--自个写嘚-->
+	<section>
+		<div class="section-contain">
+			<div class="section-contain-nav">
+				<ul>
+					<li>
+						<a href="index-mode02.html" class="one-a">产品首页</a>
+					</li>
+					<li>
+						<a href="">特权购买</a>
+					</li>
+					<li>
+						<a href="">我的积分</a>
+					</li>
+					<li>
+						<a href="index-mode03.html">试用中心</a>
+					</li>
+					<li>
+						<a href="">我的订单</a>
+					</li>
+				</ul>
+			</div>
+			<div class="section-contain-font">
+				<p>美厨出玉食 精细选家居</p>
+			</div>
+			<div class="section-contain-middle-one">
+				<div class="box">
+					<div class="box-one-div">
+						<a href="">厨房家居</a>
+					</div>
+					<dl class="box-one">
+						<dt>
+							<a href="">保温闷烧杯</a>
+						</dt>
+						<dd>
+							<a href="">保温杯</a>
+						</dd>
+						<dt>
+							<a href="">锅具</a>
+						</dt>
+						<dd>
+							<a href="">炖锅</a>
+						</dd>
+						<dd>
+							<a href="">压力锅</a>
+						</dd>
+						<dd>
+							<a href="">平底锅</a>
+						</dd>
+						<dd>
+							<a href="">煮锅</a>
+						</dd>
+						<dd>
+							<a href="">炸锅</a>
+						</dd>
+						<dd>
+							<a href="">锅具套装</a>
+						</dd>
+						<dd>
+							<a href="">蒸锅</a>
+						</dd>
+						<dd>
+							<a href="">砂锅</a>
+						</dd>
+						<dd>
+							<a href="">煎锅</a>
+						</dd>
+						<dd>
+							<a href="">汤锅</a>
+						</dd>
+						<dd>
+							<a href="">奶锅</a>
+						</dd>
+						<dd>
+							<a href="">其他</a>
+						</dd>
+						<dt>
+							<a href="">茶壶壶具</a>
+						</dt>
+						<dd>
+							<a href="">水壶</a>
+						</dd>
+						<dd>
+							<a href="">杯子</a>
+						</dd>
+						<dd>
+							<a href="">茶具套装</a>
+						</dd>
+						<dd>
+							<a href="">其他</a>
+						</dd>
+						<dt>
+							<a href="">餐具</a>
+						</dt>
+						<dd>
+							<a href="">碗碟</a>
+						</dd>
+						<dd>
+							<a href="">刀叉筷</a>
+						</dd>
+						<dt>
+							<a href="">厨房配件</a>
+						</dt>
+						<dd>
+							<a href="">餐垫</a>
+						</dd>
+						<dd>
+							<a href="">调料盒</a>
+						</dd>
+						<dd>
+							<a href="">砧板</a>
+						</dd>
+						<dd>
+							<a href="">灵巧配件</a>
+						</dd>
+						<dt>
+							<a href="">刀具</a>
+						</dt>
+						<dd>
+							<a href="">其他</a>
+						</dd>
+						<dd>
+							<a href="">多功能刀</a>
+						</dd>
+						<dd>
+							<a href="">菜刀</a>
+						</dd>
+						<dd>
+							<a href="">剪刀</a>
+						</dd>
+						<dd>
+							<a href="">刀具套装</a>
+						</dd>
+						<dt>
+							<a href="">清洁用品</a>
+						</dt>
+						<dd>
+							<a href="">洗洁精</a>
+						</dd>
+						<dd>
+							<a href="">厨房用纸</a>
+						</dd>
+						<dd>
+							<a href="">清洁膏</a>
+						</dd>
+						<dd>
+							<a href="">洗衣液</a>
+						</dd>
+						<dd>
+							<a href="">保鲜</a>
+						</dd>
+					</dl>
+					<div class="box-two-div">
+						<a href="">厨房电器</a>
+					</div>
+					<dl class="box-two">
+						<dt>
+							<a href="">创意小家电</a>
+						</dt>
+						<dd>
+							<a href="">鸡蛋助手</a>
+						</dd>
+						<dd>
+							<a href="">清凉厨电</a>
+						</dd>
+						<dd>
+							<a href="">温暖厨电</a>
+						</dd>
+						<dt>
+							<a href="">多功能料理锅</a>
+						</dt>
+						<dd>
+							<a href="">多功能料理锅</a>
+						</dd>
+						<dt>
+							<a href="">榨汁搅拌</a>
+						</dt>
+						<dd>
+							<a href="">料理机</a>
+						</dd>
+						<dd>
+							<a href="">豆浆机</a>
+						</dd>
+						<dd>
+							<a href="">榨汁机</a>
+						</dd>
+						<dd>
+							<a href="">原汁机</a>
+						</dd>
+						<dd>
+							<a href="">搅拌机</a>
+						</dd>
+						<dt>
+							<a href="">烘焙帮手</a>
+						</dt>
+						<dd>
+							<a href="">面包机</a>
+						</dd>
+						<dd>
+							<a href="">烤箱</a>
+						</dd>
+						<dt>
+							<a href="">家用电器</a>
+						</dt>
+						<dd>
+							<a href="">电陶炉</a>
+						</dd>
+						<dd>
+							<a href="">电烤架</a>
+						</dd>
+						<dd>
+							<a href="">电蒸锅</a>
+						</dd>
+						<dd>
+							<a href="">电火锅</a>
+						</dd>
+						<dd>
+							<a href="">烧烤能手</a>
+						</dd>
+						<dd>
+							<a href="">咖啡机</a>
+						</dd>
+						<dd>
+							<a href="">电水壶</a>
+						</dd>
+						<dd>
+							<a href="">电饭锅</a>
+						</dd>
+						<dd>
+							<a href="">电压力锅</a>
+						</dd>
+						<dd>
+							<a href="">电磁炉</a>
+						</dd>
+						<dd>
+							<a href="">电饼铛</a>
+						</dd>
+						<dd>
+							<a href="">微波炉</a>
+						</dd>
+					</dl>
+					<div class="box-three-div">
+						<a href="">厨房调料</a>
+					</div>
+					<dl class="box-three">
+						<dt>
+							<a href="">西式调料</a>
+						</dt>
+						<dd>
+							<a href="">黑胡椒汁</a>
+						</dd>
+						<dd>
+							<a href="">番茄酱</a>
+						</dd>
+						<dd>
+							<a href="">烘焙用料</a>
+						</dd>
+						<dt>
+							<a href="">中式调料</a>
+						</dt>
+						<dd>
+							<a href="">调味</a>
+						</dd>
+						<dd>
+							<a href="">食用油</a>
+						</dd>
+						<dd>
+							<a href="">鸡精</a>
+						</dd>
+					</dl>
+					<div class="box-four-div">
+						<a href="">生活周边</a>
+					</div>
+					<dl class="box-four">
+						<dt>
+							<a href="">数码产品</a>
+						</dt>
+						<dd>
+							<a href="">U盘硬盘</a>
+						</dd>
+						<dd>
+							<a href="">SD卡</a>
+						</dd>
+						<dd>
+							<a href="">充电宝</a>
+						</dd>
+						<dd>
+							<a href="">小米系列</a>
+						</dd>
+						<dd>
+							<a href="">摄影助手</a>
+						</dd>
+						<dd>
+							<a href="">摄影器材</a>
+						</dd>
+						<dt>
+							<a href="">生活用品</a>
+						</dt>
+						<dd>
+							<a href="">家用电器</a>
+						</dd>
+						<dd>
+							<a href="">居家用品</a>
+						</dd>
+						<dt>
+							<a href="">礼品卡</a>
+						</dt>
+						<dd>
+							<a href="">礼品卡</a>
+						</dd>
+						<dt>
+							<a href="">虚拟产品</a>
+						</dt>
+					</dl>
+				</div>
+			</div>
+			<p class="section-contain-middle-two-top-font">
+				美食杰特权优惠区----生活，就是要精打细算
+				<a href="">更多特权</a>
+			</p>
+			<div class="section-contain-middle-two">
+				
+			</div>
+			<p class="section-contain-middle-three-top-font">
+				优质产品推荐区
+			</p>
+			<div class="section-contain-middle-three">
+				<dl>
+					<dt><span>|</span>厨房家居</dt>
+					<dd class="first-dd">今日推荐</dd>
+					<dd>
+						<a href="">锅具</a>
+					</dd>
+					<dd>
+						<a href="">刀具</a>
+					</dd>
+					<dd>
+						<a href="">厨房配件</a>
+					</dd>
+					<dd>
+						<a href="">餐具</a>
+					</dd>
+					<dd>
+						<a href="">茶具壶具</a>
+					</dd>
+					<dd>
+						<a href="">清洁用品</a>
+					</dd>
+				</dl>
+				<div class="img">
+					<img src="image/20140707031700_78512.jpg" alt="">
+					<img src="image/20140707031700_78512.jpg" alt="">
+				</div>
+				<div>
+					<img src="image/jjg_goodsbg_1.png" alt="">
+				</div>
+				<div class="img img2">
+					<img src="image/20140707031700_78512.jpg" alt="">
+					<img src="image/20140707031700_78512.jpg" alt="">
+				</div>
+			</div>
+			<div class="section-contain-middle-four">
+				<dl>
+					<dt><span>|</span>厨房家电</dt>
+					<dd class="first-dd">今日推荐</dd>
+					<dd>
+						<a href="">常用电器</a>
+					</dd>
+					<dd>
+						<a href="">烘焙帮手</a>
+					</dd>
+					<dd>
+						<a href="">榨汁搅拌</a>
+					</dd>
+					<dd>
+						<a href="">创意小家</a>
+					</dd>
+					<dd>
+						<a href="">多功能料</a>
+					</dd>
+				</dl>
+				<div class="img">
+					<img src="image/20140707031700_78512.jpg" alt="">
+					<img src="image/20140707031700_78512.jpg" alt="">
+				</div>
+				<div>
+					<img src="image/jjg_goodsbg_2.png" alt="">
+				</div>
+				<div class="img img2">
+					<img src="image/20140707031700_78512.jpg" alt="">
+					<img src="image/20140707031700_78512.jpg" alt="">
+				</div>
+			</div>
+			<div class="section-contain-middle-five">
+				<dl>
+					<dt><span>|</span>厨房调料</dt>
+					<dd class="first-dd">今日推荐</dd>
+					<dd>
+						<a href="">中式调料</a>
+					</dd>
+					<dd>
+						<a href="">西式调料</a>
+					</dd>
+				</dl>
+				<div class="img">
+					<img src="image/20140707031700_78512.jpg" alt="">
+					<img src="image/20140707031700_78512.jpg" alt="">
+				</div>
+				<div>
+					<img src="image/jjg_goodsbg_3.png" alt="">
+				</div>
+				<div class="img img2">
+					<img src="image/20140707031700_78512.jpg" alt="">
+					<img src="image/20140707031700_78512.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--页脚-->
+	<footer>
+		<div class="footer-contain">
+			<div class="footer-photo">
+				<div class="footer-logo"></div>
+				<ul class="footer-logonext-links">
+					<li>
+						<a href="https://weibo.com/meishij?is_hot=1">关注：49万</a>
+						<p><a href="https://weibo.com/meishij?is_hot=1">点击进入<br>美食杰官方微博</a></p>
+					</li>
+					<li>
+						<a href="https://user.qzone.qq.com/613171717">关注：10.9万</a>
+						<p><a href="https://user.qzone.qq.com/613171717">点击进入<br>美食杰QQ空间</a></p>
+					</li>
+					<!-- 二维码写自己链接 -->
+					<li>
+						<a href=""></a>
+						<p><a href="">扫描二维码添加<br>美食杰为微信好友</a></p>
+					</li>
+					<li>
+						<a href=""></a>
+						<p><a href="">扫描二维码下载<br>美食杰手机客户端</a></p>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-link">
+				<dl class="friend_link clearfix">
+
+					<!-- 链接到别人的网页 -->
+					<dt>友情链接</dt>
+					<dd><a target="_blank" href="http://www.meishij.net" title="美食">美食</a></dd>
+					<dd><a target="_blank" href="http://tizhi.meishi.cc" title="体质测试">体质测试</a></dd>
+					<dd><a target="_blank" href="http://sj.meishi.cc/app.php?to=guanjia" title="伊特">伊特</a></dd>
+					<dd><a target="_blank" href="http://www.9ku.com/ " title="9酷音乐网">9酷音乐网</a></dd>
+					<dd><a target="_blank" href="http://www.yue365.com" title="365音乐网">365音乐网</a></dd>
+					<dd><a target="_blank" href="http://www.mapbar.com/" title="图吧">图吧</a></dd>
+					<dd><a target="_blank" href="http://baa.bitauto.com/" title="汽车论坛">汽车论坛</a></dd>
+					<dd><a target="_blank" href="http://food.39.net" title="39健康饮食">39健康饮食</a></dd>
+					<dd><a target="_blank" href="http://www.qqtn.com/ " title="QQ下载 ">QQ下载</a></dd>
+					<dd><a target="_blank" href="http://www.meilele.com/" title="家具网">家具网</a></dd>
+					<dd><a target="_blank" href="http://chihe.sohu.com" title="搜狐美食">搜狐美食</a></dd>
+					<dd><a target="_blank" href="http://www.meishichina.com" title="美食天下">美食天下</a></dd>
+					<dd><a target="_blank" href="http://www.zhms.cn" title="中华美食网">中华美食网</a></dd>
+					<dd><a target="_blank" href="http://hefei.8684.cn/" title="合肥公交网">合肥公交网</a></dd>
+					<dd><a target="_blank" href="http://www.canyin88.com/" title="红餐微杂志">红餐微杂志</a></dd>
+					<dd><a target="_blank" href="http://bj.fang.com" title="北京搜房网">北京搜房网</a></dd>
+					<dd><a target="_blank" href="https://www.meishij.net/siteinfo/links.php" title="更多友情链接">更多友情链接</a></dd>
+				</dl>
+
+					链接到自己的网页
+				<div class="in-link">
+					<ul>
+						<li><a target="_blank" href="" title="公司简介">公司简介</a></li>
+						<li><a target="_blank" href="" title="关于我们">关于我们</a></li>
+						<li><a target="_blank" href="" title="产品下载">产品下载</a></li>
+						<li><a target="_blank" href="" title="加入我们">加入我们</a></li>
+						<li><a target="_blank" href="" title="联系我们">联系我们</a></li>		
+						<li><a target="_blank" href="" title="商务合作">商务合作</a></li>
+						<li><a target="_blank" href="" title="用户协议">用户协议</a></li>
+						<li><a target="_blank" href="" title="用户协议">隐私政策</a></li>
+						<li><a target="_blank" href="" title="网站地图">网站地图</a></li>
+						<li><a target="_blank" href="" title="友情链接">友情链接</a></li>			
+					</ul>
+					<p>
+						<a target="_blank" href="https://www.miibeian.gov.cn/">京ICP备14030359号</a>
+						<a target="_blank" href="https://beian.gov.cn/"><img src="image/20180208111357_93713.png" alt="">京公网安备11010802026928</a>
+						Copyright © 2003-2019 MEISHIJ CO.,LTD.
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="main-search-box">
+		<div class="main-search">
+			<div class="main-search-show">点击显示</div>
+			<div class="main-search-hide">点击收缩</div>
+			<form action="">
+				<input type="text" placeholder="输入菜谱、食材、作者"><input type="button" value="搜索">
+			</form>	
+			<!--返回顶部 -->
+			<a href="#" class="back-to-top"></a>	
+		</div>
+	</div>
+	<script src="lib/jquery-3.4.1.js"></script>
+	<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+	</script>
+	<script src="js/index-mode.js"></script>
+</body>
+</html>

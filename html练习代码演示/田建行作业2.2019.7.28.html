@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="跳转到百度" onclick="fun()">
+	<br>
+	<br>
+	<div id="msg"></div>
+	<script>
+		var msg = document.all.msg;
+		var fun2;
+		function fun(){
+			msg.innerHTML = '<span>5s后跳转到百度，</span>\
+			<b onclick ="clip()" style="color: red;">取消</b>\
+			<span>跳转？</span>';
+			console.log(msg);
+			fun2 = setTimeout(function(){
+				open("http://www.baidu.com","_self");
+			},5000)
+		}
+        function clip(){
+				clearTimeout(fun2);
+			}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="点击获取验证码" class="btn1" onclick="fun1()">
+    <script>
+    	var btn1 = document.querySelector(".btn1");
+    	function fun1(){
+    		var num = 10;
+    		var fun2 = setInterval(function(){
+    		btn1.disabled = true;
+    		btn1.value = num +"秒后重新获取";
+    		if(num < 0){
+    			clearInterval(fun2);
+                btn1.disabled = false;
+                btn1.value = "点击获取验证码";
+    		}
+            num--;
+    	},1000)
+    }	
+    </script>
+</body>
+</html>

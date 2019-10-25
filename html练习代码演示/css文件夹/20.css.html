@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 400px;
+			height: 200px;
+			border:2px solid red;
+			display: flex;
+			flex-direction: row-reverse;
+            
+		}
+		.box div{
+			border:2px solid green;
+			flex-grow: 1;
+
+		}
+		.box .box3{
+			order:-1;
+			flex-grow: 2;
+
+		}
+		.box9{
+			width: 400px;
+			height: 200px;
+			border:2px solid red;
+			display: flex;
+			flex-direction: row-reverse;
+            
+		}
+		.box9 div{
+			border:2px solid green;
+			width: 100px;
+			flex-shrink: 1;
+		}
+		.box9 .box3{
+			flex-shrink: 0;
+		}
+		.box8{
+			width: 400px;
+			height: 200px;
+			border:2px solid red;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: center;
+            
+		}
+		.box8 div{
+			border:2px solid green;
+			width: 50px;
+			height: 100px;
+
+			
+		}
+		.box8 .box3{
+			flex-basis: 20%;
+			align-self: flex-end;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">0001</div>
+		<div class="box2">0002</div>
+		<div class="box3">0003</div>
+		<div class="box4">0004</div>
+		<div class="box5">0005</div>
+		<div class="box6">0006</div>
+	</div>
+	<br>
+	<div class="box9">
+		<div class="box1">0001</div>
+		<div class="box2">0002</div>
+		<div class="box3">0003</div>
+		<div class="box4">0004</div>
+		<div class="box5">0005</div>
+		<div class="box6">0006</div>
+	</div>
+	<br>
+	<div class="box8">
+		<div class="box1">0001</div>
+		<div class="box2">0002</div>
+		<div class="box3">0003</div>
+		<div class="box4">0004</div>
+		<div class="box5">0005</div>
+		<div class="box6">0006</div>
+	</div>
+</body>
+</html>

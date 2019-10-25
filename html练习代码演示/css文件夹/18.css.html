@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		@keyframes flash{
+			from{
+				width: 20px;
+				height: 20px;
+			}
+			50%{
+				width: 200px;
+				height: 200px;
+			}
+			to{
+				width: 500px;
+				height: 200px;
+			}
+		}
+		.box{
+			width: 10px;
+			height: 10px;
+			background-color: black;
+			/*animation-name: flash;
+			animation-duration: 3s;
+			animation-timing-function: ease;
+			animation-iteration-count: 3;
+			animation-delay: 1s;*/
+			animation: flash 6s linear 2 1s;
+			/*animation-fill-mode: forwards;*/
+			/*animation-fill-mode: backwards;*/
+			animation-fill-mode: both;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	
+</body>
+</html>

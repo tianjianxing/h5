@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<video src="video.mp4" width="200px" height="300px" controls class="v1"></video>
+	<br>
+	<br>
+	<input type="button" value="播放" class="startbtn">
+	<input type="button" value="停止" class="overbtn">
+	<input type="range" value="0" class="i1" max="24"> <span class="s1">0</span>/24
+	<script>
+		var v1 = document.querySelector(".v1");
+		var startbtn = document.querySelector(".startbtn");
+		var overbtn = document.querySelector(".overbtn");
+		var i1 = document.querySelector(".i1");
+		var s1 = document.querySelector(".s1");
+		var sss;
+		startbtn.onclick = function(){
+			if(i1.value==24){
+				i1.value = 0;
+				s1.textContent = 0;
+			}
+			v1.play();
+		}
+		v1.onplay = function(){
+			clearInterval(sss);
+			sss = setInterval(function(){
+				if(i1.value<25){
+					s1.textContent = parseInt(v1.currentTime);
+					i1.value = v1.currentTime;
+				}
+			},1000)
+		}
+		i1.onchange = function(){
+			v1.currentTime = i1.value;
+			s1.textContent = i1.value;
+		} 
+        overbtn.onclick = function(){
+        	v1.pause();
+        	clearInterval(sss);
+        }
+	</script>
+</body>
+</html>

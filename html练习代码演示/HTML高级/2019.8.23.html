@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px dashed green;
+		}
+	</style>
+</head>
+<body>
+	<canvas class="c1" width="600px" height="800px"></canvas>
+	<br>
+	<script>
+		var c1 = document.querySelector(".c1");
+		var h1 = c1.getContext("2d");
+		var img = new Image();
+		img.src = "梅.jpg";
+
+		// img.onload = function(){
+		// 	h1.drawImage(img,0,0,600,800);
+		// }
+	c1.onmousemove = function(e){
+		var x = e.offsetX,
+			y = e.offsetY;
+		h1.save();
+		// h1.clearRect(0,0,600,800);
+		h1.beginPath();
+		h1.arc(x,y,60,0,2*Math.PI,false)
+		h1.clip();
+		h1.drawImage(img,0,0,600,800);
+		h1.restore();
+	}
+	</script>
+
+
+	<canvas class="c2" width="600px" height="800px"></canvas>
+	<br>
+	<script>
+		var c2 = document.querySelector(".c2");
+		var h2 = c2.getContext("2d");
+		var img1 = new Image();
+		img1.src = "建行.jpg";
+
+		// img.onload = function(){
+		// 	h2.drawImage(img,0,0,600,800);
+		// }
+	c2.onmousemove = function(e){
+		var x = e.offsetX,
+			y = e.offsetY;
+		h2.save();
+		// h2.clearRect(0,0,600,800);探照灯形式
+		h2.beginPath();
+		h2.arc(x,y,60,0,2*Math.PI,false)
+		h2.clip();
+		h2.drawImage(img1,0,0,600,800);
+		h2.restore();
+	}
+	</script>
+</body>
+</html>

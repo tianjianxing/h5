@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择器的介绍</title>
+	<style>
+		  *{
+		  	color: grey;
+		  }
+		  [class]{
+		  	color: blue;
+		  }
+		  [class="121"]{
+		  	color: orange;
+		  }
+		  [name^="4"]{
+		  	color: yellow;
+		  }
+		  [class$="1"]{
+		  	color:green;
+		  }
+		  [name*="6"]{
+		  	color: brown;
+		  }
+		  a:link{
+		  	color: blue;
+		  }
+		  a:visited{
+		  	color: red;
+		  }
+		  a:hover{
+		  	color: black;
+		  }
+		  a:active{
+		  	color: green;
+		  }
+		  .s1 :first-child{
+		  	color: pink;
+		  }
+		  .s1 :last-child{
+		  	color: yellow;
+		  }
+		  :only-child{
+		  	color: blue;
+		  }
+		  :nth-child(3){
+		  	color: black;
+		  }
+		  /*:nth-child(odd 奇数 even 偶数){
+		  	color: orange;
+		  }*/
+		  :nth-last-child(4){
+		  	color: red;
+		  }
+		  .s2 :enabled{
+		  	background-color: red;
+		  }
+		  .s2 :disabled{
+		  	color: green;
+		  }
+		  .s2 :checked{
+		  	width: 50px;
+		  	height:50px;
+		  }
+		  .s3 :valid{
+		  	border:2px solid green;
+		  }
+		  .s3 :invalid{
+		  	border: 4px solid red;
+		  }
+		  form div :not(.s4){
+		  	background-color: yellow;
+		  	color: black;
+
+		  }
+
+</style>
+
+</head>
+<body>
+	<div class="1" name="2">1111111</div>
+	<span class="3" name="464">22222222</span>
+	<p class="121" name="5">333333333333</p>
+	<b class="123" name="678">444444444444</b><br>
+	<em class="456" name="676">55555555</em><br><br><br>
+	<a href="http://www.baidu.com">百度</a><br>
+	<a href="http://www.qq.com">腾讯</a><br>
+	<a href="http://www.sina.com">新浪</a><br>
+	<a href="http://www.huya.com">虎牙</a><br>
+	<ol>
+		<li>aaa</li>
+		<li>bbb</li>
+		<li>ccc</li>
+		<li>ddd</li>
+		<li>eee</li>
+	</ol><br>
+	<ol class="s1">
+		<li>123456789</li>
+		<li>123456789</li>
+		<li>123456789</li>
+		<li>123456789</li>
+		<li>123456789</li>
+	</ol>
+	<ul>
+		<li>00000</li>
+	</ul><br>
+	<form class="s2">
+		<input type="button" value="按钮" disabled=""><br>
+		账号:<input type="text"><br>
+		密码:<input type="password"><br>
+		<input type="submit" value="提交" ><br>
+		<input type="radio" name="sex">男
+		<input type="radio" name="sex">女<br>
+		复选框：<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+
+	</form>
+	<form class="s3">
+		用户名：<input type="text" required=""><br>
+		密码：<input type="text" required=""><br>
+		<input type="text">（可填可不填）<br>
+		<input type="submit" value="刷新">
+		<div class="box">
+			<i>111</i>
+			<i>222</i>
+			<i class="s4">333</i>
+			<i>444</i>
+			<i>555</i>
+			<i>666</i>
+		</div>
+	</form>
+
+</body>
+</html>

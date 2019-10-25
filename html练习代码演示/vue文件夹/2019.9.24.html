@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+	<style>
+		table{
+			border:1px solid black;
+			border-collapse: collapse;
+		}
+		td,th{
+			width: 100px;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div class="box" v-for="n in 10" v-random-color>第{{n}}个区域</div>
+	</div>
+	<script>
+		Vue.directive("random-color",function(el,binding){
+			setInterval(function(){
+				var bgr = Math.floor(Math.random()*256);
+				var bgg = Math.floor(Math.random()*256);
+				var bgb = Math.floor(Math.random()*256);
+				var fr = 255 - bgr;
+				var fg = 255 - bgg;
+				var fb = 255 - bgb;
+				el.style.backgroundColor = `rgb(${bgr},${bgg},${bgb})`;
+				el.style.color = `rgb(${fr},${fg},${fb})`;
+				//es6中的模板字符串写法
+			},1000)
+		})
+		new Vue({
+			el:"#app"
+		})
+	</script>
+
+
+
+	<div id="app1">
+		<table v-table-stripe.even="color">
+		  <tr>
+		    <th>ID</th>
+		    <th>姓名</th>
+		    <th>性别</th>
+		    <th>年龄</th>
+		    <th>备注</th>
+		  </tr>
+		  <tr>
+		    <td>001</td>
+		    <td>张三</td>
+		    <td>男</td>
+		    <td>22</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>002</td>
+		    <td>李四</td>
+		    <td>女</td>
+		    <td>33</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>003</td>
+		    <td>王五</td>
+		    <td>男</td>
+		    <td>23</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>004</td>
+		    <td>赵六</td>
+		    <td>女</td>
+		    <td>55</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>005</td>
+		    <td>田七</td>
+		    <td>男</td>
+		    <td>11</td>
+		    <td></td>
+		  </tr>
+		</table>
+
+		<input type="text" v-model="color">
+	</div>
+	<script>
+		Vue.directive("table-stripe",function(el,binding){
+			if(el.tagName.toUpperCase() == "TABLE"){
+				var even = binding.modifiers.even;
+				var odd = binding.modifiers.odd;
+				//  modifiers: 一个包含修饰符的对象。 例如： v-my-directive.foo.bar, 修饰符对象 modifiers 的值是 { foo: true, bar: true }。 
+				if(even){
+					var trs = el.querySelectorAll("tr:nth-child(even)");
+					for(var i = 0;i < trs.length;i++){
+						trs[i].style.backgroundColor = binding.value;
+					}
+				}else if(odd){
+					var trs = el.querySelectorAll("tr:nth-child(odd)");
+					for(var i = 0;i < trs.length;i++){
+						trs[i].style.backgroundColor = binding.value;
+					}
+				}else{
+					el.style.backgroundColor = binding.value;
+				}
+			}
+		})
+		new Vue({
+			el:"#app1",
+			data:{
+				color:"red"
+			}
+		})
+	</script>
+</body>
+</html>

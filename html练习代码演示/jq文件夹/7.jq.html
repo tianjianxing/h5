@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+	<script src="jquery-3.4.1.js"></script>
+	<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<script src="datepicker-zh-cn.js"></script>
+</head>
+<body>
+	<input type="text" class="dt">
+	<script>
+		$(".dt").datepicker({
+			showAnim:"slide",
+			showOtherMonths:true,
+			selectOtherMonths:true,
+			showButtonPanel:true,
+			onSelect:function(date){
+				console.log(date);
+			},
+			changeMonth:true,
+			changeYear:true,
+			numberOfMonths:2
+		});
+		$(".ui-datepicker").css("height","500px");
+
+		$(".dt").datepicker("option","dateFormat","yy年mm月dd日");
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<input type="button" value="按钮" class="btn1">
+	<div class="box" title="这是标题">
+		通过：jq对象.dialog()进行绑定
+	    元素的title属性会作为弹出框的标题显示
+	    元素的文本内容（可以识别html标记）
+	    <br>
+	    <i>dialog默认是自动打开的，我们可以通过设置atuoOpen属性进行设置是否自动打开</i>
+	</div>
+	<script>
+		$(".box").dialog({
+			// autoOpen:false,
+			buttons:{
+				"按钮1":function(){
+					console.log("输出按钮1");
+				},
+				"按钮2":function(){
+					console.log("输出按钮2");
+				}
+			},
+			draggable:false,
+			resizable:false,
+			// modal:true
+
+		});
+	</script>
+	<style>
+		.u1,.u2{
+			border:2px solid red;
+			list-style-type: none;
+			padding:0;
+		}
+		.u1>li{
+			border:1px solid green;
+		}
+		.u2>li{
+			border:1px solid blue;
+		}
+	</style>
+	<ul class="u1">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+		<li>005</li>
+		<li>006</li>
+	</ul>
+	<ul class="u2">
+		<li>00001</li>
+		<li>00002</li>
+		<li>00003</li>
+		<li>00004</li>
+		<li>00005</li>
+		<li>00006</li>
+		<li>00007</li>
+		<li>00008</li>
+	</ul>
+	<script>
+		$(".u1").sortable({
+			connectWith:".u2"
+		});
+		$(".u2").sortable({
+			connectWith:".u1"
+		});
+	</script>
+	<style>
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<div class="box1"></div>
+	<script>
+		$(".box1").draggable({
+			start:function(){
+				console.log("开始拖动");
+			},
+			stop:function(){
+				console.log("停止拖动");
+			},
+			drag:function(){
+				console.log("一直在被拖动");
+			},
+			axis:"x"
+		});
+		$(".box1").resizable();
+	</script>
+</body>
+</html>

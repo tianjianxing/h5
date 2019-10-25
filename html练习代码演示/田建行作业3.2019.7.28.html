@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="t1" style="width: 300px;border:none;">
+	<script>
+		var t1 = document.all.t1;
+		var fun = setInterval(function(){
+			var time = new Date();
+			var nowtime = new Date(2019,7,1,18,0,0);
+		    var blank = nowtime.getTime() - time.getTime();
+		    // var over =  blank--; 
+            t1.value ="距离8月1号还有：" + Math.floor(blank/1000/60/60) + " 时 " + Math.floor(blank/1000/60%60) + " 分 "+ Math.floor(blank/1000%60) + " 秒";
+		},1000)
+
+	</script>
+	
+</body>
+</html>

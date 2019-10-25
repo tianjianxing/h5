@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		.box div{
+			float: left;
+			border:5px solid red;
+			width: 200px;
+			height: 800px;
+			background-color: orange;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮" class="btn"><br><br>
+	<div class="box">
+		<div class="box1">001</div><div class="box1">002</div><div class="box1">003</div><div class="box1">004</div><div class="box1">005</div><div class="box1">006</div><div class="box1">007</div><div class="box1">008</div>
+		<!-- <img src="1.jpg" alt="" class="box1"><img src="2.jpg" alt="" class="box1"><img src="3.jpg" alt="" class="box1"><img src="4.jpg" alt="" class="box1"><img src="5.jpg" alt="" class="box1"><img src="6.jpg" alt="" class="box1"><img src="7.jpg" alt="" class="box1"><img src="8.jpg" alt="" class="box1"><img src="9.jpg" alt="" class="box1"> -->
+	</div>
+	<script>
+		$(".btn").click(function(){
+			// var show1 = setInterval(function(){
+			// 	if()
+			// },100)
+			// if(var i = 0;i < 8;i++){
+			// 	$(".box").append('<div>'+i+'</div>');
+			// 	i++;
+			// }
+			$(".box1").each(function(i){
+				$(this).delay(i*200).fadeIn(1000);
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.header-section{
+	position: relative;
+	height: 577px;
+	background-image: url(../image/20190104155757_792.jpg);
+}
+.header-section .header-section-nav{
+	z-index: 3
+}
+.header{
+	width: 85%;
+	height: 120px;
+	margin: auto;
+	position: relative;
+}
+.header-section .header a{
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff;
+}
+.header-section .header>a img{
+	float: left;
+	width: 150px;
+	height: 120px;
+}
+.header-section .header .header-nav{
+	display: inline-block;
+	margin-top: 48px;
+	float: right;
+}
+.header-section .header .header-nav li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header-section .header .header-nav li a{
+	font-size: 24px;
+}
+.header-section .header .header-nav li:nth-child(5) a{
+	color: #f45d52;
+	border-bottom: 3px solid #f45d52;
+}
+.header-section .header .header-nav li a:hover{
+	color: #f45d52;
+}
+.header-section .section{
+	position: absolute;
+	width: 800px;
+	height: 200px;
+	top: 220px;
+	left: 560px;
+	color: #ffffff;
+}
+.header-section .section div{
+	font-size: 72px;
+	margin-left: 50px;
+}
+.header-section .section hr{
+	border-width: 2px;
+	width: 90%;
+	color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+.header-section .section p{
+	font-size: 32px;
+	letter-spacing: 10px;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+.all-footer{
+	height: 180px;
+	line-height: 150px;
+	text-align: center;
+	font-size: 18px;
+	color: #666666;
+}
+.title{
+	font-size: 48px;
+	height: 100px;
+	margin-left: 230px;
+	margin-top: 70px;
+}
+.title p{
+	color: #f45d52;
+}
+.font{
+	margin-left: 230px;
+	width: 80%;
+	height: 750px;
+	background-image: url(../image/20190130170957_525.png);
+	background-repeat: no-repeat;
+	background-size: 50px 745px;
+	font-size: 32px;
+}
+.font .font-one-p{
+	height: 750px;
+	width: 300px;
+	margin-left: 80px;
+	margin-top: -20px;
+}
+.font .font-two-p{
+	height: 750px;
+	width: 1000px;
+	margin-left: 80px;
+}
+.font .font-one-p,.font .font-two-p{
+	display: inline-block;
+}
+.font .font-one-p span,.font .font-two-p span,.font .font-two-p a{
+	display: block;
+	margin: 10px 0px 33px 0px;
+}
+.font .font-two-p a{
+	color: #000000;
+	text-decoration: none;
+}
+.font .font-two-p a:hover{
+	color: #f45d52;
+	text-decoration: underline;
+}
+.all-footer{
+	border-top: 1px solid #e5e5e5;
+	height: 180px;
+	line-height: 150px;
+	text-align: center;
+	font-size: 18px;
+	color: #666666;
+}

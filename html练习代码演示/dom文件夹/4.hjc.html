@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+		console.log(window.innerHeight);
+		console.log(window.innerWidth);
+		var w = window.innerWidth || document.documentElemnet.clientWidth || document.body.client.Width;
+		var h = window.innerheight || document.documentElement.clientHeight || document.body.clientHeight;
+		console.log(window.outerHeight);
+		console.log(window.outerWidth);
+	</script>
+	<input type="button" value="打开新窗口" onclick="openWin()">
+	<input type="button" value="关闭新窗口" onclick="closeWin()">
+	<script>
+		// var news = prompt("请输入用户名和密码");
+		// var newss = alert("输入你要说的话");
+		var newWin;
+		function openWin(){
+			// open();
+			newWin = open("http://www.qq.com");
+			console.log(newWin);
+		}
+		function closeWin(){
+			newWin.close();
+		}
+	</script>
+	<br>
+	<input type="button" value="按钮00" onclick="fun()">
+	<br>
+	<a href="http://www.baidu.com" target="qq">qqqq</a>
+	<script>
+		function fun(){
+			open("http://www.sina.com","qq","width=200,height=300,toolbar=no,top=400,left=600");
+		}
+	</script>
+	<i onclick="fun1()">点击</i>
+	<script>
+		function fun1(){
+			var i = confirm("请确认");
+			console.log(i);
+			if(i){
+				console.log("可以");
+			}
+		}
+	</script>
+	<input type="button" value="cleartimeout" onclick="fun2()">
+	<script>
+		var num = 5;
+		var timer = setInterval(function(){
+			console.log(num--);
+			if(num < 0){
+				clearInterval(timer);
+			}
+		},1000)
+
+		var timer1 = setTimeout(function(){
+			console.log("123456789");
+		},5000)
+		function fun2(){
+			clearTimeout(timer1);
+			当点击函数2时，会接收到clearTimeout的停止信号，即在一次性计时器尚未记时前关闭。
+		}
+	</script> -->
+
+
+
+	<script>
+		console.log(navigator.appCodeName);
+		console.log(navigator.appName);
+		console.log(navigator.appVersion);
+		console.log(navigator.language);
+		console.log(navigator);
+		console.log(screen.width);
+		console.log(screen.height);
+
+	</script>
+	<a href="">111</a>
+	<a href="">222</a>
+	<a href="">333</a>
+	<input type="button" value="open" onclick="fun1()">
+	<input type="button" value="back" onclick="fun2()">
+	<input type="button" value="forward" onclick="fun3()">
+	<script>
+		console.log(history.length);
+		function fun1(){
+			open("3.hcj.html","_self");
+		}
+		function fun2(){
+			history.back();
+		}
+		function fun3(){
+			history.forward();
+		}
+		// function fun2(){
+		// 	history.go(-1);
+		// }
+		// function fun3(){
+		// 	history.go(1);
+		// }
+	</script>
+	<a href="#a1"></a>
+	<a href="#a2"></a>
+	<a href="#a3"></a>
+	<br>
+	<br>
+	<input type="button" value="gethash" onclick="fun4()">
+	<script>
+		function fun4(){
+			console.log(location.hash);
+			location.hash = "#a2";
+			var aaa  = document.querySelector(location.hash);
+			aaa.style.color = "green";
+		}
+		console.log(location.host);
+		console.log(location.href);
+		// location.href = "http://www.taobao.com";
+		console.log(location.pathname);
+		// location.reload();
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="a1">锚点1</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="a2">锚点2</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="a3">锚点3</div>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

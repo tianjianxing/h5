@@ -1,0 +1,162 @@
+nav .eat-heathy-contain a:first-child b{
+	border-bottom: 5px solid red;
+}
+section{
+	width: 100%;
+	background-color: #fae8c8;
+}
+.section-contain{
+	width: 990px;
+	margin: auto;
+}
+/*标题1*/                               /*标题二*/
+section .section-contain h3:first-child,section .section-contain h3:last-child{
+	width: 990px;
+	height: 120px;
+    line-height: 120px;
+    margin-left: 0px;
+    font-size: 24px;
+    color: #222;
+    text-align: center;
+    position: relative;
+}
+section .section-contain h3:first-child a{
+	padding-left: 40px;
+	background: url(../image/Icon-Small.png) no-repeat left center;
+	color: #222;
+}
+section .section-contain h3:first-child>a:hover{
+	text-decoration: underline;
+}
+section .section-contain h3:last-child>a{
+	color: #222;
+}
+section .section-contain h3 div{
+	line-height: 48px;
+    position: absolute;
+    right: 0px;
+    top: 75px;
+    display: block;
+    height: 48px;
+    font-size: 12px;
+    color: #666;
+}
+section .food-nav ul{
+	width: 990px;
+	height: 50px;
+	background-color: #fdf4e4;
+}
+section .food-nav ul li{
+	padding: 0px 24px;
+	line-height: 50px;
+}
+section .section-contain .food-nav ul li a{
+	font-weight: bold;
+	color: #333;
+}
+section .section-contain .food-nav ul li:hover{
+	background-color: #fff;
+}
+section .section-contain .food-nav ul li a:hover{
+	text-decoration: none;
+	color: red;
+}
+section .section-contain .food-nav a{
+	display: inline-block;
+	height: 28px;
+	padding: 0px 8px;
+	color: #666;
+	line-height: 28px;
+}
+section .section-contain .food-nav dl a:hover{
+	color: #fff;
+	text-decoration: none;
+	background-color: #ff3232;
+}
+section .food-nav{
+	background-color: #fff;
+	width: 990px;
+}
+
+section .food-nav ul li,section .food-nav dd{
+	float: left;
+}
+section .food-nav dl{
+	padding: 10px 16px 14px;
+    display: inline-block;
+    vertical-align: top;
+}
+section .food-nav dl dt{
+	font-size: 24px;
+}
+section .food-nav .food-info{
+	width: 210px;
+}
+section .food-nav .food-culture{
+	width: 537px;
+}
+section .section-image{
+	margin:auto;
+	width: 990px;
+}
+section .section-image>div{
+	background: #fff url(../image/a6681847_151063780528911.jpg) no-repeat;
+    height: 332px;
+    width: 232px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+section .section-image>div>a:first-child{
+	display: inline-block;
+	height: 232px;
+    width: 232px;
+    position: relative;
+}
+/*图片动画*/
+section .section-image>div>a:first-child span{
+	display: inline-block;
+	width: 0px;
+	height: 232px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	transition: all 1s;
+	opacity: 0;
+}
+section .section-image>div>a:first-child span .image-info-link{
+	width: 200px;
+	height: 100px;
+	color: orange;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 75px;
+}
+section .section-image>div>a:first-child span .image-info-link div{
+	width: 90px;
+	height: 50px;
+}
+section .section-image>div>a:first-child:hover span{
+	width: 200px;
+	opacity: 1;
+	background-color: #111;
+}
+section .section-image>div>a:first-child{
+	opacity: .5;
+}
+section .section-image>div div{
+	width: 232px;
+	height: 100px;
+	padding: 10px;
+}
+section .section-image>div div a:first-child{
+	font-weight: bold;
+	color: #333;
+}
+section .section-image>div div a:first-child:hover{
+	color: red;
+	text-decoration: none;
+}
+section .section-image>div div a:last-child{
+	color: red;
+}

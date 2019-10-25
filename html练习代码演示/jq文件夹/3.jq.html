@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<script>
+		window.onload = function(){
+			console.log("1111");
+		}
+		$(document).ready(function(){
+
+		})
+		$().ready(function(){
+
+		})
+		$(function(){
+			console.log("ready最简写形式");
+		})
+	</script>
+	<script>
+		console.log("验证是不是优先ready执行");
+	</script>
+	<input type="button" value="按钮1" id="btn1">
+	<script>
+		$("#btn1").bind("click",function(){
+			console.log("绑定事件方法一");
+		})
+		$("#btn1").on("click",function(){
+			console.log("绑定事件最常用方法");
+		})
+	</script>
+	<div class="box">
+		<input type="button" value="1111">
+		<input type="button" value="2222">
+		<input type="button" value="3333">
+		<input type="button" value="4444">
+	</div>
+	<script>
+		$(".box").on("click","input",function(event){
+			console.log(event.target);
+		})
+	</script>
+	<input type="button" value="按钮2" id="btn2">
+	<script>
+		// $("#btn2").on("click mouseover",function(){
+		// 	console.log("99999999");
+		// })
+		$("#btn2").on("click",function(){
+			console.log("点击鼠标");
+		})
+		.on("mouseout",function(){
+			console.log("鼠标移出");
+		})
+	</script>
+	<input type="button" value="按钮3" id="btn3">
+	<script>
+		$("#btn3").click(function(){
+			console.log("2222222");
+		})
+	</script>
+	<input type="text" id="text1">
+	<script>
+		$("#text1").on("input",function(){
+			console.log($(this).val());
+		})
+	</script>
+	<input type="button" value="按钮4" id="btn4">
+	<script>
+		$("#btn4").one("click",function(){
+			console.log("只允许输出一次");
+		})
+	</script>
+	<input type="button" value="按钮5" id="btn5">
+	<script>
+		var i = 0;
+		$("#btn5").bind("click",function(){
+			console.log("4444444");
+			if(i>=4){
+				$("#btn5").unbind("click");
+			}
+			i++;
+		})
+	</script>
+	<input type="button" value="按钮6" id="btn6">
+	<script>
+		$("#btn6").on("click",function(){
+			console.log("55555");
+		})
+		$("#btn6").off("click");
+	</script>
+	<input type="button" value="按钮7" id="btn7">
+	<script>
+		$("#btn7").on("click",function(){
+			console.log($(this));
+			var e = window.event || arguments[0];
+			var srcEle = e.target || e.srcElement;
+			console.log(e);
+			console.log(srcEle);
+			console.log(event);
+		})
+	</script>
+	<input type="button" value="得到一些东西" id="get">
+	<script>
+		$("#get").click(function(){
+			console.log("一些东西");
+		})
+		$("#get").trigger("click");
+		$("#get").click();
+		//不用点击即可输出，也就是110和111行已经帮助点击过了。
+	</script>
+</body>
+</html>

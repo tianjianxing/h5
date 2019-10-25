@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.div{
+			border:5px solid black;
+			width: 1200px;
+			height: 800px;
+			margin:auto;
+		}
+		.div div{
+			background-color: #fda400;
+			width: 200px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			color: white;
+			font-weight: bold;
+			font-size: 30px;
+		}
+		.box{
+			margin-left:0px;
+			transition: margin-left 2s ease 1s;
+		}
+		.box1{
+			margin-left: 0px;
+			transition: margin-left 2s ease-in 1s;
+		}
+		.box2{
+			margin-left: 0px;
+			transition: margin-left 2s ease-out 1s; 
+		}
+		.box3{
+			margin-left: 0px;
+			transition: margin-left 2s ease-in-out 1s;
+		}
+		.box4{
+			margin-left: 0px;
+			transition: margin-left 2s linear 1s;
+		}
+		.div:hover div{
+			margin-left:1000px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="div">
+    <br><br>
+	<div class="box">ease</div>
+	<br><br>
+	<div class="box1">ease-in</div>
+	<br><br>
+	<div class="box2">ease-out</div>
+	<br><br>
+	<div class="box3">ease-in-out</div>
+	<br><br>
+	<div class="box4">linear</div>
+	</div>
+</body>
+</html>

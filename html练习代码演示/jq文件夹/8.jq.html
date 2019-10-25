@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<script>
+		jQuery.fun1 = function(){
+			console.log("创建全局函数");
+		}
+		jQuery.fun1();
+		$.fun1();
+
+		$.extend({
+			fun2:function(){
+				console.log("扩展函数一");
+			},
+			fun3:function(){
+				console.log("扩展函数二");
+			}
+		})
+		$.fun2();
+		$.fun3();
+	</script>
+	<script>
+		$.plugin = {
+			fun4:function(){
+				console.log("封装函数一");
+			},
+			fun5:function(){
+				console.log("封装函数二");
+			},
+			fun6:function(){
+				console.log("封装函数三");
+			}
+		}
+		$.plugin.fun5();
+	</script>
+	<script>
+		$.fn.fn1 = function(){
+			console.log("创建对象函数");
+		}
+		$.fn.fn1();
+	</script>
+	<div class="box1"></div>
+	<br>
+	<div class="box2"></div>
+	<script>
+		$.fn.fn2 = function(){
+			this.css({
+				"width":"100px",
+				"height":"100px",
+				"background-color":"green"
+			})
+		}
+		$(".box1").fn2();
+		$(".box2").fn2();
+	</script>
+	<br>
+	<div class="box3">aaaaaaaa</div>
+	<br>
+	<div class="box4">444444444</div>
+	<script>
+		$.fn.fn3 = function(a,b,c,d){
+			this.css({
+				"width":a,
+				"height":b,
+				"color":c,
+				"background-color":d
+			})
+		}
+		$(".box3").fn3("200px","100px","blue","yellow");
+		$(".box4").fn3("100px","200px","red","green");
+	</script>
+	<br>
+	<div class="box5">1234567890</div>
+	<script>
+		$.fn.fn4 = function(obj){
+			this.css({
+				"background-color":obj.bgc,
+				"width":obj.wid,
+				"height":obj.heig,
+				"color":obj.color
+			})
+			if(obj.hsaBorder){
+				this.css("border","2px solid black");
+			}
+		}
+		$(".box5").fn4({
+			bgc:"green",
+			color:"red",
+			hsaBorder:true
+		});
+	</script>
+
+
+	<script>
+		var i = {
+			a:1,
+			b:2,
+			c:3
+		}
+		var j = {
+			d:4,
+			e:5,
+			a:6,
+			b:7
+		}
+		var res = $.extend(j,i);
+		var ress = $.extend(i,j);
+		console.log(res,ress);
+	</script>
+	<br>
+	<br>
+	<div class="box6">666666666</div>
+	<script>
+		$.fn.fn5 = function(obj){
+			var moren = {
+				w:"300px",
+				h:"100px",
+				c:"orange",
+				bgc:"pink",
+				fun:function(){
+					console.log(this);
+				}
+				//默认参数值
+			}
+			var resss = $.extend(moren,obj);
+		    this.css({
+				"width":resss.w,
+				"height":resss.h,
+				"color":resss.c,
+				"background-color":resss.bgc
+			})
+			resss.fun();
+		}
+		$(".box6").fn5({
+			w:"200px",
+			h:"200px",
+			bgc:"yellow",
+			// fun:function(){
+			// 	console.log("这是传过来的方法");
+			// }
+		});
+	</script>
+</body>
+</html>

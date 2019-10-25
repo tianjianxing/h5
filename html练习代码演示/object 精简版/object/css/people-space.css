@@ -1,0 +1,458 @@
+section{
+	width: 100%;
+}
+section>h3{
+	width: 990px;
+	height: 120px;
+	color: #222;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+/* 个人简介 */
+section .section-contain{
+	width: 990px;
+	margin: auto;
+	display: flex;
+}
+section .section-contain .userh-main{
+	width: 570px;
+	background-color: white;
+}
+section .section-contain .userh-main .info1{
+	width: 530px;
+	height: 106px;
+	color: #000;
+	font-size: 12px;
+	margin: 0 20px;
+	border-bottom: 1px solid #999;
+}
+section .section-contain .userh-main .info1 h1{
+	width: 530px;
+	height: 58px;
+	color: #333;
+	font-size: 24px;
+	padding: 14px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+}
+section .section-contain .userh-main .info1 h1>div:first-child a{
+	display: inline-block;
+	width: 50px;
+	height: 25px;
+	background-image: url(../image/jf_hz_wd_userlevel_bg.gif);
+}
+section .section-contain .userh-main .info1 h1>div:last-child{
+	display: flex;
+}
+section .section-contain .userh-main .info1 h1 .mail{
+	display: block;
+	width: 60px;
+	height: 22px;
+	color: #999;
+	font-size: 12px;
+	background-color: #eee;
+	padding: 0 12px;
+	display: flex;
+	align-items: center;
+}
+section .section-contain .userh-main .info1 h1 .follow-ta{
+	display: block;
+	width: 58px;
+	height: 22px;
+	margin: 0 0 0 6px;
+	font-size: 12px;
+	background-image: url(../image/follow_btn.png);
+	background-repeat: no-repeat;
+}
+section .section-contain .userh-main .info1 h1 .follow-ta:hover{
+	background-position: 0 -22px;
+}
+section .section-contain .userh-main .info1 a,em{
+	font-size: 12px;
+	color: #999;
+}
+section .section-contain .userh-main .info1>a:hover{
+	color: red;
+}
+section .section-contain .userh-main .info1 .mail:hover{
+	background-color: #dddddd;
+	color: #666;
+	text-decoration: none;
+}
+section .section-contain .uder-userinfo{
+	width: 210px;
+	height: 210px;
+	font-size: 12px;
+	background-color: white;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+}
+section .section-contain .uder-userinfo a{
+	display: block;
+	width: 81px;
+	height: 81px;
+	border-radius: 32px;
+	background-color: #f8f8f8;
+	position: relative;
+}
+section .section-contain .uder-userinfo a div{
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	bottom: 0;
+	right: 0;
+	background-color: #f8f8f8;
+}
+section .section-contain .uder-userinfo a:nth-child(2) div{
+	left: 0;
+}
+section .section-contain .uder-userinfo a:nth-child(3) div{
+	top: 0;
+}
+section .section-contain .uder-userinfo a:nth-child(4) div{
+	top: 0;
+	left: 0;
+}
+section .section-contain .uder-userinfo a span,
+section .section-contain .uder-userinfo a strong{
+	display: block;
+	width: 81px;
+	height: 34px;
+	color: #999;
+	font-size: 12px;
+	padding: 14px 0 0 14px;
+	position: relative;
+}
+section .section-contain .uder-userinfo a strong{
+	font-size: 18px;
+	padding: 0 0 0 14px;
+	color: #ff3232;
+	font-weight: normal;
+}
+section .section-contain .uder-userinfo a:nth-child(4) strong{
+	color: #999;
+}
+section .section-contain .uder-userinfo a:hover,
+section .section-contain .uder-userinfo a:hover div{
+	background-color: red;
+	text-decoration: none;
+}
+section .section-contain .uder-userinfo a:hover span,
+section .section-contain .uder-userinfo a:hover strong{
+	color: white;
+}
+/* 导航 */
+section>ul{
+	width: 990px;
+	height: 90px;
+	display: flex;
+	margin: auto;
+	align-items: center;
+}
+section>ul li a{
+	display: block;
+	height: 50px;
+	margin: 0 20px;
+	color: #333;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	border-bottom: 3px solid transparent;
+}
+section>ul li a:hover{
+	color: red;
+	cursor: pointer;
+}
+section>ul li:first-child a{
+	font-weight: bold;
+	color: red;
+	border-bottom: 3px solid red;
+}
+/* 动态 */
+section .user-space{
+	width: 990px;
+	margin: auto;
+	background-color: white;
+	display: flex;
+}
+section .user-space .user-works{
+	width: 672px;
+	height: 285px;
+	color: #000;
+	font-size: 12px;
+	margin: 0 14px;
+	padding: 10px 0 0;
+	display: flex;
+}
+section .user-space .user-works>a img{
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+}
+
+section .user-space .user-works li:first-child{
+	width: 590px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 10px;
+}
+section .user-space .user-works li:nth-child(2) a{
+	display: block;
+	width: 590px;
+	height: 170px;
+	padding: 10px;
+	background-color: #f5f5f5;
+}
+section .user-space .user-works li:nth-child(2) a:hover{
+	text-decoration: none;
+}
+section .user-space .user-works li:nth-child(2) a h3{
+	width: 390px;
+	height: 32px;
+	color: #ff3232;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+section .user-space .user-works li:nth-child(2) a p{
+	color: #666;
+	font-size: 14px;
+	padding: 4px 0 0 0;
+}
+section .user-space .user-works li:nth-child(3){
+	width: 590px;
+	height: 44px;
+	color: #aaa;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+}
+section .user-space aside{
+	width: 290px;
+	background-color: #fafafa;
+	padding-bottom: 30px;
+}
+section .user-space aside>div{
+	width: 290px;
+	height: 196px;
+	padding: 0 0 0 14px;
+}
+section .user-space aside>div h3{
+	width: 276px;
+	height: 60px;
+	color: #333;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	position: relative;
+}
+section .user-space a{
+	right: 20px;
+	font-size: 12px;
+	color: #999;
+}
+section .user-space a:hover{
+	color: red;
+}
+section .user-space aside>div h3 a{
+	position: absolute;
+}
+section .user-space aside>div img{
+	width: 68px;
+	height: 68px;
+	padding: 0 8px 8px 0;
+	border-radius: 4px;
+}
+section .user-space aside>div ul{
+	width: 260px;
+	background-color: white;
+}
+section .user-space aside>div ul li{
+	width: 260px;
+	padding: 0 14px 0 14px;
+	height: 45px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section .user-space aside>div ul li a{
+	color: #666;
+	font-size: 14px;
+}
+section .user-space aside>div ul li span{
+	color: #aaa;
+	font-size: 12px;
+}
+/* 作品 */
+section .user-space .user-space-box{
+	width: 990px;
+}
+section .user-space .user-space-nav{
+	width: 990px;
+	height: 70px;
+	border-bottom: 1px solid #fafafa;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 20px;
+	position: relative;
+}
+section .user-space .user-space-nav ul,
+section .user-space .my-task{
+	width: 322px;
+	height: 68px;
+	padding: 14px 20px;
+	display: flex;
+	align-items: center;
+}
+section .user-space .user-space-nav ul li{
+	width: 94px;
+	height: 40px;
+}
+section .user-space .user-space-nav ul li a,
+section .user-space .my-task a,
+section .user-space .collect-box a{
+	display: block;
+	width: 84px;
+	height: 40px;
+	color: #333;
+	font-size: 14px;
+	padding: 0 14px;
+	margin: 0 10px 0 0;
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
+}
+section .user-space .user-space-nav ul li:first-child a,
+section .user-space .my-task a,
+section .user-space .collect-box a:first-child{
+	background-color: red;
+	color: white;
+}
+section .user-space a:hover{
+	text-decoration: none;
+}
+section .user-space .user-space-nav ul li:nth-child(2) a:hover,
+section .user-space .user-space-nav ul li:nth-child(3) a:hover{
+	background-color: #f5f5f5;
+}
+section .user-space .user-space-nav form{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+section .user-space .user-space-nav [type="text"]{
+	width: 220px;
+	height: 38px;
+	padding: 8px;
+}
+section .user-space .user-space-nav [type="submit"]{
+	position: absolute;
+	right: 1px;
+	width: 34px;
+	height: 34px;
+	background-color: white;
+	border: none;
+	background-image: url(../image/searchbtn1.png);
+	background-position: center 0px;
+}
+section .user-space .user-space-nav [type="submit"]:hover{
+	background-position: center -40px;
+}
+section .works{
+	width: 990px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fafafa;
+}
+/* 任务 */
+section .user-space .my-task-section,
+section .user-space .collect-box .collect-section,
+section .user-space .user-like{
+	width: 990px;
+    height: 184px;
+    font-size: 12px;
+    color: #000;
+    padding: 24px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed #ddd;
+}
+/* 收藏 */
+section .user-space .collect-box .collect-nav{
+	width: 990px;
+	height: 69px;
+	border-bottom: 1px solid #aaa;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+section .user-space .collect-box .collect-nav a:nth-child(2){
+	display: inline-block;
+	width: 100px;
+	display: flex;
+}
+section .user-space .collect-box .collect-nav>a:nth-child(2) div{
+	font-size: 8px;
+	margin-left: 2px;
+}
+section .user-space .collect-box .collect-nav>a:nth-child(2):hover{
+	background-color: #f5f5f5;
+}
+section .user-space .collect-box .collect-nav .more{
+	position: absolute;
+	top: 53px;
+	left: 114px;
+	display: none;
+}
+section .user-space .collect-box .collect-nav .more a{
+	background-color: white;
+	color: #666;
+	width: 100px;
+	border: 1px solid #ddd;
+	border-top: none;
+	border-radius: 0;
+}
+section .user-space .collect-box .collect-nav .more a:hover{
+	background-color: #f5f5f5;
+	color: red;
+}
+section .user-space .collect-box .collect-section,
+section .user-space .user-like{
+	height: 288px;
+}
+/* 测试 */
+section .user-space .text-box p{
+	width: 990px;
+	height: 59px;
+	padding: 0 20px;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+}
+section .user-space .text-box  .user-text{
+	padding-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	background-color: #ddd;
+}

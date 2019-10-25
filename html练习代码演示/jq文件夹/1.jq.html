@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="box"></div>
+	<div id="iii"></div>
+	<script>
+		var iii = $("#iii");
+		console.log(iii);
+		iii.html("<b>bbb</b>");
+		var aaa = document.querySelector(".box");
+		aaa.innerHTML = "666";
+		// $(aaa).html("000");
+
+	</script>
+	<div class="box1"></div>
+	<div class="box1"></div>
+	<div class="box1"></div>
+	<script>
+		var box1 = $(".box1");
+		console.log(box1); 
+		box1.html("999");
+		box1.get(2).innerHTML = "222";
+		box1[1].innerHTML = 111; 
+	</script>
+	<div class="box2"></div>
+	<div class="box2"></div>
+	<div class="box2"></div>
+	<p class="p1"></p>
+	<p class="p2"></p>
+	<script>
+		console.log($(".box2,.p1"));
+		$(".box2,.p2").html("233");
+	</script>
+	<ol class="ol">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li class="li4"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+	<script>
+		$(".ol :first").css("background-color","red");
+		$(".ol :last").css("background-color","yellow");
+		$(".ol :not(.li4)").css("border","1px solid black");
+	</script>
+	<ul class="ul">
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+		<li>444</li>
+		<li>555</li>
+		<li>666</li>
+	</ul>
+	<script>
+		$(".ul :odd").css("background-color","blue");
+		$(".ul :even").css("background-color","red");
+		$(".ul :eq(2)").css("color","green");
+		$(".ul :gt(3)").css("color","pink");
+		$(".ul :lt(2)").css("color","orange");
+	</script>
+	<div class="box3">
+		aaaaa
+		<p>ppppppppppbbbbbbasdas
+			<b>bbbppppppadfas</b>
+		</p>
+	</div>
+	<script>
+		$(".box3 :contains(bbbb)").css("border","1px solid black");
+	</script>
+	<ul class="cc">
+		<li>01</li>
+		<li>02</li>
+		<li></li>
+		<li>04</li>
+		<li>05
+			<b>bbb</b>
+		</li>
+		<li>06</li>
+		<li>07
+			<i>iii</i>
+			<u>uuu</u>
+		</li>
+		<li>08</li>
+	</ul>
+	<script>
+		$(".cc :empty").css("border","2px dashed red");
+		
+		$(".cc :parent").css("border","2px dashed blue");
+		$(".cc :has(b)").css("border","2px dashed orange");
+	</script>
+	<form class="f1">
+		<input type="text">
+		<input type="passward">
+		<input type="checkbox" disabled="">
+		<input type="radio">
+		<input type="button" disabled="">
+	</form>
+	<script>
+		console.log($(".f1 :enabled"));
+		console.log($(".fi :disabled"));
+	</script>
+	<form class="f2">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="radio">
+		<input type="radio">
+		<select name="" id="">
+			<option value="">001</option>
+			<option value="">002</option>
+			<option value="">003</option>
+			<option value="" selected="">004</option>
+			<option value="">005</option>
+		</select>
+	</form>
+	<script>
+		console.log($(".f2 :checked"));
+		console.log($(".f2 ：selected"));
+	</script>
+	<form class="f3">
+		<input type="text">
+		<input type="psaaward">
+		<input type="file">
+		<input type="radio">
+		<input type="checkbox">
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<select name="" id="">
+			<option value="">001</option>
+			<option value="">002</option>
+			<option value="">003</option>
+			<option value="">004</option>
+			<option value="">005</option>
+		</select>
+		<button>按钮</button>
+		<fieldset>
+			<legend>标题</legend>
+			<label for="">111</label>
+			<input type="text">
+			<input type="button" value="aaa">
+			<input type="submit">
+			<input type="reset">
+		</fieldset>
+	</form>
+	<script>
+		console.log($(".f3 :input"));
+		console.log($(".f3 :text"));
+		console.log($(".f3 :submit"));
+		console.log($(".f3 :button"));
+	</script>
+	<div class="box4">
+		<u>uuuuuu</u>
+		<s>sssssss</s>
+	</div>
+	<script>
+		console.log($(".box4").html());
+		$(".box4").html("<i>iiii</i>");
+	</script>
+	<div class="box5">
+		<u>uuuuuu</u>
+	</div>
+	<script>
+		console.log($(".box5").text());
+		$(".box5").text("<i>nnnn</i>");
+	</script>
+	<input type="text" class="class1" value="kk">
+	<script>
+		console.log($(".class1").val());
+		$(".class").val("7777");
+	</script>
+	<div class="box6" id="id1" title="tttttttttt">.........</div>
+	<script>
+		console.log($("#id1").attr("title"));
+		$("#id1").attr("title","555555");
+		$("#id1").removeAttr("class");
+	</script>
+    <input type="checkbox" class="class2" checked="">
+    <script>
+    	var class2 = document.querySelector(".class2");
+    	class2.onclick =function(){
+    		console.log(class2.checked);
+    		console.log(class2.getAttribute("checked"));
+    		console.log($(".class2").prop("checked"));
+    		console.log($(".class2").attr("checked"));
+    		$(".class2").prop("disabled",true);
+    	}
+    </script>
+    <input type="text" autofocus>
+</body>
+</html>

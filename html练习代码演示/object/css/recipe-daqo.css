@@ -1,0 +1,324 @@
+nav .nav-contain .menu-totle-contain>a b{
+	border-bottom: 4px solid red; 
+}
+section{
+	width: 100%;
+}
+section .section-contain{
+	width: 990px;
+	margin:20px auto 0;
+}
+section .section-contain ul{
+	width: 990px;
+	height: 50px;
+	background-color: #fdf4e4;
+	line-height: 50px;
+	margin: 0;
+}
+section .section-contain ul a{
+	display: block;
+	height: 50px;
+	padding: 0 24px;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+}
+section .section-contain ul a:hover{
+	color: red;
+	text-decoration: none;
+	background-color: white;
+}
+section .section-contain ul li{
+	float: left;
+}
+section .section-contain ul li:nth-child(2) a{
+	background-color: white;
+}
+section .section-contain .food-data-nav dl dd a{
+	line-height: 28px;
+	display: block;
+	height: 28px;
+	color: #666;
+	padding: 0 8px;
+}
+section .section-contain .food-data-nav dl dd a:hover{
+	color: white;
+	background-color: #ff3232;
+	text-decoration: none;
+}
+section .section-contain .food-data-nav{
+	display: flex;
+	flex-wrap: wrap;
+}
+section .section-contain .food-data-nav dl dd{
+	float: left;
+}
+section .section-contain .food-data-nav dl{
+	margin: 0;
+	background-color: white;
+	padding: 10px 16px 14px;
+}
+section .section-contain .food-data-nav dl dt{
+	font-size: 24px;
+	color: #333;
+	line-height: 42px;
+	height: 42px;
+	font-weight: normal;
+}
+section .section-contain .food-data-nav dl:first-child{
+	width: 990px;
+	border-bottom: 1px solid #ddd;
+}
+section .section-contain .food-data-nav dl:nth-child(2){
+	width: 300px;
+}
+section .section-contain .food-data-nav dl:nth-child(3){
+	width: 330px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+section .section-contain .food-data-nav dl:nth-child(4){
+	width: 360px;
+}
+/* 主体 */
+section .mom-food-show{
+	display: flex;
+	flex-wrap: wrap;
+}
+section .mom-food-show h3{
+	width: 990px;
+	height: 120px;
+	position: relative;
+	background-color: #fae8c8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* 导航 */
+section .mom-food-show h3 span{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #666;
+	position: absolute;
+	right: 2px;
+}
+section .mom-food-show h3 span a{
+	color: #666;
+}
+section .mom-food-show h3 span a:first-child{
+	color: #ff3232;
+}
+section .mom-food-show h3 span a:hover{
+	color: red;
+}
+section .mom-food-show .food-style{
+	width: 756px;
+	height: 1900px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding:8px;
+	overflow: hidden;
+	padding: 0 0 0 20px;
+}
+section .mom-food-show .food-style>a{
+	display: block;
+	width: 232px;
+	height: 332px;
+	position: relative;
+	text-align: left;
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 20px;
+}
+section .mom-food-show .food-style a>img{
+	width: 232px;
+	height: 232px;
+	position: relative;
+	z-index: 1;
+}
+section .mom-food-show .food-style a:hover .box{
+	top:132px;
+	height: 200px;
+}
+section .mom-food-show .food-style a .box{
+	width: 232px;
+	height: 100px;
+	background-color: white;
+	font-size: 14px;
+	color: #333;
+	position: absolute;
+	top: 232px;
+	left: 0px;
+	z-index: 0;
+	overflow: hidden;
+	transition: all 1s;
+}
+section .mom-food-show .food-style a .box strong{
+	display: block;
+	width: 232px;
+	height: 35px;
+	padding: 17px 14px 0;
+}
+section .mom-food-show .food-style a .box>span{
+	display: block;
+	width: 232px;
+	height: 26px;
+	font-size: 12px;
+	padding: 5px 14px;
+	position: absolute;
+	top: 35px;
+}
+section .mom-food-show .food-style a .box p{
+	width: 232px;
+	height: 23px;
+	font-size: 12px;
+	color: #ff3232;
+	padding: 0 14px;
+	position: absolute;
+	top: 61px;
+}
+section .mom-food-show .food-style a .box div{
+	width: 232px;
+	height: 100px;
+	position: absolute;
+	top: 100px;
+	background-color: #eee;
+	padding: 10px 0;
+}
+section .mom-food-show .food-style a .box div span:first-child,section .mom-food-show .food-style a .box div span:last-child{
+	display: block;
+	width: 232px;
+	height: 30px;
+	padding: 10px 40px;
+	position: relative;
+	overflow: hidden;
+}
+section .mom-food-show .food-style a .box div span:first-child img{
+	position: absolute;
+	top: -124px;
+	left: 0;
+}
+section .mom-food-show .food-style a .box div span:last-child img{
+	position: absolute;
+	top: -40px;
+	left: 0;
+}
+/* 侧边框 */
+section .mom-food-show .aside-left{
+	width: 232px;
+	position: relative;
+}
+section .mom-food-show .aside-left>p{
+	margin: 0;
+	width: 232px;
+	background-color: #fafafa;
+}
+/* 第一个p */
+section .mom-food-show .aside-left>p:nth-child(1){
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+}
+section .mom-food-show .aside-left>p:nth-child(1) a{
+	display: block;
+	width: 116px;
+	height: 50px;
+	line-height: 50px;
+	color: #333;
+	font-weight: bold;
+	text-align: center;
+}
+section .mom-food-show .aside-left>p:nth-child(1) a:last-child{
+	color: red;
+	background-color: white;
+}
+/* 第二个p */
+section .mom-food-show .aside-left>p:nth-child(2) input{
+	height: 28px;
+	background-color: #fafafa;
+	border: 1px solid #aaa;
+}
+section .mom-food-show .aside-left>p:nth-child(2) input:first-child{
+	width: 168px;
+	height: 28px;
+	padding: 4px;
+	border-right: none;
+	border: 
+}
+section .mom-food-show .aside-left>p:nth-child(2) input:last-child{
+	width: 32px;
+	border-left: none;
+	background-image: url(../image/searchbtn1.png);
+	background-repeat: no-repeat;
+	background-position: center -7px;
+}
+section .mom-food-show .aside-left>p:nth-child(2) input:last-child:hover{
+	background-position: center -47px;
+}
+section .mom-food-show .aside-left>p:nth-child(2){
+	height: 50px;
+	background-color: white;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+}
+/* 侧边框的dl */
+section .mom-food-show .aside-left>dl{
+	width: 232px;
+	background-color: #fafafa;
+	font-size: 12px;
+	padding: 0px 0 6px 14px;
+	margin: 0;
+}
+section .mom-food-show .aside-left .first-dl{
+	padding-top: 14px;
+}
+section .mom-food-show .aside-left>dl a{
+	display: block;
+	width: 204px;
+	height: 32px;
+	color: #333;
+	border: 1px solid #9990;
+	background-color: white;
+	margin: 0 8px 8px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+section .mom-food-show .aside-left>dl a:hover{
+	border: 1px solid #aaa;
+	text-decoration: none;
+	background-image: url(../image/liststyle1_icons.png);
+	background-repeat: no-repeat;
+	background-position: 170px -66px;
+}
+section .mom-food-show .aside-left>dl a div:first-child span{
+	padding: 4px 5px;
+	background-color: #60a531;
+	color: white;
+	margin: 0 20px 0 5px;
+}
+section .mom-food-show .aside-left>img{
+	position: absolute;
+	top: -7px;
+	right: -7px;
+}
+section .mom-food-show .aside-left>dl a div:last-child{
+	color: #999;
+	margin: 0 20px;
+}
+section .mom-food-show .aside-left .all-show-p,
+section .mom-food-show .aside-left .all-hide-p{
+	width: 232px;
+	height: 46px;
+	background-color: #fafafa;
+	color: #666;
+	padding: 7px;
+	text-align: center;
+}
+section .mom-food-show .aside-left .all-hide-p{
+	display: none;
+}

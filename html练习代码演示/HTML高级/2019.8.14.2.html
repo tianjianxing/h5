@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text">
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				var res = xhr.responseText;
+				var resObj = JSON.parse(res);
+				console.log(resObj);
+			}
+		}
+		xhr.open("get","https://www.apiopen.top/novelSearchApi?name=");
+		xhr.send(null);
+	</script>
+</body>
+</html>

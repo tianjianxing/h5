@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<my-tag :num="n" :my-msg="msg"></my-tag>
+		<my-tag :num="nn"></my-tag>
+	</div>
+	<script>
+		Vue.component("my-tag",{
+			template:`<div>这是个组件{{num}}--{{myMsg}}</div>`,
+			props:["num","myMsg"]
+		})
+		new Vue({
+			el:"#app",
+			data:{
+				n:99,
+				nn:55,
+				msg:"这是一首简单的歌"
+			}
+		})
+	</script>
+	<div id="app1">
+		<tag1 :msg = "message" :num = "n"></tag1>
+	</div>
+	<script>
+		Vue.component("tag1",{
+			template:`<div>TAG1---{{msg}}---{{num}}</div>`,
+			props:{
+				msg:String,
+				num:{
+					type:Number,
+					default:0,
+					required:true,
+					validator:function(v){
+						return v >= 0 && v <= 20;
+					}
+				}
+			}
+		})
+		new Vue({
+			el:"#app1",
+			data:{
+				message:"66",
+				n:10
+			}
+		})
+	</script>
+	<br>
+	<div id="app2">
+		<tag2 :num="num"></tag2>
+	</div>
+	<script>  
+		Vue.component("tag2",{
+			template:`<div>
+				这是tag2<tag3 :msg="t1" :n="num"></tag3>
+			</div>`,
+			components:{
+				"tag3":{
+					template:`<p>这里是tag3--{{msg}}--{{n}}</p>`,
+					props:{
+						msg:String,
+						n:Number
+					}
+				}
+			},
+			data(){
+				return{
+					t1:"来自tag2的数据"
+				}
+			},
+			props:{
+				num:Number
+			}
+		})
+		new Vue({
+			el:"#app2",
+			data:{
+				num:999
+			}
+		})
+	</script>
+	<div id="app3">
+		<tag4 :o="{n1,n2,n3}"></tag4>
+	</div>
+	<script>
+		Vue.component("tag4",{
+			template:`<div>tag4---{{o.n1+o.n2+o.n3}}</div>`,
+			props:["o"]
+		})
+		new Vue({
+			el:"#app3",
+			data:{
+				n1:5,
+				n2:4,
+				n3:3
+			}
+		})
+	</script>
+
+
+
+
+	<div id="app4">
+		<tag5><b>原来就有的东西</b></tag5>
+	</div>
+	<script>
+		Vue.component("tag5",{
+			template:`<div>这里是tag5<slot></slot></div>`
+		})
+		new Vue({
+			el:"#app4"
+		})
+	</script>
+	<div id="app5">
+		<tag6>
+			<template slot="header">
+				<header>这是header</header>
+			</template>
+			<h3>这是标题</h3>
+			<p>这是一些内容</p>
+			<template slot="footer">
+				<footer>这是footer</footer>
+			</template>
+			<span>spanspan</span>
+		</tag6>
+	</div>
+	<script>
+		Vue.component("tag6",{
+			template:`<div>
+				这里放头：
+				<slot name="header"></slot>
+				这下面放其他部分：
+				<slot></slot>
+				这下面放脚：
+				<slot name="footer"></slot>
+			</div>`
+		})
+		new Vue({
+			el:"#app5"
+		})
+	</script>
+	<div id="app6">
+		{{n}}
+		<tag7 @mess="showInfo"></tag7>
+	</div>
+	<script>
+		Vue.component("tag7",{
+			template:`<button type="button" @click="fun1">按钮</button>`,
+			data(){
+				return{
+					num:999
+				}
+			},
+			methods:{
+				fun1(){
+					console.log("111");
+					console.log(this);
+					this.$emit("mess",this.num);
+				}
+			}
+		})
+		new Vue({
+			el:"#app6",
+			data:{
+				n:0
+			},
+			methods:{
+				showInfo(v){
+					console.log("888");
+					console.log(v);
+					this.n=v;
+				}
+			}
+		})
+	</script>
+	<div id="app7">
+		{{total}}
+		<tag8 @aaa="incTotal"></tag8>
+		<tag8 @aaa="incTotal"></tag8>
+	</div>
+	<script>
+		Vue.component("tag8",{
+			template:`<button type="button" @click="increment">{{count}}</button>`,
+			data(){
+				return{
+					count:0
+				}
+			},
+			methods:{
+				increment(){
+					this.count++;
+					this.$emit("aaa");
+				}
+			}
+		})
+		new Vue({
+			el:"#app7",
+			data:{
+				total:0
+			},
+			methods:{
+				incTotal(){
+					this.total++;
+				}
+			}
+		})
+	</script>
+	<div id="app8">
+		<tag11></tag11>
+		<tag22></tag22>
+	</div>
+	<script>
+		//非父子型组件相互传递数据
+		var bus = new Vue();//空实例当中转站
+		Vue.component("tag11",{
+			template:`<button type="button" @click="fun1">按钮</button>`,
+			data(){
+				return{
+					msg:"这是要传递的数据"
+				}
+			},
+			methods:{
+				fun1(){
+					bus.$emit("myevent",this.msg);
+				}
+			}
+		})
+		Vue.component("tag22",{
+			template:`<div>{{a}}</div>`,
+			data(){
+				return{
+					a:"000"
+				}
+			},
+			//钩子函数
+			mounted(){
+				bus.$on("myevent",(v)=>{
+					this.a=v;
+				})
+			}
+		})
+		new Vue({
+			el:"#app8"
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+p {
+  color: red;
+}
+p a {
+  color: blue;
+  text-decoration: none;
+}
+p b {
+  border: 1px solid red;
+}
+p .abc {
+  background-color: #f00;
+}
+p .abc #ddd {
+  color: green;
+}
+p u {
+  color: red;
+}
+p s {
+  color: yellow;
+}
+p del {
+  color: green;
+}

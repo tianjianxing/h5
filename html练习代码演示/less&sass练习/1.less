@@ -1,0 +1,88 @@
+@bgc:#eee;
+@color:#333;
+
+.box{
+	background-color: @bgc;
+	color:@color;
+}
+.border{
+	border-top:dotted 1px red;
+	border-bottom: 1px solid green;
+}
+
+#menu a{
+	color:#444;
+	.border;
+}
+
+section{
+	width: 100px;
+	height: 200px;
+	nav{
+		width: 50px;
+		height: 100px;
+		a{
+			display: block;
+		}
+		.aaa{
+			display: inline-block;
+			width: 20px;
+			height: 90px;
+			&:before{
+				content:"sss";
+				display: inline;
+			}
+		}
+		&:after{
+			content: "78";
+		}
+		&:hover{
+			color: #132;
+		}
+		&>a{
+			color: #413;
+		}
+	}
+}
+
+@base:5%;
+@filter:@base*2;
+@other:@base+@filter;
+@base-color:#757;
+
+div{
+	color:#888/4;
+	background-color: @base-color+#111;
+}
+
+.btn{
+	background-color: #fff;
+	&:hover{
+		background-color: #ff0 - #222;
+	}
+}
+
+@var:2px + 6;
+.xxx{
+	width: @var;
+}
+.d1,.d2,.d3{
+	width: 300px;
+	height: 200px;
+}
+.d1{
+	background-color: #879;
+	&:hover{
+		background-color: lighten(#888, 30%);
+	}
+}
+.d2{
+	background-color: #000;
+	&:hover{
+		background-color: 
+	}
+}
+.d3{
+	background-color: mix(#213,#464,50%);
+	background-color: average(#122,#456);
+}

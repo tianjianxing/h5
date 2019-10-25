@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var xxx = new XMLHttpRequest();
+		console.log(xxx.readyState);
+		xxx.onreadystatechange = function(){
+			console.log(xxx.readyState);
+			if(xxx.readyState == 4){
+				console.log(xxx.responseText);
+				console.log(xxx.status);
+				console.log(xxx.statusText);
+			}
+
+		}
+		// xxx.open("get","https://www.apiopen.top/weatherApi?city=德州");
+		// xxx.send(null);
+
+
+		xxx.open("post","https://www.apiopen.top/weatherApi");
+		xxx.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=utf-8");
+		xxx.send("city=郑州");
+		// xxx.send('{"city":"郑州"}');
+	</script>
+	<script>
+		var a1 = "abc",
+		    a2 = "a&b",
+		    a3 = "a=b";
+		var s1 = "a1=abc&a2=a&b&a3=a=b";
+		var a11 = encodeURIComponent(a1);    
+		var a22 = encodeURIComponent(a2);    
+		var a33 = encodeURIComponent(a3);    
+		console.log(a11);
+		console.log(a22);
+		console.log(a33);
+		var s2 = "a1=abc&a2=a%26ba3=a%3Db";
+	</script>
+	<script>
+		var yyy = new XMLHttpRequest();
+		yyy.onreadystatechange = function(){
+			if(yyy.readyState == 4){
+				console.log(yyy.responseText);
+			}
+		}
+		yyy.open("post","http://route.showapi.com/341-2");
+		yyy.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=utf-8");
+		yyy.send('showapi_appid=38010&showapi_sign=3cfdb251b248451792b7d99fd9d05fdc');
+	</script>
+</body>
+</html>

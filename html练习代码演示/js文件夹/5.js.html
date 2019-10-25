@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+		var arr = [1,5,3,9,4,7];
+		for(i=1;i<arr.length;i++){
+			for(var j=0;j<arr.length-i;j++){
+				if(arr[j]>arr[j+1]){
+					var a=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=a;
+				}
+			}
+		}
+		console.log(arr);
+	</script> -->
+	<script>
+		var str = new String("vb");
+		console.log(str,str.length);
+		var str1 = "aKJnoasKNN";
+		console.log(str1.toLowerCase());
+		console.log(str1.toUpperCase());
+	</script>
+	<script>
+		var str2 = "soinjspk";
+		console.log(str2.charAt(3));
+		console.log(str2.charCodeAt(5));	
+	</script>
+	<script>
+		var str3 = "qwejoijoqwekl";
+		console.log(str3.indexOf("jo",0));
+		console.log(str3.lastIndexOf("j",4));
+	</script>
+	<script>
+		var str4 = "nioaihaoijsd";
+		console.log(str4.slice(3,6));
+		console.log(str4.substring(2,5));
+		console.log(str4.substr(4,3));
+	</script>
+	<script>
+		var str5 = "o,h,b,u,y,a,g,j,a,h";
+		console.log(str5.split(",",40));
+		var str6 = "g*l*j,j*";
+		console.log(str6.split("*",4));
+	</script>
+	<script>
+		var str7 = "s,dsd,sdfj.";
+		console.log(str5+str7+str2);
+        console.log(str7.concat(str6));
+	</script>
+	<script>
+		var str8 = "sd,faf,g,af,g";
+		console.log(str8.replace("g","a"));
+		console.log(str8.search("af"));
+	</script>
+	<!-- <script>
+		var arr = [1,2,4,8,3];
+		for(var a in arr){      
+		}
+		console.log(arr);
+	</script> -->
+	<script>
+		console.log(Math.E);
+		console.log(Math.PI);
+		console.log(Math.abs(-5));
+		console.log(Math.ceil(1.1));
+		console.log(Math.floor(1.1));
+		console.log(Math.round(2.6));
+		console.log(Math.round(2.4));
+		console.log(Math.exp(3));
+		console.log(Math.pow(2,4));
+		console.log(Math.max(5,3,7,));
+		console.log(Math.min(2,7,6,5));
+		console.log(Math.sqrt(9));
+	</script>
+	<script>
+		console.log(Math.random());
+		console.log(Math.random()*30);
+		console.log(parseInt(Math.random()*11));
+		console.log(Math.ceil(Math.random()*10));
+		console.log(Math.round(Math.random()*10));
+		console.log(Math.floor(Math.random()*11));
+        console.log(Math.round(Math.random()*20)+10);
+	</script>
+	<script>
+		var time = new Date(2019,6,16);
+		console.log(time);
+		var time1 = new Date(2019,6,16,16,25,25);
+		console.log(time1);
+		var time2 = new Date("2019/7/16");
+		var time3 = new Date("2019/7/16 16,27,27");
+		console.log(time2,time3);
+		var time4 = new Date();
+		var time5 = new Date;
+		var time6 = Date();
+	</script>
+	<script>
+        console.log(time5.getFullYear());		
+        console.log(time5.getMonth()+1);
+        console.log(time5.getDate());
+        console.log(time5.getDay());
+        console.log(time5.getHours());
+        console.log(time5.getMinutes());
+        console.log(time5.getSeconds());
+        console.log(time5.getTime());
+	</script>
+</body>
+</html>

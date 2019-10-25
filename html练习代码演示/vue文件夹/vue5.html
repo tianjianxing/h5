@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="按钮" v-on:click="alert">
+		<input type="button" value="按钮一" @click="alert">
+	</div>
+	<script>
+		new Vue({
+			el:"#app",
+			methods:{
+				alert:function(){
+					console.log("点击按钮");
+				}
+			}
+		})
+	</script>
+	<div id="app1">
+		<input type="button" value="按钮二" @click="count++">
+		<br>
+		{{count}}
+	</div>
+	<script>
+		new Vue({
+			el:"#app1",
+			data:{
+				count:1
+			}
+		})
+	</script>
+	<div id="app2">
+		<input type="button" value="按钮1" @click="showEvent">
+		<input type="button" value="按钮2" @click="showEvent($event)">
+		<input type="button" value="按钮3" @click="">
+	</div>
+	<script>
+		new Vue({
+			el:"#app2",
+			methods:{
+				showEvent:function(e){
+					console.log(e);
+				}
+			}
+		})
+	</script>
+	<style>
+		.box1{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+	<div id="app3">
+		<div class="box1" @click="fun1">
+			<div class="box2" @click="fun2">
+				<div class="box3" @click.stop="fun3"></div>
+			</div>
+		</div>
+		<form action="">
+			<input type="text">
+			<input type="reset" @click.prevent="fun4">
+		</form>
+	</div>
+	<script>
+		new Vue({
+			el:"#app3",
+			methods:{
+				fun1:function(){
+					console.log("box1");
+				},
+				fun2:function(){
+					console.log("box2");
+				},
+				fun3:function(){
+					console.log("box3");
+				},
+				fun4:function(){
+					console.log("box4");
+				}
+			}
+		})
+	</script>
+	<div id="app4">
+		<div class="box1" @click.capture="fun1">
+			<div class="box2" @click="fun2">
+				<div class="box3" @click="fun3"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		new Vue({
+			el:"#app4",
+			methods:{
+				fun1:function(){
+					console.log(".box1");
+				},
+				fun2:function(){
+					console.log(".box2");
+				},
+				fun3:function(){
+					console.log(".box3");
+				}
+			}
+		})
+	</script>
+	<br>
+	<div id="app5">
+		<div class="box1" @click="fun1">
+			<div class="box2" @click.self="fun2">
+				<div class="box3" @click.stop="fun3"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		new Vue({
+			el:"#app5",
+			methods:{
+				fun1:function(){
+					console.log(".box1");
+				},
+				fun2:function(){
+					console.log(".box2");
+				},
+				fun3:function(){
+					console.log(".box3");
+				}
+			}
+		})
+	</script>
+	<div id="app6">
+		<input type="text" @keyup.delete="submitFun" v-model="mess">
+	</div>
+	<script>
+		new Vue({
+			el:"#app6",
+			data:{
+				mess:""
+			},
+			methods:{
+				submitFun:function(){
+					console.log(this.mess);
+				}
+			}
+		})
+	</script>
+	<div id="app7">
+		<input type="text" @keyup.alt.67="fun1">
+		<input type="button" value="按钮" @click.ctrl.alt="fun2">
+		<input type="text" @keyup.113="fun3">
+	</div>
+	<style>
+		.color1{
+			color: red;
+		}
+	</style>
+	<script>
+		Vue.config.keyCodes.f2 = 113;
+		new Vue({
+			el:"#app7",
+			methods:{
+				fun1:function(){
+					console.log("0000");
+				},
+				fun2:function(){
+					console.log("1111");
+				},
+				fun3:function(){
+					console.log("2222");
+				}
+			}
+		})
+	</script>
+	<div id="app8">
+		<p :class="c1">不会显示，直到编译结束</p>
+		<input type="text" v-model.lazy="mess">
+		<p>{{mess}}</p>
+		<input type="text" v-model.number="n1">
+		<p>{{n1}}</p>
+		<input type="text" v-model.trim="n2">
+		<p>{{n2}}</p>
+		<p>{{c1}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app8",
+			data:{
+				c1:"color1",
+				mess:"",
+				n1:0,
+				n2:""
+			},
+			watch:{
+				n2:function(v,ov){
+					console.log(v,ov);
+				}
+			}
+		})
+	</script>
+	 <style>
+	 	.red{
+	 		color:red;
+	 	}
+	 	.rgb{
+	 		background-color: orange;
+	 	}
+	 	.sbor{
+	 		border:2px solid red;
+	 	}
+	 </style>
+	<div id="app9">
+		<p>{{mess | capitalize}}</p>
+		<p>{{mess1 | capitalize}}</p>
+		<p>{{price | money(symbol)}}</p>
+		<p :class="cs | formatClass(char)">从午夜到清晨</p>
+	</div>
+	<script>
+		Vue.filter("capitalize",function(v){
+			if(!v){
+					return "";
+				}
+				v=v.toString();
+				return v.charAt(0).toUpperCase()+v.slice(1);
+		})
+		//全局过滤器
+		new Vue({
+			el:"#app9",
+			data:{
+				mess:"asdaAFGA",
+				mess1:"you",
+				price:5,
+				symbol:"$",
+				cs:["red","rgb","sbor"],
+				char:"r"
+			},
+			filters:{
+				// capitalize:function(v){
+				// 	if(!v){
+				// 		return "";
+				// 	}
+				// 	v=v.toString();
+				// 	return v.charAt(0).toUpperCase()+v.slice(1);
+				// },局部过滤器
+				money:function(v,symbol){
+					if(!parseFloat(v)){
+						v = 0;
+					}
+					return symbol+parseFloat(v).toFixed(2);
+				},
+				formatClass:function(v,char){
+					var arr = [];
+					for(var i in v){
+						if(v[i][0] == char){
+							arr.push(v[i]);
+						}
+					}
+					return arr;
+				}
+			}
+		})
+	</script>
+	<div id="app10">
+		<p>{{message | capitalize}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app10",
+			data:{
+				message:"abcde"
+			}
+		})
+	</script>
+</body>
+</html>

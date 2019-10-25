@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str = "Hello World";
+	    var patt = /h/i;
+	    document.write(str.match(patt));
+	    document.write("<br>");
+	    var str1 = "Is this all there is?";
+	    var patt = /is/g;
+	    document.write(str1.match(patt));
+	    document.write("<br>");
+	    var str2 = "Is this all there is?";
+	    var patt = /is/ig;
+	    document.write(str2.match(patt));
+	    document.write("<br>");
+	    var str3 = "Is this all there is?";
+	    var patt = /[l-s]/ig;
+	    document.write(str3.match(patt));
+	    document.write("<br>");
+	    var str4 = "Is this all there is?";
+	    var patt = /[is]/ig;
+	    document.write(str4.match(patt));
+	    document.write("<br>");
+	    var str5 = "Is this all there is?";
+	    var patt = /[^is]/ig;
+	    document.write(str5.match(patt));
+	    document.write("<br>");
+	    var str6 = "That’s hot!";
+	    var patt = /h.t/g;
+	    document.write(str6.match(patt));
+	    document.write("<br>");
+	    var str7 = "Give 100%!";
+	    var patt = /\w/g;
+	    document.write(str7.match(patt));
+	    document.write("<br>");
+	    var str8 = "Give 100%!";
+	    var patt = /\W/g;
+	    document.write(str8.match(patt));
+	    document.write("<br>");
+	    var str9 = "Give 100%!";
+	    var patt = /\d/g;
+	    document.write(str9.match(patt));
+	    document.write("<br>");
+	    var str10 = "Give 100%!";
+	    var patt = /\D/g;
+	    document.write(str10.match(patt));
+	    document.write("<br>");
+	    var str11 = "Give 100%!";
+	    var patt = /\s/g;
+	    document.write(str11.match(patt));
+	    document.write("<br>");
+	    var str12 = "Give 100%!";
+	    var patt = /\S/g;
+	    document.write(str12.match(patt));
+	    document.write("<br>");
+	    var str13 = "Give\n100%!";
+	    var patt = /[\n]/g;
+	    console.log(str13);
+	    console.log(str13.search(patt));
+    </script>
+    <script>
+    	var str14 = "Hellooo World! Hello";
+    	var patt = /o+/g;
+    	document.write(str14.match(patt));
+    	document.write("<br>");
+    	var str15 = "Hellooo World! Hello";
+    	var patt = /\w+/g;
+    	document.write(str15.match(patt));
+    	document.write("<br>");
+    	var str16 = "Hellooo World! Hello";
+    	var patt = /loo*/g;
+    	document.write(str16.match(patt));
+    	document.write("<br>");
+    	var str17 = "1,100 or 1000?";
+    	var patt = /10*/g;
+    	document.write(str17.match(patt));
+    	document.write("<br>");
+    	var str18 = "1,100 or 1000?";
+    	var patt = /10?/g;
+    	document.write(str18.match(patt));
+    	document.write("<br>");
+    	var str19 = "1,100 or 1000?";
+    	var patt = /1000?/g;
+    	document.write(str19.match(patt));
+    	document.write("<br>");
+    	var str20 = "1,100 or 1000?";
+    	var patt = /\d{3}/g;
+    	document.write(str20.match(patt));
+    	document.write("<br>");
+    	var str21 = "1,100 or 1000 or 100000?";
+    	var patt = /\d{3,}/g;
+    	document.write(str21.match(patt));
+    	document.write("<br>");
+    	var str22 = "1,10,100,1000 or 100000000000000?";
+    	var patt = /\d{3,4}/g;
+    	document.write(str22.match(patt));
+    	document.write("<br>");
+    	// var str23 = "1,100 or 1000";
+    	// var patt = /00$/g;
+    	// document.write(str23.match(patt));
+    	// document.write("<br>");
+    	// var str24 = "1,100 or 1000?";
+    	// var patt = /^1,/g;
+    	// document.write(str24.match(patt));
+    	// document.write("<br>");
+    	// var str25 = "Mr.Blue has a blue house";
+    	// document.write(str25.search("blue"));
+    	// document.write("<br>");
+    	// document.write(str25.search(/blue/i));
+    	// document.write("<br>");
+    	// var str26 = "The rain in SPAIN stays mainly in the plain";
+    	// document.write(str26.match(/ain/ig));
+    	// document.write("<br>");
+    	// var str27 = "Hellooo World! Hello";
+    	// document.write(str27.replace(/he/ig,"wo"));
+    	// document.write("<br>");
+    	// var str28 = "a1b2c3d4e5f";
+    	// document.write(str28.split(/\d/g));
+    	// document.write("<br>");
+    	// document.write(str28.split(/[a-z]/g)); 
+    	// document.write("<br>");
+    	// var str29 = "Hello world";
+    	// var patt1 = /Hello/g;
+    	// document.write(patt1.exec(str29));
+    	// document.write("<br>");
+    	// var patt2 = /dad/g;
+    	// document.write(patt2.exec(str29));
+    	// document.write("<br>");
+    	// var patt3 = /Hello/g;
+    	// document.write(patt3.test(str29));
+    	// document.write("<br>");
+    	// var patt4 = /ads/g;
+    	// document.write(patt4.test(str29));
+    	// document.write("<br>");
+    	// var patt = /[a-l]/g;
+    	// document.write(patt.toString());
+    	
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <style>
+		body{
+			background-color: black;
+		}
+		.box{
+			width: 1000px;
+			height: 900px;
+			background-color: white;
+			margin: auto;
+			/*transform-style: preserve-3d;*/
+
+		}
+		@keyframes fang{
+			to{
+				transform:perspective(1000px)  
+				 rotateY(720deg);
+			}
+		}
+		.box div{
+			opacity: 0.7;
+			
+		}
+		.ccc{
+			transform-style: preserve-3d;
+			/*transform-origin: 300px 300px 300px;*/
+			transform:perspective(1000px)
+				 rotateY(30deg);
+			position: relative;
+			animation: fang 10s infinite;
+		}
+		.box1{
+			width: 600px;
+			height: 600px;
+			background-color: pink;
+			font-size: 400px;
+			text-align: center;
+			line-height: 600px;
+			position: absolute;
+			left: 200px;
+			top: 150px;
+			transform:perspective(1000px) translateZ(300px);
+		}
+		.box2{
+			width: 600px;
+			height: 600px;
+			background-color: green;
+			font-size: 400px;
+			text-align: center;
+			line-height: 600px;
+			position: absolute;
+			left: 200px;
+			top: 150px;
+			/*transform-origin: 0px 300px*/
+			transform: perspective(1000px) rotateX(90deg) translateY(300px);
+		}
+		.box3{
+			width: 600px;
+			height: 600px;
+			background-color: blue;
+			font-size: 400px;
+			text-align: center;
+			line-height: 600px;
+			position: absolute;
+			left: 200px;
+			top: 150px;
+			transform:perspective(1000px) translateZ(-300px);
+		}
+	</style> -->
+	<!-- <style>
+		@keyframes zhuan{
+			to{
+				transform:perspective(500px) rotateX(360deg) rotateZ(360deg);
+			}
+		}
+		.ccc{
+			width: 200px;
+			height: 200px;
+			margin:200px auto;
+			transform-style:preserve-3d;
+			position: relative;
+			transform:perspective(500px) rotateX(0deg) rotateZ(0deg);
+			animation:zhuan 2s infinite;
+		}
+		.ccc div{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left:0;
+			top:0;
+			font-size: 120px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 200px;
+		}
+		.box1{
+			background-color: #f00a;
+			transform:translateZ(100px);
+		}
+		.box2{
+			background-color: #0f0a;
+			transform:translateZ(-100px);
+		}
+		.box3{
+			background-color: #00fa;
+			transform:translateX(-100px) rotateY(90deg);
+		}
+		.box4{
+			background-color: #ff0a;
+			transform:translateX(100px) rotateY(90deg);
+		}
+		.box5{
+			background-color: #0ffa;
+			transform:translateY(-100px) rotateX(90deg);
+		}
+		.box6{
+			background-color: #f0fa;
+			transform:translateY(100px) rotateX(90deg);
+		}
+	</style> -->
+	<style>
+		/*body{
+			background-color: black;
+		}*/
+		/*.box{
+			background-color: white;
+			width: 1000px;
+			height: 900px;
+					
+		}*/
+		@keyframes fang{
+			from{
+				transform:perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			}
+			to{
+				transform:perspective(500px) rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+			}
+		}
+		.ccc{
+			width: 200px;
+			height: 200px;
+			margin-top: 200px;
+			margin-left: 200px;
+			transform-style: preserve-3d;
+			position: relative;
+			animation: fang 3s infinite;
+		}
+		.ccc div{
+			width: 200px;
+			height: 200px;
+			font-size: 100px;
+			font-weight: bolder;
+			text-align: center;
+			line-height: 200px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			opacity: 0.5;
+			
+		}
+		.box1{
+			background-color: red;
+			transform: translateZ(100px);
+		}
+		.box3{
+			background-color: green;
+			transform: translateZ(-100px) rotateY(180deg);
+		}
+		.box2{
+			background-color: blue;
+			transform: translateX(100px) rotateY(90deg);
+		}
+		.box4{
+			background-color: yellow;
+			transform: translateX(-100px) rotateY(-90deg);
+		}
+		.box5{
+			background-color: orange;
+			transform: translateY(100px) rotateX(-90deg);
+		}
+		.box6{
+			background-color: purple;
+			transform: translateY(-100px) rotateX(90deg);
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="box"> -->
+		<div class="ccc">
+		    <div class="box1">1</div>
+		    <div class="box2">2</div>
+		    <div class="box3">3</div>
+		    <div class="box4">4</div>
+		    <div class="box5">5</div>
+		    <div class="box6">6</div>
+	    </div>
+	<!-- </div> -->
+	
+</body>
+</html>

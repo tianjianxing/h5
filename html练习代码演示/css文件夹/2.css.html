@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择器的使用</title>
+    <style>
+    	*{
+    		color: red;
+    	}
+    	p{
+    		color: yellow;
+    	}
+    	i{
+    		color: purple;
+    	}
+    	.c{
+    		color: blue;
+    	}
+    	.c1{
+    		color: grey;
+    	}
+    	#b1{
+    		color: green;
+    	}
+    	.c .c2{
+    		color: yellow;
+    	}
+    	.c2 > s{
+    		color: pink;
+    	}
+    	.i1,.i2{
+    		color:blue;
+    	}
+    	.c2 s+s{
+    		color: green;
+    	}
+    	p em ~ em{
+    		color: orange;
+    	}
+        p~u{
+        	color: black;
+        }
+
+
+
+
+
+    	
+
+
+
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+	<p id="b2">ppppp</p>
+	<b id="b1">bbbbb</b>
+	<div>
+	    ddddd
+	</div>	
+	<div>ddddddddd
+	  <p>pppppppppp</p>
+	</div>
+	<div>dddddddddddd
+		<p>ppppppppppppp
+			<b>bbbbbbbbbbb</b>
+		</p>
+	</div>
+	<span>sss
+		<i class="i2">ii
+			<i>iiii</i>
+		</i>
+	</span>
+	<br>
+	<span class="c1 c2 ">sssss
+		<i class="i1">iiiiiii
+			<i>iiiiiiiiiii
+				<s>sssssss
+					<s>sssssssssss</s>
+				</s>
+			</i>
+		</i>
+	</span>
+	<br>
+	<span class="c">ssssssss
+		<i>iiiiiiiii
+			<b class="c1">bbbbbbbb</b>
+			<i class="c2">iiiiiiiiiiiiiiii
+				<s>sssssssssssssssssss</s>
+				<s>sssssssssssssssssssssssss</s>
+			</i>
+		</i>
+	</span>
+	<br>
+	<p class="p1">
+		<u class="u1">uuuuuuuuuuuuu
+			<em>eeeeee</em><br>
+			<em>eeeeeeeeeee</em><br>
+			<em>eeeeeeeeeeeeeee</em>
+		</u>
+	</p>
+	<u>uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+		<em>mmmmmmmmmmmmmm</em>
+	</u>
+
+</body>
+</html>

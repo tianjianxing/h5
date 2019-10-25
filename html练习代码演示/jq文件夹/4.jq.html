@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+		.box3,.box4{
+			background-color: red;
+		}
+		.box5{
+			width: 200px;
+			height: 200px;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="显示" class="showBtn">
+	<input type="button" value="隐藏" class="hideBtn">
+	<input type="button" value="切换" class="toggleBtn">
+	<div class="box"></div>
+	<script>
+		$(".showBtn").click(function(){
+			$(".box").show(1111,function(){
+				console.log("show");
+			})
+		})
+		$(".hideBtn").click(function(){
+			$(".box").hide(1111,function(){
+				console.log("hide");
+			})
+		})
+		$(".toggleBtn").click(function(){
+			$(".box").toggle(1111,function(){
+				console.log("切换");
+			})
+			
+		})
+	</script>
+	<input type="button" value="显示" class="showBtn1">
+	<input type="button" value="隐藏" class="hideBtn1">
+	<input type="button" value="切换" class="toggleBtn1">
+	<div class="box1"></div>
+	<script>
+		$(".showBtn1").click(function(){
+			$(".box1").slideDown(2222,function(){
+				console.log("滑动显示");
+			})
+		})
+		$(".hideBtn1").click(function(){
+			$(".box1").slideUp(2222,function(){
+				console.log("滑动隐藏");
+			})
+		})
+		$(".toggleBtn1").click(function(){
+			$(".box1").slideToggle(2222,function(){
+				console.log("滑动切换");
+			})
+		})
+	</script>
+	<input type="button" value="显示" class="showBtn2">
+	<input type="button" value="隐藏" class="hideBtn2">
+	<input type="button" value="切换" class="toggleBtn2">
+	<div class="box2"></div>
+	<script>
+		$(".showBtn2").click(function(){
+			$(".box2").fadeIn(3333,function(){
+				console.log("淡出显示");
+			})
+		})
+		$(".hideBtn2").click(function(){
+			$(".box2").fadeOut(3333,function(){
+				console.log("淡出隐藏");
+			})
+		})
+		$(".toggleBtn2").click(function(){
+			$(".box2").fadeToggle(3333,function(){
+				console.log("淡出切换");
+			})
+		})
+	</script>
+	<input type="button" value="按钮" class="btn1">
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<script>
+		$(".btn1").click(function(){
+			$(".box3").animate({
+				"width":"400px",
+				"height":"200px"
+			},4444)
+            $(".box4").animate({"width":"600px"},1111)
+                      .animate({"height":"300px"},2222)
+                      .animate({"border-radius":"300px"},3333)
+                      .fadeOut(4444);
+		})
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<input type="button" value="开始" class="startBtn">
+	<input type="button" value="结束" class="overBtn">
+	<div class="box5"></div>
+	<script>
+		$(".startBtn").click(function(){
+			$(".box5").animate({"width":"400px"},2222)
+			          .delay(2222)
+			          .animate({"height":"400px"},2222);
+		})
+		$(".overBtn").click(function(){
+			$(".box5").stop();
+			// $(".box5").stop(true);
+			// $(".box5").stop(true,true);
+			// $(".box5").stop(false,true);
+		})
+	</script>
+	<br>
+	<br>
+	<input type="button" value="置顶" class="toTopBtn">
+	<script>
+		$(".toTopBtn").click(function(){
+			$("html,body").animate({scrollTop:0},5555)
+		})
+	</script>
+
+</body>
+</html>

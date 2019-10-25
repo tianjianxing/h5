@@ -1,0 +1,117 @@
+body{
+    background-color: #f5f5f5;
+}
+.red-line{
+    border-bottom: 5px solid red;
+}
+/*轮播图*/
+section{
+    position: relative;
+    height: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    width: 1130px;
+    margin: auto;
+}
+section h3{
+    width: 1050px;
+    height: 120px;
+    line-height: 100px;
+    padding: 36px 0 0;
+    text-align: center;
+    margin-left: 40px;
+}
+/*精选照片*/
+section .nice-content{
+    width: 1050px;
+    height: 616px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+section .nice-content div{
+    width: 330px;
+    height: 280px;
+}
+section .nice-content div:hover{
+    box-shadow: 0 5px 5px 5px #ccc;
+}
+section .nice-content div span{
+    display: block;
+    width: 330px;
+    height: 102px;
+    padding: 12px 20px 16px;
+}
+section .nice-content div span a:first-child,section .nice-food span a:first-child{
+    display: block;
+    width: 290px;
+    height: 30px;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: auto;
+    color: #333;
+}
+section .nice-content div span i,section .nice-food span i{
+    display: block;
+    width: 290px;
+    height: 22px;
+    color: #999;
+    text-decoration: none;
+    font-size: 12px;
+}
+section .nice-content div span a:last-child,section .nice-food span a:last-child{
+    font-size: 12px;
+    color: red;
+}
+section .user-header{
+    width: 1050px;
+    background: #fff;
+    padding: 40px 0px 40px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+section .user-header>div{
+    width: 336px;
+    height: 140px;
+    position: relative;
+    display: flex;
+}
+section .user-header div img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: inline-block;
+}
+section .user-content{
+    margin-left: 10px;
+}
+section .user-content p{
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0 0 0;
+}
+section .user-content span{
+    color: #999;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 3px;
+}
+section .section-contain>a{
+    display: block;
+    line-height: 60px;
+    font-size: 15px;
+    color: #333;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+section .section-contain>a:hover{
+    color: red;
+    text-decoration: none;
+}

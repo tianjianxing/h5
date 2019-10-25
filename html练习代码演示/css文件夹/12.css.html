@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 100px;
+			border:2px solid black;
+		}
+		.box{
+			text-overflow: clip;
+			word-wrap:normal;
+			white-space:nowrap;
+		}
+		.box1{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space:nowrap;
+		}
+		.box2{
+			word-wrap: break-word;
+
+		}
+		.box3{
+			width: 300px;
+			height: 200px;
+			/*border:1px solid red;*/
+			color: red;
+			margin:2px;
+			padding:3px;
+			/*border-collapse:collapse;*/
+			empty-cells: hide;
+			caption-side: bottom;
+			table-layout:fixed;
+		}
+		.box3 tr:first-child{
+			vertical-align: top;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">合并空白序列，可以保留文本的格式，包括空格、回车、tab、换行合并空白序列，可以保留文本的格式<br></div><br>
+	<div class="box1">合并空白序列，可以保留文本的格式，包括空格、回车、tab、换行</div><br>
+	<div class="box2">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div><br>
+	<table class="box3" border="1px" cellspacing="3px" cellpadding="10px">
+		<caption>表格-1</caption>
+		<tr>
+			<td>01</td>
+			<td>02</td>
+			<td>03</td>
+			<td>04</td>
+		</tr>
+		<tr>
+			<td>0100000000000</td>
+			<td></td>
+			<td>03</td>
+			<td>04</td>
+		</tr>
+		<tr>
+			<td>01</td>
+			<td>02</td>
+			<td></td>
+			<td>04</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

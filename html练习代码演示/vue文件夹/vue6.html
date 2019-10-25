@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<my-comp></my-comp>
+		<my-component></my-component>
+		<my-tag></my-tag>
+	</div>
+	<script>
+		var child1 = Vue.extend({
+			template:`<div>
+				<b>{{x}}</b>
+				<s>sssssss</s>
+			</div>`,
+			data:function(){
+				return {
+					x:123456
+				}
+			}
+		})
+		var child2 = {
+			template:`<p>
+				<span>spanspan</span>
+			</p>`
+		}
+		Vue.component("my-comp",child1);
+		Vue.component("MyComponent",child2);
+		Vue.component("my-tag",{
+			template:`<div>
+				<i>iiiiiiii</i>
+			</div>`
+		})
+		new Vue({
+			el:"#app",
+			data:{
+
+			}
+		})
+	</script>
+	<div id="app1">
+		<my-tag></my-tag><!-- 验证上面的全局组件my-tag -->
+		<tag1></tag1>
+		<tag2></tag2>
+	</div>
+	<script>
+		var myTag1 = {
+			template:"<div>tag1</div>"
+		}
+		//myTag1是全局变量，在另外一个app里面也能用
+		Vue.component("tag2",{
+			template:`<div>
+				<b>bbbbbbb</b>
+				<child-comp></child-comp>
+				<child-component></child-component>
+				<childComponent></childComponent>
+			</div>`,
+			components:{
+				"child-comp":{
+					template:`<i>child</i>`
+				},
+				"childComponent":{
+					template:`<s>childchild</s>`
+				}
+			}
+		})
+		new Vue({
+			el:"#app1",
+			components:{
+				"tag1":myTag1
+			}
+		})
+	</script>
+	<div id="app2">
+		<root-comp></root-comp>
+	</div>
+	<script>
+		var title = Vue.extend({
+			template:"<h4>这是一首简单的歌</h4>"
+		})
+		var time = {
+			template:"<span>{{new Date()}}</span>"
+		}
+		var descript = {
+			template:"<p>当前时间：<myTime></myTime></p>",
+			components:{
+				myTime:time
+			}
+		}
+		Vue.component("root-comp",{
+			template:`<div>
+				<myTitle></myTitle>
+				<my-desc></my-desc>
+				以下是时间：
+				<times></times>
+			</div>`,
+			components:{
+				myTitle:title,
+				myDesc:descript,
+				times:time
+			}
+		})
+		new Vue({
+			el:"#app2"
+		})
+	</script>
+	<div id="app3">
+		<my-name></my-name>
+		<my-age></my-age>
+		<abc></abc>
+	</div>
+	<script>
+		var yes = {
+			template:`<input type="button" value="yes" />`
+		}
+		var no = {
+			template:`<input type="button" value="no" />`
+		}
+		Vue.component("my-name",{
+			template:`<div>你的名字是：{{un}}
+			<p>
+				<yes></yes>
+				<no></no>
+			</p>
+			</div>`,
+			data:function(){
+				return {
+					un:"张三"
+				}
+			},
+			components:{
+				yes,
+				no
+			}
+		})
+		Vue.component("my-age",{
+			template:`<div>你的年龄是：{{age}}
+			<p>
+				<yes></yes>
+				<no></no>
+			</p>
+			</div>`,
+			data:function(){
+				return {
+					age:33
+				}
+			},
+			components:{
+				yes,
+				no
+			}
+		})
+		new Vue({
+			el:"#app3",
+			components:{
+				"abc":{
+					template:`<p>111111111</p>`
+				}
+			}
+		})
+	</script>
+   	SPA(single page application)单页面应用
+</body>
+</html>

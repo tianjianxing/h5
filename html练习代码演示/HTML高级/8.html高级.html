@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px dashed red;
+		}
+	</style>
+</head>
+<body>
+	<canvas class="c1" width="600px" height="300px"></canvas>
+	<script>
+		var c1 = document.querySelector(".c1");
+		var h1 = c1.getContext("2d");
+
+		h1.lineWidth = 16;
+		h1.lineCap = "round";
+		h1.beginPath();
+		h1.arc(200,200,100,0,1*Math.PI,true);
+		h1.stroke();
+
+		h1.lineJoin = "bevel";
+
+		h1.beginPath();
+		h1.moveTo(400,200);
+		h1.lineTo(430,100);
+		h1.lineTo(460,200);
+		h1.stroke();
+	</script>
+	<canvas class="c2" width="600px" height="220px"></canvas>
+	<script>
+		var c2 = document.querySelector(".c2");
+		var h2 = c2.getContext("2d");
+
+		var img = new Image();
+		img.src = "3.jpg";
+
+		img.onload = function(){
+			h2.drawImage(img,50,50,200,150);
+		}
+	</script>
+	<canvas class="c3" width="1000px" height="500px"></canvas>
+	<script>
+		var c3 = document.querySelector(".c3");
+		var h3 = c3.getContext("2d");
+
+		var img1 = new Image();
+		img1.src = "0.jpg";
+
+		img1.onload = function(){
+			var p1 = h3.createPattern(img1,"repeat");
+			h3.fillStyle = p1;
+			h3.fillRect(0,0,1000,500);
+			h3.fill();
+		}
+	</script>
+	<canvas class="c4" width="1000px" height="500px"></canvas>
+	<script>
+		var c4 = document.querySelector(".c4");
+		var h4 = c4.getContext("2d");
+
+		var img3 = new Image();
+		img3.src ="4.jpg";
+
+		h4.beginPath();
+		h4.arc(400,200,200,0,2*Math.PI);
+		h4.moveTo(50,50);
+		h4.lineTo(400,30);
+		h4.lineTo(160,300);
+		h4.closePath();
+		h4.stroke();
+		h4.clip();
+
+		img3.onload = function(){
+			h4.drawImage(img3,0,0,1000,500);
+		}
+	</script>
+	<canvas class="c5" width="600px" height="400px"></canvas>
+	<script>
+		var c5 = document.querySelector(".c5");
+		var h5 = c5.getContext("2d");
+
+		h5.strokeStyle = "blue";
+		h5.lineWidth = 10;
+		h5.lineJoin = "bevel";
+
+		h5.save();
+		//跟第二个restore是一对儿
+		h5.beginPath();
+		h5.moveTo(50,50);
+		h5.lineTo(300,100);
+		h5.lineTo(100,130);
+		h5.stroke();
+        
+		h5.strokeStyle = "green";
+		h5.lineWidth = 8;
+
+		h5.save();
+
+		h5.beginPath();
+		h5.moveTo(120,150);
+		h5.lineTo(240,180);
+		h5.lineTo(120,200);
+		// h5.fill();
+		h5.stroke();
+
+		h5.restore();
+
+		h5.restore();
+
+		h5.beginPath();
+		h5.moveTo(100,280);
+		h5.lineTo(300,300);
+		h5.stroke();
+	</script>
+	<canvas class="c6" width="600px" height="400px"></canvas>
+	<script>
+		var c6 = document.querySelector(".c6");
+		var h6 = c6.getContext("2d");
+
+		h6.save()
+		// h6.scale(2,0.5);
+		h6.fillRect(50,50,100,100);
+		h6.fillRect(100,100,100,100);
+
+		h6.scale(2,0.5);
+		h6.fillRect(150,150,100,100);
+		h6.fillRect(200,200,100,100);
+
+		h6.restore();
+
+		h6.translate(300,300);
+		h6.fillRect(0,0,50,50);
+		h6.fillRect(-100,0,50,50);
+	</script>
+	<canvas class="c7" width="600px" height="400px"></canvas>
+	<script>
+		var c7 = document.querySelector(".c7");
+		var h7 = c7.getContext("2d");
+
+		h7.save();
+		h7.rotate(30*Math.PI/180);
+		h7.fillRect(100,100,100,100);
+		h7.restore();
+
+		h7.save();
+		h7.translate(300,200);
+		h7.rotate(60*Math.PI/180);
+		h7.fillRect(-50,-50,100,100);
+		h7.restore();
+
+		h7.save();
+		h7.translate(500,200);
+		h7.rotate(90*Math.PI/180);
+		h7.fillRect(-50,-50,100,100);
+		h7.restore();
+	</script>
+</body>
+</html>

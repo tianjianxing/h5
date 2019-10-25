@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var object = {
+			username:"田建行",
+			grade:"优秀",
+			age:23,
+			sex:"男"
+		}
+		console.log(object);
+		var obj = {
+			math:82,
+			chinese:86,
+			english:80
+		}
+		console.log(obj);
+	</script>
+	<script>
+		var duixiang = new Object();
+		duixiang.user = "建行";
+		duixiang.grade = "良好";
+		duixiang.age = 22;
+		duixiang.sex = "男";
+		console.log(duixiang);
+		var obj = new Object();
+		obj.math = 51;
+		obj.chinese = 78;
+		obj.english = 57;
+		console.log(obj);
+	</script>
+	<script>
+		function object(use,score,year){
+			this.aaa = use;
+			this.bbb = score;
+			this.ccc = year; 
+		}
+		var s1 = new object("建","不及格","20");
+		console.log(s1);
+		var s2 = new object("行","极差","18");
+		console.log(s2);
+		function Obj(a,b,c){
+			this.math = a;
+			this.chinese = b;
+			this.english = c;
+		}
+		var n1 = new Obj("78","87","88");
+		var n2 = new Obj("45","84","87");
+		console.log(n1,n2);
+
+	</script>
+	<script>
+		var object = {
+			aaa:999,
+			"a  b":164,
+			"4-2":487,
+			66:777,
+			userwho:"abd",
+			_2:4641,
+			_55:"saf",
+			_498:"484",
+			$89:81
+		}
+        console.log(object.aaa);
+        console.log(object["a  b"]);
+        console.log(object["4-2"]);
+        console.log(object[66]);
+        console.log(object.userwho);
+        console.log(object._2);
+        console.log(object._55);
+        console.log(object._498);
+        console.log(object.$89);	
+	</script>
+	<script>
+		for(var attr in object){
+			console.log(object[attr]);
+		}
+		console.log("aaa" in object);
+		console.log("2" in object);
+		console.log(object.hasOwnProperty("66"));
+		console.log(object.hasOwnProperty("489"));
+	</script>
+	<script>
+		var obj = {
+			user:"天行健",
+			sex:"男",
+			do:function(s){
+				return this.user+"去"+s;
+			}
+		}
+		console.log(obj.do("干什么"));
+	</script>
+	<script>
+		var obj = {
+			user:"天行健",
+			sex:"男",
+			so:function(){
+				console.log(this.sex);
+			}
+		}
+			obj.so();
+	</script>
+	<script>
+		var obj = {
+			user:"天行健",
+			sex:"男",
+			so:function(){
+			   return this.sex = 22;
+			}
+		}
+			console.log(obj.so("22"));
+	</script>
+	<script>
+		function Study(j,k){
+			this.uname = j;
+			this.uage = k;
+			this.fun = function(sjoj){
+				console.log(sjoj);
+			}
+		}
+		var p1 = new Study("a","b");
+		var p2 = new Study("c","d");
+		console.log(p1,p2);
+		p1.fun(123);
+		p2.fun(456);
+	</script>
+	<script>
+		function People(m,n){
+			this.uuname = m;
+			this.uuage = n;
+		}
+
+		var n1 = new People("建",20);
+		var n2 = new People("行",22);
+		console.log(n1,n2);
+		// n1.__proto__.sex="女";
+		People.prototype.sex = "男";
+		console.log(n1.sex)
+	</script>
+	<script>
+		String.prototype.fun = function(){
+			console.log(this+"12356");
+		}
+		var str1 = "abc";
+		str1.fun();
+		var str2 = "bbb";
+		str2.fun();
+	</script>
+	<script>
+		String.prototype.repeatify = function(n){
+			var aaa = "";
+			for(var i=0;i<n;i++){
+				aaa += this;
+			}
+			return aaa;
+		}
+		var str9 = "qwer";
+		console.log(str9.repeatify(3));
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var f = v => v;
+		// var f = function(v){
+		// 	return v;
+		// }
+
+		// var f = () => 5;
+		// var f = function(){
+		// 	return 5;
+		// }
+
+		// var f = (x,y) => x+y;
+		// var f = function(x,y){
+		// 	return x+y;
+		// }
+		
+		// var f = (x,y) => {
+		// 	let sum = x+y;
+		// 	return sum;
+		// }
+	</script>
+	<script>
+		var obj = {
+			age: 1,
+			say: function(){
+				console.log(this);
+				var that = this;
+				setTimeout(function(){
+					console.log(that,this,that.age,this.age);
+				},0);
+			},
+		}
+		obj.say();
+
+		var obj1 = {
+			age:1,
+			say:function(){
+				setTimeout(()=>{
+					console.log(this,this.age);
+				},0);
+			}
+		}
+		obj1.say();
+	</script>
+	<input type="button" value="按钮" class="btn"><script>
+		var btn = document.querySelector(".btn");
+		btn.onclick = function(){
+			console.log(this);
+			setTimeout(()=>{
+				this.style.color = "red";
+			},1000)
+		}
+	</script>
+	<div class="box"></div>
+	<script>
+		var box = document.querySelector(".box");
+		var bb = "123";
+		var ss = "999";
+		var uu = "888";
+		var bb = "777";
+		span = "000";
+		box.innerHTML = '<p\
+		class="p1"><b>'+bb+'</b></p>\
+		<p class="p2"><s>'+ss+'</s></p>\
+		<div class="p3">\
+		<span>'+span+'</span>\
+		</div>';
+		box.innerHTML = `<p
+		class="p1"><b>${uu}</b></p>
+		<p class="p2"><s>${bb}</s></p>
+		<div class="p3">
+		abc
+		5646
+		111 \`
+		<span>${span}</span>
+		</div>`;
+
+		var str = ` 123 2 `;
+		console.log(str.trim());
+		console.log(str.trimStart());
+		console.log(str.trimEnd());
+	</script>
+
+</body>
+</html>

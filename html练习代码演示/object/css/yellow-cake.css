@@ -1,0 +1,154 @@
+body{
+    background-color: #f5f5f5;
+}
+.red-line{
+    border-bottom: 5px solid red;
+}
+section{
+	width: 1050px;
+	margin: auto;
+	display: flex;
+}
+section .section-contain{
+	width: 710px;
+	padding: 40px 60px;
+}
+section .section-contain .cake-title{
+	padding: 32px 40px 22px;
+}
+
+section .section-contain .cake-title h1{
+	font-size: 21px;
+    font-weight: bold;
+    line-height: 32px;
+    text-align: center;
+    color: #333;
+}
+section .section-contain .cake-title span{
+	line-height: 32px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    display: block;
+}
+section .user-info{
+	width: 300px;
+	height: 580px;
+    margin: 0px auto;
+    background: #fff;
+    padding-bottom: 40px;
+    border: 1px solid red;
+}
+section .section-contain .cake-content p{
+	line-height: 30px;
+    font-size: 17px;
+    color: rgb(37, 53, 69);
+    margin-bottom: 25px;
+    margin-top: 0px;
+    font-family: "PingFang SC", SourceHanSansCN, "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, Helvetica, DINAlternate-Bold;
+    text-align: justify;
+    white-space: normal;
+    background-color: #fff;
+}
+section .section-contain .cake-content img{
+	display: inline-block;
+	width: 590px;
+	margin: 16px auto;
+}
+section .section-contain .cake-content .little-tips{
+	padding: 20px 30px;
+    font-size: 15px;
+    color: #999;
+    line-height: 23px;
+}
+section .section-contain .cake-content .little-tips b{
+	font-size: 16px;
+	color: #444;
+}
+section .section-contain .cake-content .little-tips .red{
+	color: red;
+	font-size: 16px;
+	display: block;
+}
+section .section-contain .user-zan{
+	width: 590px;
+    padding: 40px 0px;
+    margin: 0px auto 60px;
+}
+section .section-contain .user-zan>a{
+	height: 64px;
+    width: 64px;
+    line-height: 64px;
+    border-radius: 32px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background: #ff4c35;
+    display: block;
+    margin: 0px auto;
+    position: relative;
+}
+section .section-contain .user-zan span{
+	line-height: 28px;
+    height: 28px;
+    width: 100%;
+    text-align: center;
+    color: #999;
+    display: block;
+    padding-top: 6px;
+    font-size: 10px;
+}
+section .section-contain .user-zan .user-daibiao{
+	height: 44px;
+    width: 432px;
+    font-size: 0px;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px auto 0px;
+}
+section .section-contain .user-zan .user-daibiao a{
+	display: inline-block;
+    height: 44px;
+    width: 44px;
+    margin: auto 5px;
+}
+section .section-contain .user-zan .user-daibiao a img{
+	display: inline-block;
+    height: 44px;
+    width: 44px;
+    border-radius: 22px;
+}
+section .yourself-talk{
+	width: 710px;
+	height: 120px;
+	margin: auto;
+	padding:0px 40px 0px 40px;
+	display: flex;
+	position: relative;
+}
+section .yourself-talk textarea{
+	width: 450px;
+	height: 68px;
+	line-height: 22px;
+    background: #eaeaea;
+    color: #333;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 14px;
+    resize: none;
+    margin: 5px 0 0 10px;
+}
+section .yourself-talk .sumbtn{
+	position: absolute;
+    right: 120px;
+    bottom: 0px;
+    height: 32px;
+    width: 66px;
+    background: #ff4c35;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border: 0px;
+}

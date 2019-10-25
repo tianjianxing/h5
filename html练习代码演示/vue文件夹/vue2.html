@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p>{{mess}}</p>
+		<input type="text" v-model="mess">
+	</div>
+	<script>
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				mess:"这是一首简单的歌谣"
+			},
+			beforeCreate:function(){
+				console.log("beforeCreate");
+				console.log(this.$el);
+				console.log(this.$data);
+			},
+			created:function(){
+				console.log("created");
+				console.log(this.$el);
+				console.log(this.$data);
+			},
+			beforeMount:function(){
+				console.log("beforeMount");
+				console.log(this.$el);
+				console.log(this.$data);
+			},
+			mounted:function(){
+				console.log("mounted");
+				console.log(this.$el);
+				console.log(this.$data);
+			},
+			beforeUpdate:function(){
+				console.log("beforeUpdata");
+				console.log(this.$el.textContent);
+				if(this.mess === "这是"){
+					this.$destroy();
+				}
+			},
+			updated:function(){
+				console.log("updatad");
+				console.log(this.$el.textContent);
+			},
+			beforeDestroy:function(){
+				console.log("destoryed");
+			},
+			destroyed:function(){
+				console.log("destoryed");
+			}
+		})
+	</script>
+	<style>
+		.p1{
+			color:red;
+		}
+	</style>
+	<div id="app1">
+		<p>{{aaa}}</p>
+		<p v-once>{{aaa}}</p>
+		<input type="text" v-model="aaa">
+		<div v-html="message"></div>
+		{{ok?"yes":"no"}}<br>
+		{{2+2+num}}<br>
+		{{2+8>12}}<br>
+		{{ (function(){return 2})() }}
+		<p v-bind:class="'p'+n">这是一些话语</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app1",
+			data:{
+				aaa:"111",
+				message:"<h2>插入标记</h2>",
+				ok:true,
+				num:10,
+				n:1
+			}
+		})
+	</script>
+
+	<div id="app2">
+		<p>{{ city }}</p>
+		<p>{{ school }}</p>
+		<p>{{ city+school }}</p>
+		<p>{{ fullAddress }}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app2",
+			data:{
+				city:"郑州",
+				school:"大学"
+			},
+			computed:{
+				fullAddress:function(){
+					return this.city + this.school;
+				}
+			}
+		})
+	</script>
+	<div id="app3">
+		<input type="text" v-model="price">
+		*
+		<input type="text" v-model="count">
+		=
+		<input type="text" v-model="total">
+		<p>单价：&yen;{{ price }}</p>
+		<p>数量：{{ count }}</p>
+		<p>总价：&yen;{{ total }}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app3",
+			data:{
+				price:100,
+				count:2
+			},
+			computed:{
+				total:{
+					set:function(newValue){
+						this.price=newValue/this.count;
+					},
+					get:function(){
+						return this.price*this.count;
+					}
+				}
+			}
+		})
+	</script>
+	<div id="app4">
+		<input type="text" v-model="a"><br>
+		<input type="text" v-model="b"><br>
+		<input type="text" v-model="c"><br>
+		<input type="text" v-model="d.e">{{d.e}}<br>
+		<input type="text" v-model="d.f.g"><br>
+		<input type="text" v-model="h"><br>
+		<input type="text" v-model="n1"><br>
+	</div>
+	<script>
+		new Vue({
+			el:"#app4",
+			data:{
+				a:1,
+				b:2,
+				c:3,
+				d:{
+					e:4,
+					f:{
+						g:5
+					}
+				},
+				h:6,
+				n1:"a",
+				n2:"b"
+			},
+			computed:{
+				res:function(){
+					return this.n1+this.n2;
+				}
+			},
+			watch:{
+				a:function(value,oldValue){
+					console.log(value,oldValue);
+				},
+				b:"fun1",
+				c:{
+					handler:function(value,oldValue){
+						console.log(value,oldValue);
+					}
+				},
+				d:{
+					handler:function(value,oldValue){
+						console.log(value,oldValue);
+					},
+					deep:true
+				},
+				"d.f.g":function(value,oldValue){
+					console.log(value,oldValue);
+				},
+				h:{
+					handler:function(value,oldValue){
+						console.log(value,oldValue);
+					},
+					immediate:true
+				},
+				res:function(value,oldValue){
+					console.log(value,oldValue);
+				}
+			},
+			methods:{
+				fun1:function(value,oldValue){
+						console.log(value,oldValue);
+				}
+			}
+		})
+	</script>
+</body>
+</html>

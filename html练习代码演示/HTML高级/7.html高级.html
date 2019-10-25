@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{
+			border:2px dashed black;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="800px" height="720px"></canvas>
+	<script>
+		var c1 = document.querySelector("canvas");
+		var hh = c1.getContext("2d");
+		hh.fillRect(20,20,100,80);
+		hh.strokeRect(20,120,100,80);
+
+		hh.clearRect(60,40,20,20);
+		hh.clearRect(0,100,80,80);
+
+		hh.strokeStyle = "green";
+		hh.strokeRect(20,220,100,80);
+		hh.fillStyle = "blue";
+		hh.fillRect(20,320,100,80);
+
+		hh.globalAlpha = 0.6;
+		hh.fillRect(20,420,100,80);
+
+		hh.globalAlpha = 1;
+		var lg = hh.createLinearGradient(20,520,120,560);
+		lg.addColorStop(0,"red");
+		lg.addColorStop(0.3,"yellow");
+		lg.addColorStop(0.6,"green");
+		lg.addColorStop(1,"pink");
+
+		hh.fillStyle = lg;
+		hh.fillRect(20,520,100,80);
+		hh.fillStyle="red"
+		hh.fillRect(20,620,100,80);
+
+		hh.strokeStyle = lg;
+		hh.strokeRect(140,20,100,80);
+	</script>
+	<canvas width="400px" height="420px" class="c2"></canvas>
+	<script>
+		var c2 = document.querySelector(".c2");
+		var hh1 = c2.getContext("2d");
+
+		var rg = hh1.createRadialGradient(200,200,0,200,200,100);
+		rg.addColorStop(0,"red");
+		rg.addColorStop(1,"green");
+
+		hh1.fillStyle = rg;
+		hh1.fillRect(20,20,300,300);
+	</script>
+	<canvas width="800px" height="520px" class="c3"></canvas>
+	<script>
+		var c3 = document.querySelector(".c3");
+		var hh3 = c3.getContext("2d");
+
+		hh3.font = "30px 微软雅黑";
+		hh3.textAlign = "right";
+		hh3.textBaseline = "top";
+		hh3.strokeStyle = "red";
+		hh3.fillStyle = rg
+		//rg是全局变量
+		hh3.strokeText("只是太爱你",400,100);
+		hh3.fillText("无法呼吸",400,200);
+
+		hh3.shadowColor = "orange";
+		hh3.shadowOffsetX = 2;
+		hh3.shadowOffsetY = 2;
+		//取值为零则环绕
+		hh3.shadowBlur = 20;
+
+		hh3.fillRect(222,333,100,100);
+	</script>
+	<canvas width="800px" height="520px" class="c4"></canvas>
+	<script>
+		var c4 = document.querySelector(".c4");
+		var hh4 = c4.getContext("2d");
+
+		hh4.beginPath();
+		hh4.moveTo(100,100);
+		hh4.lineTo(200,100);
+		hh4.lineTo(220,140);
+		hh4.lineTo(180,160);
+		hh4.lineTo(180,240);
+		hh4.lineTo(190,250);
+		hh4.lineTo(90,250);
+		hh4.lineTo(100,240);
+		hh4.lineTo(100,100);
+		hh4.lineTo(200,100);
+		// hh4.lineTo(200,100);
+		// hh4.lineTo(200,100);
+
+		// hh4.fill();
+
+		hh4.stroke();
+
+		hh4.beginPath();
+		hh4.moveTo(120,90);
+		hh4.lineTo(130,100);
+		hh4.lineTo(140,90);
+
+
+		// hh4.fill();
+
+		hh4.stroke();
+		hh4.beginPath();
+		hh4.moveTo(110,260);
+		hh4.lineTo(120,250);
+		hh4.lineTo(130,260);
+
+
+		// hh4.fill();
+
+		hh4.stroke();
+		hh4.stroke();
+		hh4.beginPath();
+		hh4.moveTo(150,260);
+		hh4.lineTo(160,250);
+		hh4.lineTo(170,260);
+
+
+		// hh4.fill();
+
+		hh4.stroke();
+	</script>
+	<!-- <canvas width="800px" height="250px" class="c5"></canvas>
+	<script>
+		var c5 = document.querySelector(".c5");
+		var hh5 = c5.getContext("2d");
+		hh5.beginPath();
+		hh5.moveTo(130,250);
+		hh5.lineTo(140,260);
+
+
+		hh5.fill();
+
+		hh5.stroke();
+	</script> -->
+</body>
+</html>

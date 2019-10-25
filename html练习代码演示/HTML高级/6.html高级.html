@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			position:absolute;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+		.box3{
+			width: 300px;
+			height: 300px;
+			border:20px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" draggable="true"></div>
+	<script>
+		$(".box").on("dragstart",function(){
+			console.log("dragstart");
+		}).on("drag",function(){
+			console.log("drag");
+		}).on("dragend",function(){
+			console.log("dragend");
+		})
+	</script>
+	<div class="box1" draggable="true"></div>
+	<script>
+		var x,
+			y;
+			$(".box1").on("dragstart",function(e){
+				x = e.offsetX;
+				y = e.offsetY;
+				console.log(x,y);
+			}).on("drag dragend",function(e){
+				// console.log(e);
+				var xx = e.clientX,
+					yy = e.clientY;
+				console.log(xx,yy);
+				$(this).css({
+					"top":yy - y + "px",
+					"left":xx - x + "px"
+				})
+			})
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="box2" draggable="true"></div>
+	<br>
+	<br>
+	<div class="box3"></div>
+	<br>
+	<script>
+		$(".box3").on("dragenter",function(){
+			console.log("进入触发");
+		}).on("dragover",function(e){
+			e.preventDefault();
+			//注意，执行drop事件的函数时，需要对dragover事件阻止默认行为
+			console.log("拖到时触发");
+		}).on("drop",function(){
+			console.log("投放时触发");
+		}).on("dragleave",function(){
+			console.log("离开时触发");
+		})
+	</script>
+</body>
+</html>

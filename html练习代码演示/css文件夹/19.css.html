@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 400px;
+			height: 300px;
+			border:2px solid red;
+			display: flex;
+			/*flex-direction: row;*/
+			/*flex-direction: row-reverse;*/
+			flex-direction: column-reverse;
+			/*flex-wrap: wrap;*/
+			/*flex-wrap: wrap-reverse;*/
+			/*flex-flow:column nowrap;*/
+
+		}
+		.box div{
+			width: 70px;
+			height: 30px;
+			border:5px solid blue;
+		}
+		.box9{
+			width: 400px;
+			height: 300px;
+			border:2px solid red;
+			display: flex;
+			flex-wrap: wrap;
+			/*justify-content: flex-end;*/
+			/*justify-content: space-between;*/
+			justify-content: space-around;
+			/*align-content: center;*/
+			align-content: space-around;
+		}
+		.box9 div{
+			width: 100px;
+			height: 30px;
+			border:5px solid blue;
+		}
+		.box8{
+			width: 400px;
+			height: 200px;
+			border:2px solid red;
+			display: flex;
+			/*flex-wrap: wrap;*/
+			/*align-content: center;*/
+			align-items: center;
+		}
+		.box8 div{
+			width: 50px;
+			height: 30px;
+			border:5px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">item1</div>
+		<div class="box2">item2</div>
+		<div class="box3">item3</div>
+		<div class="box4">item4</div>
+		<div class="box5">item5</div>
+		<div class="box6">item6</div>
+	</div>
+	<br>
+	<div class="box9">
+		<div class="box1">item1</div>
+		<div class="box2">item2</div>
+		<div class="box3">item3</div>
+		<div class="box4">item4</div>
+		<div class="box5">item5</div>
+		<div class="box6">item6</div>
+	</div>
+	<br>
+	<div class="box8">
+		<div class="box1">item1</div>
+		<div class="box2">item2</div>
+		<div class="box3">item3</div>
+		<div class="box4">item4</div>
+		<div class="box5">item5</div>
+		<div class="box6">item6</div>
+	</div>
+</body>
+</html>

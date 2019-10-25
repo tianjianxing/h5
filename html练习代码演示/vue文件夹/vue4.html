@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<style>
+		.c1{
+			font-weight: bold;
+		}
+		.c2{
+			background-color: yellow;
+		}
+		.c3{
+			font-size: 28px;
+		}
+	</style>
+	<div id="app">
+		<p v-bind:class="{'c1':a,'c2':b,'c3':c}">这些事忘了就好</p>
+		<p v-bind:class="[classA,classB,classC]">无关紧要的东西</p>
+		<p v-bind:class="whichClass ? classA : classB " class="c3">就像个演员肆无忌惮</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				a:true,
+				b:true,
+				c:false,
+				whichClass:false,
+				classA:"c1",
+				classB:"c2",
+				classC:"c3"
+			}
+		})
+	</script>
+	<div id="app1">
+		<p v-bind:style="{color:co,backgroundColor:bg}">能不能行啊</p>
+		<p v-bind:style="{color:s1.color,backgroundColor:s1.bgc}">太多的 太假的</p>
+		<p v-bind:style="s2">我得举一动随你改变多荒唐</p>
+		<p v-bind:style="[s2,s3,{fontSize:ck}]">任你肆意玩弄</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app1",
+			data:{
+				co:"green",
+				bg:"yellow",
+				s1:{
+					color:"orange",
+					bgc:"red"
+				},
+				s2:{
+					color:"pink",
+					backgroundColor:"black"
+				},
+				s3:{
+					fontweight:"blod",
+					border:"10px dashed blue"
+				},
+				ck:"30px"
+			}
+		})
+	</script>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+		}
+		.c1{
+			color:green;
+		}
+		.c2{
+			background-color: yellow;
+		}
+		.c3{
+			border:10px dashed black;
+		}
+	</style>
+	<div id="app2">
+		<div class="box" v-bind:class="chk">往事重提是折磨</div>
+		<input type="checkbox" value="c1" v-model="chk">
+		<input type="checkbox" value="c2" v-model="chk">
+		<input type="checkbox" value="c3" v-model="chk">
+		<p>{{chk}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app2",
+			data:{
+				chk:[]
+			}
+		})
+	</script>
+	<div id="app3">
+		<p v-if="ok">表情无喜无悲的冷漠</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app3",
+			data:{
+				ok:true
+			}
+		})
+	</script>
+	<div id="app4">
+		<input type="text" v-model="sen">
+		<p v-if="sen == 1">aaaaaaaaaa</p>
+		<span v-else-if="sen == 2">bbbbbbbbbbbb</span>
+		<div v-else-if="sen == 3">cccccccccccc</div>
+		<p v-else>
+			<u>uuuuuuuuu</u>
+			<s>ssssssssss</s>
+		</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app4",
+			data:{
+				sen:3
+			}
+		})
+	</script>
+	<div id="app5">
+		<p v-show="isShow">#######</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app5",
+			data:{
+				isShow:true
+			}
+		})
+	</script>
+	<div id="app6">
+		<ul>
+			<li v-for="i in items">{{i}}</li>
+		</ul>
+		<br>
+		<ul>
+			<li v-for="i in objs">
+				<h3>{{i.title}}</h3>
+				<p>{{i.desc}}</p>
+			</li>
+		</ul>
+	</div>
+	<script>
+		new Vue({
+			el:"#app6",
+			data:{
+				items:["aa","bb","cc","dd","ee"],
+				objs:[
+					{
+						title:"第一个",
+						desc:"这是第一个"
+					},
+					{
+						title:"第二个",
+						desc:"这是第二个"
+					},
+					{
+						title:"第三个",
+						desc:"这是第三个"
+					}
+				]
+			}
+		})
+	</script>
+	<div id="app7">
+		<ul>
+			<li v-for="(item,i) in items">
+				<b>{{i+1}}</b>
+				<span>{{item}}</span>
+			</li>
+		</ul>
+	</div>
+	<script>
+		new Vue({
+			el:"#app7",
+			data:{
+				items:[11,22,33,44,55]
+			}
+		})
+	</script>
+	<div id="app8">
+		<ul>
+			<li v-for="(v,k,g) in obj">{{g}}.{{k}}:{{v}}</li>
+		</ul>
+	</div>
+	<script>
+		new Vue({
+			el:"#app8",
+			data:{
+				obj:{
+					name:"建行",
+					age:22,
+					sex:"男",
+					height:1.75,
+					weight:70
+				}
+			}
+		})
+	</script>
+	<div id="app9">
+		<p v-for="n of 5">{{n}}</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app9"
+		})
+	</script>
+	<div id="app10">
+		<p>
+			<template v-if="isShow">
+				<u>uuuu</u>
+				<s>sssssss</s>
+			</template>
+			<i>iiii</i>
+		</p>
+	</div>
+	<script>
+		new Vue({
+			el:"#app10",
+			data:{
+				isShow:true
+			}
+		})
+	</script>
+	<div id="app11">
+		<template v-for="n in 5">
+			<h3>标题{{n}}</h3>
+			<p>内容{{n}}</p>
+		</template>
+	</div>
+	<script>
+		new Vue({
+			el:"#app11"
+		})
+	</script>
+</body>
+</html>

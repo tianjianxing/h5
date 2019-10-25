@@ -1,0 +1,351 @@
+section{
+	width: 100%;
+}
+nav .nav-contain li:first-child a b{
+	border-bottom: 4px solid red;
+}
+section  .section-contain .breadcrumb a:hover{
+	color: red;
+}
+section  .section-contain .breadcrumb{
+	width: 990px;
+	height: 120px;
+	margin: 0 10px;
+	font-size: 18px;
+	background-color: #fae8c8;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+section  .section-contain .breadcrumb li:first-child::before{
+	content: " ";
+}
+section  .section-contain .breadcrumb li a{
+	color: #333;
+	font-size: 18px;
+}
+section  .section-contain .breadcrumb li::before{
+	content: ">";
+}
+section  .section-contain .food-material-contain{
+	width: 990px;
+	height: 210px;
+	margin: auto;
+	display: flex;
+	background-color: white;
+}
+section  .section-contain .food-material-contain .food-material-section{
+	width: 480px;
+	height: 210px;
+	color: #000;
+	padding: 0 0 0 20px;
+}
+section  .section-contain .food-material-contain .food-material-header{
+	width: 300px;
+	height: 210px;
+	padding: 70px 0 0;
+}
+section  .section-contain .food-material-contain .food-material-section h1{
+	width: 460px;
+	height: 64px;
+	font-size: 32px;
+	padding: 20px 0 0;
+	color: #333;
+	display: flex;
+	align-items: center;
+	margin: 0 0 10px 0;
+}
+section  .section-contain .food-material-contain .food-material-section h1 a{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	margin: 9px;
+	background-image: url(../image/cart_26.gif);
+	background-repeat: no-repeat;
+}
+section  .section-contain .food-material-contain .food-material-section p{
+	width: 460px;
+	height: 70px;
+	color: #666;
+	font-size: 14px;
+	padding: 0 0 10px;
+}
+section  .section-contain .food-material-contain .food-material-header ul{
+	width: 300px;
+	margin: 0;
+}
+section  .section-contain .food-material-contain .food-material-header ul li a{
+	display: block;
+	width: 60px;
+	height: 30px;
+	background-color: #60a531;
+	padding: 0 8px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section  .section-contain .food-material-contain .food-material-header ul li a:hover{
+	background-color: #46811d;
+	text-decoration: none;
+}
+section  .section-contain>h2{
+	width: 990px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+section  .section-contain>h2 a{
+	display: block;
+	width: 168px;
+	height: 120px;
+	color: #222;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section  .section-contain .food-style{
+	width: 760px;
+	position: relative;
+	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding:8px;
+	overflow: hidden;
+}
+section  .section-contain .food-style>a{
+	display: block;
+	width: 232px;
+	height: 332px;
+	position: relative;
+	text-align: left;
+	display: flex;
+	flex-wrap: nowrap;
+}
+section  .section-contain .food-style a>img{
+	width: 232px;
+	height: 232px;
+	position: relative;
+	z-index: 1;
+}
+section  .section-contain .food-style a:hover .box{
+	top:132px;
+	height: 200px;
+}
+section  .section-contain .food-style a .box{
+	width: 232px;
+	height: 100px;
+	background-color: white;
+	font-size: 14px;
+	color: #333;
+	position: absolute;
+	top: 232px;
+	left: 0px;
+	z-index: 0;
+	overflow: hidden;
+	transition: all 1s;
+}
+section  .section-contain .food-style a .box strong{
+	display: block;
+	width: 232px;
+	height: 35px;
+	padding: 17px 14px 0;
+}
+section  .section-contain .food-style a .box>span{
+	display: block;
+	width: 232px;
+	height: 26px;
+	font-size: 12px;
+	padding: 5px 14px;
+	position: absolute;
+	top: 35px;
+}
+section  .section-contain .food-style a .box p{
+	width: 232px;
+	height: 23px;
+	font-size: 12px;
+	color: #ff3232;
+	padding: 0 14px;
+	position: absolute;
+	top: 61px;
+}
+section  .section-contain .food-style a .box div{
+	width: 232px;
+	height: 100px;
+	position: absolute;
+	top: 100px;
+	background-color: #eee;
+	padding: 10px 0;
+}
+section  .section-contain .food-style a .box div span:first-child,
+section  .section-contain .food-style a .box div span:last-child{
+	display: block;
+	width: 232px;
+	height: 30px;
+	padding: 10px 40px;
+	position: relative;
+	overflow: hidden;
+}
+section  .section-contain .food-style a .box div span:first-child img{
+	position: absolute;
+	top: -124px;
+	left: 0;
+}
+section  .section-contain .food-style a .box div span:last-child img{
+	position: absolute;
+	top: -40px;
+	left: 0;
+}
+/* 右上角的标题 */
+section  .section-contain .food-style .small-title{
+	position: absolute;
+	width: 80px;
+	height: 32px;
+	top:10px;
+	right:-5px;
+	z-index: 2;
+	background-color: #60a531;
+	text-align: center;
+	color: white;
+	font-size: 14px;
+	line-height: 32px;
+	border-radius: 3px;
+	box-shadow: 0px 1px 1px #0008;
+}
+section  .section-contain .food-style .small-title .small-title-triangular,
+section .heathly-news .left-news .small-title-triangular{
+	width: 0;
+	height: 0;
+	border: 3px solid #0000;
+	border-bottom: 3px solid #000;
+	transform: rotate(-45deg);
+	position: absolute;
+	right: 2px;
+	bottom: -3px;
+}
+/* 热门推荐 */
+section  .section-contain .food-style .food-recommend{
+	width: 232px;
+	height: 332px;
+	background-color: white;
+}
+section  .section-contain .food-style .food-recommend h4{
+	width: 232px;
+	height: 50px;
+	font-size: 14px;
+	border-bottom: 1px solid #ddd;
+	line-height: 40px;
+	text-align: left;
+	padding: 0 14px;
+}
+section  .section-contain .food-style .food-recommend a{
+	width: 30px;
+	padding: 8px 10px;
+	font-size: 14px;
+	color: #666;
+	background-color: #fcfcfc;
+	margin-right: 10px;
+	border: 1px solid #ddd;
+}
+section  .section-contain .food-style .food-recommend a:hover{
+	color:white;
+	text-decoration: none;
+	background-color: red;
+}
+section  .section-contain .food-style-box{
+	width: 990px;
+	margin: auto;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+}
+section  .section-contain .food-style-box .all-subjects{
+	width: 716px;
+	height: 684px;
+	position: absolute;
+	right: -486px;
+	top: 0;
+	z-index: 5;
+	background: white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transition: right 1s;
+}
+section  .section-contain .food-style-box .all-subjects .title1{
+	width: 699px;
+	height: 61px;
+	font-size: 24px;
+	color: #333;
+	padding: 0 0 0 20px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #aaaa;
+}
+section  .section-contain .food-style-box .all-subjects .title2{
+	width: 699px;
+	height: 40px;
+	font-size: 18px;
+	padding: 10px 0 0 20px;
+	color: red;
+}
+section  .section-contain .food-style-box .all-subjects p{
+	width: 699px;
+	color: #666;
+	font-size: 14px;
+	padding: 10px 20px;
+}
+section  .section-contain .food-style-box .all-subjects>div{
+	width: 736px;
+	height: 70px;
+	padding: 0 20px 20px;
+	display: flex;
+}
+section  .section-contain .food-style-box .all-subjects>div span:first-child{
+	font-size: 24px;
+	color: #60a531;
+	padding: 0 20px 0 0;
+	display: flex;
+	align-items: center;
+}
+section  .section-contain .food-style-box .all-subjects>div .add{
+	display: inline-block;
+	width: 28px;
+	height: 50px;
+	background-image: url(../image/shicai_+.gif);
+	background-position: center;
+}
+section  .section-contain .food-style-box .all-subjects>div .last-a{
+	margin-left: 20px;
+	display: flex;
+	align-items: center;
+	color: #666;
+	font-size: 14px;
+}
+section  .section-contain .food-style-box .all-subjects>div .last-a:hover{
+	color: red;
+}
+section  .section-contain .food-style-box .all-subjects>div img{
+	width: 50px;
+	height: 50px;
+}
+section  .section-contain .food-style-box .all-subjects .all-subjects-shadow,
+section  .section-contain .food-style-box .food-style-shadow{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #fff8;
+	z-index: 4;
+}
+section  .section-contain .food-style-box .food-style-shadow{
+	display: none;
+}
+section  .section-contain .food-style-box .all-subjects .all-subjects-shadow{
+	height: 1000px;
+}

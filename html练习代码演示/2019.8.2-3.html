@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style>
+		div{
+			width: 50px;
+			height: 30px;
+			background-color: red;
+			font-weight: bolder;
+			color: orange;
+			text-align: center;
+			line-height: 30px;
+			position: absolute;
+            display: none;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div></div> -->
+	<script>
+		var arr = ["小芳","灰灰","小马","慧慧","阿东","大妈","俊俊","徒儿","香香","萌萌"];
+		$(window).click(function(){
+			var e = window.event || arguments[0];
+			// console.log(e);
+			// console.log(e.clientX,e.clientY);
+			// console.log(e.x,e.y);
+			// console.log(e.pageX,e.pageY);
+			// console.log(e.screenX,e.screenY);
+			// console.log(e.offsetX,e.offsetY);
+			// console.log($( "body").offset().left);
+			var x = e.x-30;
+			var y = e.y-20;
+			var i = parseInt(Math.random()*arr.length);
+			// $(".box").html(arr[i]);
+            $("body").append("<div>"+arr[i]+"</div>");
+            $("div").css({"left":x,"top":y,"display":"block"})
+			$("div").animate({"top":e.clientY-100,"opacity":"0"},1000,function(){
+				$(this).remove();
+			});            
+		})
+	</script>
+
+	<!-- <script>
+		var arr = ['富强','民主','自由','和谐','开放','法治','平等','公平','正义','包容','奉献','爱国','团结','友爱','互助','诚实','守信','奋斗','勤奋','友善','文明','公正','敬业'];
+		$(document).click(function(e){
+			// console.log(e);
+			// var e = arguments[0];
+			// console.log(e);
+			var x = e.clientX,
+			    y = e.clientY;
+		    var index = Math.floor(Math.random()*arr.length);
+		    var add = $("<div class='add'>"+arr[index]+"</div>");
+		    add.css({
+		    	"top":y-30 + "px",
+		    	"left":x-25 + "px"
+		    });
+		    $("body").append(add);
+		    add.animate({"top":y-100+"px","opacity":"0"},1000,function(){
+		    	$(this).remove();
+		    });
+
+		})
+	</script> -->
+</body>
+</html>

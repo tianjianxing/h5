@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <script>
+        var a = parseFloat(prompt("输入数字："));
+        var b = parseFloat(prompt("输入数字："));
+        var c = parseFloat(prompt("输入数字："));
+        var x = a > b ? a : b;
+        var y = c > x ? c : x;
+        console.log(y);
+	</script> -->
+	<!-- <script>
+		var year = parseFloat(prompt("输入年份："));
+		if(year%4==0 && year%100!=0 || year%400==0){
+			console.log("闰年");
+		}
+		else{
+			console.log("平年");
+		}
+	</script> -->
+	<!-- <script>
+		var dan = parseFloat(prompt("输入单价："))；
+		var num = parseFloat(prompt("输入购买数量："));
+		console.log(all = dan * num);
+		var zong = parseFloat(prompt("输入实付金额："));
+		if(zong >1000){
+			console.log("恭喜，奖励宝马一辆！");
+		}
+		if(all > 100){
+			console.log(all * 0.8);
+		}
+	</script>
+	<script>
+		var rmb = parseFloat(prompt("输入应付金额："));
+		var rmb1 = parseFloat(prompt("输入实付金额："));
+		if(rmb < rmb1){
+			console.log("输入有误");
+		}
+		else(rmb > rmb1){
+			console.log(rmb - rmb1);
+		}
+	</script>
+	<script>
+		var qian = parseFloat(prompt("输入工资：")); 
+		if(qian < 3000){
+			console.log("吃低保");
+		}
+		else if(qian >=3000 && qian <5000){
+			console.log("工薪阶层");
+		}
+		else if(qian >=5000 && qian < 8000){
+			console.log("小康生活")；
+		}
+		else if(qian >=8000 && qian <= 15000){
+			console.log("白领");
+		}
+		else(qian > 15000){
+			console.log("土豪");
+		}
+	</script> -->
+	<script>
+        var time = parseFloat(prompt("输入通话时间："));
+        if(time<=100){
+        	var A = 50;
+        	var B = 50;
+        }else{
+        	A = 50 + (time-100);
+        	if(A>200){
+        		A = 200;
+        	}
+        	B = 50 + (time-100)*0.85;
+
+        }
+        C = time*0.75;
+        if(A>B){
+        	if(B>C){
+        		console.log("C");
+        	}else{
+        		console.log("B");
+        	}
+        }else{
+        	if(A>C){
+        		console("C");
+        	}else{
+        		console.log("A");
+        	}
+        }
+	</script>
+	<!-- <script>
+		var hh = parseFloat(prompt("输入小时："));
+		var mm = parseFloat(prompt("输入分钟："));
+		if(hh < 10 && mm < 10){
+			console.log("0" + hh + "：" + "0" + mm);
+		}else if(hh < 10 && mm > 10){
+			console.log("0" + hh + "：" + mm
+				);
+		}else if(hh >10 && mm < 10){
+			console.log(hh + "：" + "0" + mm
+				);
+		}else(hh >10 && mm > 10){
+			console.log(hh + "：" + mm);
+		}
+	</script> -->
+	
+</body>
+</html>

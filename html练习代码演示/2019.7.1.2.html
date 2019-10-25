@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: black;
+		}
+		.box{
+			margin: auto;
+			width: 500px;
+			height: 1060px;
+			border:1px solid white;
+			background-color: white;
+		}
+		.box1{
+			margin:20px 10px;
+			width: 400px;
+			height: 400px;
+			background-color: black;
+			position: relative;
+		}
+		.box1 div{
+			width: 400px;
+			height: 400px;
+			text-align: center;
+			line-height: 400px;
+			color: orange;
+			font-size: 250px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: scale(0);
+			transition: all 1s ease;
+			background-color: black;
+			opacity: 0;
+		}
+		.box1:hover div{
+			transform: scale(1);
+			opacity: 1;
+		}
+		.box1 .c1{
+			transition-delay: 1s;
+		}
+		.box1 .c2{
+			transition-delay: 2s;
+		}
+		.box1 .c3{
+			transition-delay: 3s;
+		}
+		.box1 .c4{
+			transition-delay: 4s;
+		}
+		.box1 .c5{
+			transition-delay: 5s;
+		}
+	/*	.box1 div{
+			width: 400px;
+			height: 400px;
+			font-weight: bolder;
+			color: orange;
+			background-color: black;
+			line-height: 400px;
+			text-align: center;
+			visibility: hidden;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			opacity: 0;
+			
+			transition: all ease;
+			transition: font-size 2s ease 0s,visibility 0s ease 0s;
+		}
+		
+		.box1 .c1{
+			transition-delay: 1s;
+		}
+		.box1 .c2{
+			transition-delay: 2s;
+		}
+		.box1 .c3{
+			transition-delay: 3s;
+		}
+		.box1 .c4{
+			transition-delay: 4s;
+		}
+		.box1 .c5{
+			transition-delay: 5s;
+		}
+		.box1:hover div{
+			visibility: visible;
+			font-size: 300px;
+			opacity: 1;			
+		}*/
+
+
+		/*.ccc div{
+			font-size: 35px;
+			text-align: center;
+			height: 70px;
+			line-height: 70px;
+			font-weight: bolder;
+		}
+		body div .box2{
+			border: 2px solid black;
+			text-align: center;
+			width: 400px;
+			height: 70px;
+			line-height: 70px;
+			font-weight: bolder;
+			font-size: 50px;
+			transition: background-color 1s ease 0s,color 1s ease 0s;				
+		}
+		.box2:hover{
+			background-color: blue;
+			color: white;
+		}
+		.box3{
+			width: 200px;
+			background-color: #ebebeb;
+			border:2px solid transparent;
+		}
+		.box3:hover{
+			border: 2px solid purple;
+		}
+		.box4,.box5{
+			width: 250px;
+			border:2px solid black;
+
+		}
+		
+		.box4,.box5:hover{
+			background: purple;
+			color: white
+
+		}*/
+		.box2{
+			border: 2px solid black;
+            width: 400px;
+            height: 70px;
+            position: relative;
+		}
+		.box2::before{
+			content: "按 钮";
+			width: 400px;
+			height: 70px;
+			line-height: 70px;
+			font-weight: bolder;
+			font-size: 50px;
+			text-align: center;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+		}
+		.box2::after{
+			content: "";
+			width: 0px;
+			height: 70px;
+			background-color: blue;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			opacity: 0;
+			transition: width 1s ease 0s,opacity 1s ease 0s;
+		}
+		.box2:hover::before{
+			color: white;
+		}
+		.box2:hover::after{
+			width: 400px;
+			opacity: 1;
+		}
+		.box3{
+			width: 200px;
+			height: 70px;
+			text-align: center;
+			font-size: 35px;
+			font-weight: bolder;
+			line-height: 70px;
+			background-color: #ebebeb;
+			position: relative;
+		}
+		.box3::before{
+			content: "";
+			/*display: block;*/
+			width: 2px;
+			height: 0px;
+			background-color: purple;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			transition: height 1s ease 0s;
+		}
+		.box3::after{
+			content: "";
+			/*display: block;*/
+			width: 2px;
+			height: 0px;
+			background-color: purple;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			transition: height 1s ease 0s;
+		}
+		.box3:hover::before{
+			height: 70px;
+		}
+		.box3:hover::after{
+			height: 70px;
+		}
+		.box6::before{
+			content: "";
+			/*display: block;*/
+			width: 0px;
+			height: 2px;
+			background-color: purple;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			transition: width 1s ease 0s;
+		}
+		.box6::after{
+			content: "";
+			/*display: block;*/
+			width: 0px;
+			height: 2px;
+			background-color: purple;
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			transition: width 1s ease 0s;
+		}
+		.box3:hover .box6::before{
+			width: 200px;
+		}
+		.box3:hover .box6::after{
+			width: 200px;
+		}
+		.box4{
+			border: 2px solid black;
+            width: 400px;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+		}
+		.box4::before{
+			content: "BUTTON";
+			width: 400PX;
+			height: 70PX;
+			line-height: 70PX;
+			font-size: 50PX;
+			font-weight: bolder;
+			text-align: center;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+			transition: color 1s ease 0s;
+		}
+		.box4::after{
+			content: "";
+			width: 400px;
+			height: 70px;
+			background-color: purple;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			transform-origin: left bottom;
+			transform: rotateZ(-90deg);
+			transition: transform 1s ease 0s;
+		}
+		.box4:hover::before{
+            color: white;
+		}
+		.box4:hover::after{
+			transform: rotateZ(0deg);
+		}
+		.box5{
+			border: 2px solid black;
+            width: 400px;
+            height: 70px;
+            position: relative;
+		}
+		.box5::before{
+			content: "BUTTON";
+			display: block;
+			width: 400PX;
+			height: 70PX;
+			line-height: 70PX;
+			font-size: 50PX;
+			font-weight: bolder;
+			text-align: center;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+			transition: color 1s ease 0s;
+		}
+		.box5::after{
+			content: "";
+			display: block;
+			width: 0;
+			height: 70px;
+			background-color: purple;
+			margin: auto;
+			/*position: absolute;
+			left: 200px;
+			top: 35px;*/
+			transition: width 1s ease 0s;
+		}
+		.box5:hover::before{
+			color: white;
+		}
+		.box5:hover::after{
+			width: 400px;
+		}
+		.box7{
+			border: 2px solid black;
+            width: 400px;
+            height: 70px;
+            position: relative;
+		}
+		.box7::before{
+			content: "BUTTON";
+			display: block;
+			width: 400PX;
+			height: 70PX;
+			line-height: 70PX;
+			font-size: 50PX;
+			font-weight: bolder;
+			text-align: center;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+			transition: color 1s ease 0s;
+		}
+		.box7::after{
+			content: "";
+			display: block;
+			width: 0px;
+			height: 0px;
+			background-color: purple;
+			position: absolute;
+			left: 200px;
+			top: 35px;
+			transform: translateX(-50%) translateY(-50%);
+			transition: all 1s ease 0s; 
+		}
+		.box7:hover::before{
+			color: white;
+		}
+		.box7:hover::after{
+			width: 400px;
+			height: 70px;
+			/*transform: translateX(-200px) translateY(-35px);*/
+
+		}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box1">
+			<div class="c1">5</div>
+			<div class="c2">4</div>
+			<div class="c3">3</div>
+			<div class="c4">2</div>
+			<div class="c5">1</div>
+		</div>
+		<br><br>
+		<div class="box2"></div>
+		<br><br><br>
+		<!-- <div class="ccc"> -->
+		<div class="box3">
+			按钮
+			<div class="box6"></div>
+		</div>
+		<br><br><br>
+		<div class="box4"></div>
+		<br><br>
+		<div class="box5"></div>
+		<br><br>
+		<div class="box7"></div>
+	  <!--  </div> -->
+	</div>
+
+	
+</body>
+</html>

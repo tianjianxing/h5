@@ -1,0 +1,631 @@
+*,p{
+	margin: 0;
+	padding: 0;
+}
+.red-line{
+	border-bottom: 5px solid red;
+}
+body{
+	background-color: #fae8c8;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+     /* 头部 */
+header{
+	width: 100%;
+	height: 129px;
+	background-image:linear-gradient(to right,#d51315,#a1000e)
+}
+/* LOGO */
+header .header-contain{
+	width: 990px;
+	margin: auto;
+	display: flex;
+}
+header .header-contain .logo2 a{
+	display:inline-block;
+	width: 184px;
+	height: 129px;
+	background-image: url(../image/logo2.png);
+	background-repeat: no-repeat;
+	background-position: -23px 9px;
+}
+/* 搜索栏 */
+header .header-contain .header-search{
+	width: 430px;
+	height: 129px;
+	margin:  0 0 0 68px;
+	font-size:12px;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+header .header-contain .header-search-box{
+	background-color: #fff;
+	border-radius:3px;
+	overflow: hidden;
+	margin-top:-2px;
+	margin-left: -22px;
+	display: flex;
+	align-items: center;
+}
+/* 搜索text */
+header .header-contain .header-search-box [type="text"]{
+	width: 344px;
+	height: 34px;
+	padding: 8px;
+	margin:0 0 0 1px;
+	border:none;
+}
+/* 搜索btn */
+header .header-contain .header-search-box [type="button"]{
+	width: 78px;
+	height: 32px;
+	font-size: 14px;
+	margin:2px 2px 2px 0;
+	color:white;
+	background-color: #a8000f;
+	border: none;
+}
+header .header-contain .header-search-box [type="button"]:hover{
+	background-color:#890511;
+}
+/* 登录、注册 */
+header .log-on{
+	width: 267px;
+	height: 129px;
+	display: flex;
+	align-items: center;
+	margin-left:33px;
+}
+header .log-on li{
+	padding:4px 0px;
+}
+header .log-on li:hover{
+	cursor: pointer;
+	background-color: #77000a;
+	border-radius: 3px;
+	text-decoration: underline;
+}
+header .log-on li a{
+	line-height: 23px;
+	font-size: 12px;
+	color:white;
+}
+header .log-on li:first-child,header .log-on li:nth-child(2){
+	background-image:url(../image/topdsflogin_icon.gif);
+	background-repeat: no-repeat;
+	background-position:3px 1px;
+	padding:4px 10px 4px 34px;
+}
+header .log-on li:nth-child(2){
+	background-position:3px -27px;
+}
+header .log-on li:nth-child(3) a,header .log-on li:nth-child(4) a{
+	padding: 0 10px;
+}
+     /* 导航 */
+nav{
+	width: 100%;
+	height: 76px;
+	color:#444;
+	background: #fff;
+	font-size: 18px;
+	position: relative;
+	box-shadow: 10px 0px 10px rgba(0,0,0,0.3);
+	z-index: 2000;
+}
+/* 导航盒 */
+nav .nav-contain{
+	width: 990px;
+	height: 76px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+}
+nav .nav-contain li>a{
+	color:#444;
+}
+nav .nav-contain li{
+	padding:0 24px;
+	text-align: center;
+	position: relative;
+}
+nav .nav-contain .home{
+	padding:0 11px;
+}
+nav .nav-contain li:hover{
+	text-decoration: none;
+	background-color: #fafafa;
+}
+nav .nav-contain li:hover span{
+	color:#fafafa;
+}
+nav .nav-contain li>a b{
+	display: inline-block;
+	height: 76px;
+	line-height: 76px;
+	text-align: center;
+}
+/* 下拉箭头 */
+nav .nav-contain li .glyphicon{
+	font-size: 10px;
+	color:#cacaca;
+}
+nav .nav-contain li .crown{
+	position: relative;
+	top:-20px;
+	left:-13px;
+}
+/* 菜谱大全的展开 和 饮食健康 */
+nav .nav-contain li>a:hover{
+	text-decoration: none;
+}
+/* 菜谱 健康的display */
+nav .menu-totle,nav .eat-heathy{
+	width: 990px;
+	height: 283px;
+	background-color: #fafafa;
+	position: absolute;
+	left:-84px;
+	top:76px;
+	display: none;
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+nav .eat-heathy{
+	left:-221px;
+}
+nav .menu-totle-contain:hover .menu-totle,nav .eat-heathy-contain:hover .eat-heathy{
+	display:block;
+}
+/* 布局 */
+nav .menu-totle-contain .menu-totle,.eat-heathy{
+	text-align: left;
+	padding: 16px 30px ;
+}
+nav .menu-totle-contain .menu-totle dl,.eat-heathy dl{
+	height: 20px;
+	margin-bottom: 20px;
+	margin-top: 2px;
+}
+/* p 标题 */
+nav .menu-totle-contain .menu-totle p,.eat-heathy p{
+	color: red;
+}
+nav .menu-totle-contain .menu-totle dl dd,.eat-heathy dl dd{
+	float:left;
+	font-size:12px;
+	margin-right: 15px;
+}
+nav .menu-totle-contain .menu-totle dl dd a,.eat-heathy dl dd a{
+	color: #999999;
+}
+nav .menu-totle-contain .menu-totle dl dd a:hover,.eat-heathy dl dd a:hover{
+	background-color: red;
+	color: white;
+	text-decoration: none;
+}
+/* 两个块定位 */
+nav .world-menu,nav .small-food{
+	display: inline-block;
+	text-align: left;
+}
+nav .menu-totle-contain .menu-totle .crab{
+	position: absolute;
+}
+         /* 饮食健康的布局 */
+nav .eat-heathy-left,nav .eat-heathy-right{
+	float:left;
+	margin-right: 10px;
+}
+nav .eat-heathy .onion{
+	position: absolute;
+    right: -57px;
+    bottom:-25px;
+}
+footer{
+	background-color: #3f3a32;
+	font-size: 12px;
+	height: 464px;
+	margin-top:40px;
+	padding-bottom: 60px;
+}
+footer a{
+	color:#999;
+}
+footer .in-link li,footer .footer-link dl dd{
+	float: left;
+}
+footer .footer-photo{
+	position: relative;
+}
+footer .footer-photo,.footer-link{
+	width: 990px;
+	margin: auto;
+}
+footer .footer-photo .footer-logo{
+	width: 600px;
+	height: 196px;
+	background-image: url(../image/20190606113304_957.png);
+	background-size:420px;
+	background-repeat: no-repeat;
+	background-position:0 center; 
+	display: inline-block;
+}
+/* 四个css雪碧链接 */
+footer  .footer-photo .footer-logonext-links{
+	position: absolute;
+	width: 500px;
+	height: 160px;
+	top:30px;
+	right:0;
+}
+footer  .footer-photo .footer-logonext-links li{
+	float:left;
+	text-align: center;
+	margin-left:20px;
+}
+footer  .footer-photo .footer-logonext-links li>a{
+	display: block;
+	width: 105px;
+	height: 105px;
+	font-size:13px;
+	padding-top:85px;
+	color:white;
+	margin-bottom: 15px;
+	background-image: url(../image/footerlinks.png)
+}
+footer  .footer-photo .footer-logonext-links li>a:hover{
+	text-decoration: none;
+}
+footer  .footer-photo .footer-logonext-links li:nth-child(2)>a{
+	background-position:-105px;
+}
+footer  .footer-photo .footer-logonext-links li:nth-child(3)>a{
+	background-position:-210px;
+}
+footer  .footer-photo .footer-logonext-links li:nth-child(4)>a{
+	background-position:-316px;
+}
+footer  .footer-photo .footer-logonext-links li p a:hover{
+	color:white;
+}
+/* links */
+footer .footer-link dt{
+	font-size:14px;
+	color:white;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #444;
+}
+footer .footer-link dd{
+	width: 99px;
+	height: 25px;
+}
+footer .footer-link dd a:hover{
+	color: red;
+}
+footer .footer-link dl{
+	border-bottom: 1px solid #444;
+	padding-bottom: 8px; 
+	margin-bottom: 10px;
+}
+footer .in-link{
+	width: 990px;
+	height: 89px;
+	padding: 0 0 30px 0;
+}
+footer .in-link ul{
+	display: block;
+	margin: auto;
+	text-align: center;
+	height: 24px;
+	width: 710px;
+	margin-bottom: 10px;
+}
+footer .in-link li a{
+	line-height: 24px;
+	display: block;
+	width: 68px;
+	height: 24px;
+}
+footer .in-link li a:hover{
+	color: white;
+	background-color: red;
+	text-decoration: none;
+}
+footer .in-link p,footer .in-link p a{
+	text-align: center;
+	color:#666;
+}
+footer .in-link p img{
+	margin-top:-10px;
+}
+footer .in-link p a:hover{
+	text-decoration: none;
+}
+/* 页面底部的搜索框 */
+.main-search-box{
+	width: 100%;
+	height: 60px;
+	color:white;
+	background-color:#0008;
+	position: fixed;
+	bottom:-50px;
+	padding-top:15px;
+	transition: all 500ms 50ms;
+	z-index: 100000;
+}
+.main-search{
+	text-align: center;
+	position: relative;
+	width: 990px;
+	height: 60px;
+	margin: auto;
+}
+.main-search .main-search-show, .main-search-hide{
+	width: 48px;
+	height: 48px;
+	padding: 5px;
+	text-align: center;
+	background-color: #403f3d88;
+	position: absolute;
+	left: 1px;
+}
+.main-search-hide{
+	display: none;
+}
+.main-search [type="text"]{
+	width: 480px;
+	height: 48px;
+	padding:14px;
+	background-color: #fff;
+}
+.main-search [type="button"]{
+	width: 120px;
+	height: 48px;
+	background-color: #ff3232;
+	border:none;
+}
+.back-to-top{
+	display: block;
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	left:990px;
+	bottom:72px;
+	background-image: url(../image/backtotop_icon.png);
+	background-position: center 96px;
+	transition: bottom 500ms 50ms;
+	display: none;
+}
+.back-to-top:hover{
+	background-position: center -48px;
+}
+/*登录后*/
+header .log-in{
+	display: flex;
+	align-items: center;
+	margin-left:33px;
+}
+header .log-in>li:first-child{
+	position: relative;
+}
+header .log-in>li:first-child a img{
+	display: inline-block;
+	width: 36px;
+}
+header .log-in>li>a{
+	width: 44px;
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	padding: 0px 10px;
+	position: relative;
+	font-size: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}header .log-in li>a:nth-child(2){
+	width: 69px;
+}
+header .log-in>li:first-child .user-power{
+	width: 160px;
+	height: 250px;
+	padding: 10px;
+	position: absolute;
+	background-color: #fff;
+	top: -10px;
+	left: 0px;
+	z-index: 55555555555555555;
+	display: none;
+}
+header .log-in>li:first-child .user-power li{
+	display: flex;
+	flex-wrap: wrap;
+	width: 140px;
+	position: relative;
+	padding: 7px 0;
+}
+header .log-in>li:first-child .user-power li a{
+	display: inline-block;
+	font-size: 10px;
+	color: #444;
+}
+header .log-in>li:first-child .user-power li:first-child a{
+	width:45px;
+	color: red;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+header .log-in>li:first-child .user-power li:first-child span{
+	position: absolute;
+	width: 36px;
+	bottom: -8px;
+	right: 60px;
+	color: #666;
+	font-size: 10px;
+}
+header .log-in>li:first-child .user-power li a img{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.V{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 5px;
+	right: 25px;
+}
+header .log-in>li:first-child .user-power li:nth-child(2){
+	display: block;
+    height: 32px;
+    width: 140px;
+    background: #ff3232;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    margin: 10px 0px 10px;
+    padding: 0px;
+}
+header .log-in>li:first-child .user-power li:nth-child(2) a{
+	color: white;
+}
+header .log-in>li:first-child .user-power li:nth-child(3){
+	text-align: center;
+	padding: 7px 0 12px 0;
+	background-color: #eee;
+	display: inline-block;
+}
+.log-in>li:first-child .user-power li:not(:nth-child(2)) a:hover{
+	color: red;
+}
+body header .log-in>li:first-child .user-power li:nth-child(3):hover{
+	background-color: #ddd;
+	text-decoration: none;
+}
+body header .log-in>li:first-child .user-power li:nth-child(3):hover a{
+	color: #444;
+}
+.Sign-in{
+	position: relative;
+}
+.Sign-in img{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 10002222222222;
+	display: none;
+}
+.high-ligth{
+	height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 6000;
+    display: none;
+}
+.drow{
+	width: 800px;
+	height: 380px;
+    background-color: #fff;
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.6);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -190px 0px 0px -400px;
+    border-radius: 2px;
+    z-index: 100000000000000;
+}
+.drow h3{
+	height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+}
+.drow h4{
+	font-size: 18px;
+    line-height: 32px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 12px 0 0 15px;
+}
+.drow h5{
+	color: #ff4c35;
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 20px;
+}
+.drow .call-fun{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+.drow .juti-call{
+	display: flex;
+	flex-wrap: wrap;
+}
+.drow .juti-call div{
+	margin-top: 10px;
+	width: 350px;
+	text-align: right;
+	white-space: nowrap;
+}
+.drow .juti-call div:last-child{
+	margin-left: 100px;
+}
+.drow .juti-call span{
+	color: red;
+}
+.drow .juti-call input{
+	height: 30px;
+    line-height: 22px;
+    color: #333;
+    font-size: 15px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 180px;
+}
+.drow .juti-call .juti-place{
+	width: 450px;
+}
+.drow .cancle-send{
+	text-align: center;
+}
+.drow .cancle-send input:first-child,.drow .cancle-send input:last-child{
+	width: 80px;
+	height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    color: #666;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 2px;
+    margin: 15px 6px;
+}
+.drow .cancle-send input:last-child{
+	border: 1px solid #e90808;
+    background: #ff4c35;
+    color: white;
+}
